@@ -1,14 +1,14 @@
 // loop examples
 //////////////////////////////
-/* $colors: ( 
-	('facebook', 'f-icon', 'blue'),
-	('twitter', 't-icon', 'red'),
-);
+// $colors: ( 
+// 	('facebook', 'f-icon', 'blue'),
+// 	('twitter', 't-icon', 'red'),
+// );
 
-@each $social, $icon, $color in $colors {
-	.#{$social} {
-		background: $social;
-		color: $color;
-		content: $icon;
-	}
-} */
+// @each $social, $icon, $color in $colors {
+// 	.#{$social} {
+// 		background: $social;
+// 		color: $color;
+// 		content: $icon;
+// 	}
+// }
