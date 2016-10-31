@@ -1,0 +1,29 @@
+// Base Styles
+@import 'partials/base/normalize';
+@import 'partials/base/global';
+@import 'partials/base/typography';
+@import 'partials/base/print';
+
+// helpers Styles
+@import 'partials/helpers/functions';
+@import 'partials/helpers/placeholders';
+@import 'partials/helpers/mixins';
+@import 'partials/helpers/variables';
+
+// layout Styles
+@import 'partials/layout/grid';
+@import 'partials/layout/header';
+@import 'partials/layout/content';
+@import 'partials/layout/sidebar';
+@import 'partials/layout/footer';
+
+// components Styles
+@import 'partials/components/buttons';
+@import 'partials/components/forms';
+@import 'partials/components/navigation';
+
+// pages Styles
+@import 'partials/pages/home';
+
+// plugins Styles
+//@import 'partials/plugins/';
