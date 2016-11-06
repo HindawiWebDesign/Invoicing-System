@@ -473,14 +473,61 @@ textarea {
   color: #000;
   padding: 0.2em 0; }
 
+/* ==========================================================================
+   Body
+   ========================================================================== */
+body {
+  background: #EDEDED;
+  width: 100%; }
+
+ul, li, dl, dt, dd {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  position: relative;
+  border: 0; }
+
+a {
+  color: #6cb33e;
+  text-decoration: none; }
+  a:hover {
+    color: #00718f; }
+
 html {
   font-size: 62.5%; }
 
 body {
-  font-size: 1.6rem;
-  line-height: 1.4;
-  color: #222;
-  -webkit-font-smoothing: antialiased; }
+  font-family: "Myriad W01 Regular", sans-serif;
+  font-size: 1.8rem;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 2.4rem;
+  color: #787878;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on; }
+
+.author-corresponding, .authors-list {
+  font-size: 1.4rem;
+  line-height: 1.6rem; }
+
+.authors-list a {
+  text-decoration: underline; }
+
+h1, h2, h3, h4, h5, h6, b, strong {
+  font-family: "Myriad W01 Bd", sans-serif;
+  font-weight: normal;
+  font-style: normal; }
+
+section h2 {
+  font-size: 1.8rem; }
+
+section .percent {
+  font-family: "Myriad W01 Regular", sans-serif; }
+
+section dt, section .subtotal dd {
+  font-family: "Myriad W01 Bd", sans-serif; }
 
 /* ==========================================================================
    Print styles.
@@ -564,6 +611,162 @@ MIT - https://github.com/afonsopacifer/flex-grid-framework/blob/master/licence.m
 ------------------------------------------------*/
 /* Flex Items
 ------------------------------------------------*/
+header {
+  max-width: 113.6rem;
+  margin: 3rem auto 0;
+  padding: 0 1.5rem; }
+  header a.logo {
+    width: 72px;
+    height: 72px;
+    outline: 0 none;
+    line-height: 0;
+    float: left;
+    margin-bottom: 3rem; }
+  header h1 {
+    color: #000;
+    font-family: "Myriad W01 Lt", sans-serif;
+    letter-spacing: 2px;
+    margin: 0 auto 1.5rem;
+    width: 50%;
+    position: relative;
+    text-align: center;
+    top: 4.8rem; }
+  header nav {
+    clear: both;
+    border-top: 1px solid #B5B5B5; }
+    header nav li {
+      display: inline-block;
+      margin-right: 3.4rem;
+      padding: 0.8rem 0; }
+      header nav li:first-child:after {
+        width: 9px;
+        height: 9px;
+        border-right: 1px solid #6cb33e;
+        border-bottom: 1px solid #6cb33e;
+        content: "";
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: -2.2rem; }
+      header nav li.steps--enabled {
+        color: #00718f; }
+      header nav li.steps--disabled {
+        color: #BABABA; }
+
+main {
+  max-width: 113.6rem;
+  margin: 0 auto;
+  padding: 0 1.6rem; }
+
+section {
+  background-color: #FFF;
+  margin-bottom: 1.6rem;
+  padding: 0;
+  border-radius: 5px 5px 0 0; }
+  section .section-title {
+    background-color: #00718f;
+    border-radius: 5px 5px 0 0; }
+  section h2 {
+    margin: 0;
+    padding: 0.8rem 3.2rem;
+    color: #FFF; }
+  section .section-content,
+  section .invoice-details {
+    padding: 3.2rem; }
+  section .invoice-details,
+  section footer {
+    background-color: #F5F5F5; }
+  section .section-content--left,
+  section .section-content--right {
+    width: 47%;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 30px; }
+  section dl {
+    float: right;
+    height: auto;
+    width: 100%;
+    margin-bottom: 0.4rem; }
+  section dt {
+    float: left;
+    padding: 0 1.6rem 0 0;
+    width: 27%;
+    white-space: nowrap; }
+  section dd {
+    float: right;
+    width: 68%; }
+  section .invoice-details__checkout dl {
+    float: left;
+    width: 70%; }
+  section .invoice-details__checkout dt {
+    width: 62%;
+    white-space: nowrap; }
+  section .invoice-details__checkout dd {
+    width: 33%;
+    text-align: right;
+    white-space: nowrap; }
+  section .invoice-details__checkout .net-charges dt {
+    border-top: 1px solid transparent;
+    padding-top: 0.4rem; }
+  section .invoice-details__checkout .net-charges dd {
+    border-top: 1px solid #B5B5B5;
+    padding-top: 0.4rem; }
+  section .invoice-details__checkout .subtotal {
+    border-top: 1px solid #B5B5B5;
+    margin: 0.8rem 0 1.6rem;
+    padding-top: 1.6rem; }
+
+footer {
+  max-width: 113.6rem;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  clear: both;
+  padding: 1.6rem 0; }
+  footer p {
+    margin: 0; }
+
+section footer {
+  border-top: 1px solid #B5B5B5; }
+
+.button-default,
+input[type=button],
+input[type=submit] {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0;
+  text-transform: uppercase;
+  font: 1.4rem/1.7rem "Myriad W01 Regular", sans-serif;
+  color: #FFF;
+  height: 20px;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  text-decoration: none;
+  padding: 0.8rem 1.6rem 0.8rem;
+  border-width: 0;
+  border-radius: 0.5rem; }
+
+.button-default,
+input[type=button],
+input[type=submit] {
+  background-color: #6cb33e;
+  position: relative; }
+  .button-default:hover, .button-default:active, .button-default:focus,
+  input[type=button]:hover,
+  input[type=button]:active,
+  input[type=button]:focus,
+  input[type=submit]:hover,
+  input[type=submit]:active,
+  input[type=submit]:focus {
+    background-color: #568f32;
+    color: #FFF; }
+
 /* FormHack v1.2.0 (formhack.io) */
 /* Global Reset Styles ------------------ */
 input,

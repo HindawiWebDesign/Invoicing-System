@@ -1,0 +1,90 @@
+
+main {
+    max-width: 113.6rem;
+    margin: 0 auto;
+    padding: 0 $pica;
+}
+
+section {
+	background-color: #FFF;
+	margin-bottom: $pica;
+	padding: 0;
+    border-radius: 5px 5px 0 0;
+
+    .section-title {
+    	background-color: $bgcolor-sectionTitle;
+	    border-radius: 5px 5px 0 0;
+    }
+
+    h2 {
+    	margin: 0;
+    	padding: $pica/2 $pica*2;
+    	color: #FFF;
+    }
+
+    .section-content, 
+    .invoice-details {
+    	padding: $pica*2;
+    }
+
+    .invoice-details, 
+    footer {
+    	background-color: $bgcolor-lightGrey;
+    }
+    .section-content--left, 
+    .section-content--right {
+	    width: 47%;
+	    display: inline-block;
+	    vertical-align: top;
+	    padding-right: 30px;
+    }
+
+    dl {
+   	    float: right;
+	    height: auto;
+        width: 100%;
+        margin-bottom: $pica/4;
+    }
+
+    dt {
+	    float: left;
+	    padding: 0 $pica 0 0;
+	    width: 27%;
+        white-space: nowrap;
+    }
+    dd {
+	    float: right;
+	    width: 68%;
+	}
+	.invoice-details__checkout {
+		dl {
+			float: left;
+			width: 70%;
+		}
+	    dt {
+		    width: 62%;
+		    white-space: nowrap;
+	    }
+	    dd {
+		    width: 33%;
+		    text-align: right;
+		    white-space: nowrap;
+		}
+		.net-charges dt {
+			border-top: 1px solid transparent;
+		    padding-top: 0.4rem;
+		}
+		.net-charges dd {
+			border-top: 1px solid $color-border-grey;
+		    padding-top: 0.4rem;
+		}
+		.subtotal {
+			border-top: 1px solid $color-border-grey;
+			margin: 0.8rem 0 1.6rem;
+			padding-top: 1.6rem;
+		}
+	}
+}
+
+
+

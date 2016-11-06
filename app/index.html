@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title></title>
+        <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/b0473a0b-24da-4a9e-8da4-d7f517f75d31.css"/>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -22,30 +23,216 @@
 
         <!-- Content Starts --> 
         <header>
-            <nav> 
-                <ul>
-                    <li></li>
-                </ul>
-            </nav>
+            <div class="container">
+                <a href="http://checkout.hindawi.com/" class="logo">
+                    <img src="images/hindawi.svg" alt="Hindawi Publishing Corporation">
+                </a>
+                <h1>PAYMENT DETAILS</h1>
+                <nav class="steps"> 
+                    <ul>
+                        <li class="steps--enabled">Confirm payment information</li>
+                        <li class="steps--disabled">Select Payment Method</li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
         <main>
-            
-            <section>
-                <h1></h1>
-                <article>
-                    <header>
-                        <h2></h2>
-                    </header>
-                </article>
+        <!-- Article Details section -->
+            <section class="article-details">
+                <div class="section-title">
+                   <h2>Article Details</h2>
+                </div>
+                <div class="section-content">
+                    <div class="section-content--left">
+                        <dl>
+                            <dt>Journal Title</dt>
+                            <dd>International Journal of Mathematics and Mathematical Science</dd>
+                        </dl>
+                        <dl>
+                            <dt>Article Title</dt>
+                            <dd>Disrupted Endothelial Cell Layer and Exposed Extracellular Matrix Proteins Promote Capture of Late Outgrowth Endothelial Progenitor Cells</dd>
+                        </dl>
+                    </div>
+                    <div class="section-content--right">
+                        <dl>
+                            <dt>Type</dt>
+                            <dd>Research Article</dd>
+                        </dl>
+                        <dl>
+                            <dt>CC License</dt>
+                            <dd>CC-BY 4.0</dd>
+                        </dl>
+                        <dl>
+                            <dt>Author</dt>
+                            <dd>Jing Zhao 
+                                <span class="author-corresponding">(corresponding author)</span> 
+                                <div class="authors-list"><a href="#">View authors list</a></div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>ORCID ID</dt>
+                            <dd>0000-0002-8140-3658</dd>
+                        </dl>
+                        <dl>
+                            <dt>Article ID</dt>
+                            <dd>1406304</dd>
+                        </dl> 
+                    </div>
+                </div>
+                <div class="invoice-details">
+                    <div class="section-content--left">
+                        <dl>
+                            <dt>Invoice Issue Date</dt>
+                            <dd>20 October 2016</dd>
+                        </dl>
+                        <dl>
+                            <dt>Date of Supply</dt>
+                            <dd>20 October 2016</dd>
+                        </dl>
+                        <dl>
+                            <dt>Invoice/Ref. No.</dt>
+                            <dd>5686/2016</dd>
+                        </dl>
+                        <dl>
+                            <dt>Terms</dt>
+                            <dd>Payable upon Receipt</dd>
+                        </dl>
+                    </div>
+                    <div class="section-content--right">
+                        <div class="invoice-details__checkout">
+                            <dl>
+                                <dt>Article Processing Charges</dt>
+                                <dd>1,500.00</dd>
+                            </dl>
+                            <dl>
+                                <dt>Special Issue Discount <span class="percent">(-50%)</span></dt>
+                                <dd>750.00</dd>
+                            </dl>
+                            <dl class="net-charges">
+                                <dt>Net Charges</dt>
+                                <dd>-750.00</dd>
+                            </dl>
+                            <dl>
+                                <dt>Vat 
+                                    <span class="percent">(+20%) 
+                                    <span class="icon-help"></span>
+                                </dt>
+                                <dd>150.00</dd>
+                            </dl>
+                            <dl class="subtotal">
+                                <dt>Total</dt>
+                                <dd>USD 900.00</dd>
+                            </dl>
+                            <form>
+                                <input type="text" name="" placeholder="Enter coupon code">
+                                <input type="submit" name="" value="Redeem" class="button-default">
+                                <span class="icon-help"></span>
+                                <div class="validation-message">Coupon Expired</div>
+                            </form>
+                        </div>
+ 
+                    </div>
+                </div>
+                <footer>
+                    <p>UK VAT applies to this invoice, based on the country of the payer.</p>
+                </footer>
+            </section>
+
+        <!-- Paid By / Bill To section -->
+            <section class="bill-to">
+                <div class="section-title">
+                   <h2>Bill to</h2>
+                </div>
+                <div class="section-content">
+                    <div class="section-content--left">
+                        <dl>
+                            <dt>Payer Name</dt>
+                            <dd>Jing Zhao</dd>
+                        </dl>
+                        <dl>
+                            <dt>Email</dt>
+                            <dd>sample@sample.com</dd>
+                        </dl>
+                        <dl>
+                            <dt>Address</dt>
+                            <dd>University of Cambridge</dd>
+                        </dl>
+                        <dl>
+                            <dt>Country</dt>
+                            <dd>United Kingdom</dd>
+                        </dl>
+                        <a href="" class="button-default">Edit / Change</a>
+                    </div>
+                </div>
+            </section>
+
+            <div class="container">
+                <input type="submit" name="" value="Go Back" class="button-default">
+                <input type="submit" name="" value="Download Invoice" class="button-default">
+                <input type="submit" name="" value="Create Invoice" class="button-default">
+            </div>
+
+        <!-- Payment options section -->
+            <section class="payment-options">
+                <div class="section-title">
+                   <h2>Payment options</h2>
+                </div>
+                <div class="section-content"> 
+                    <ul class="payment-options__list">
+                        <li class="paypal"></li>
+                        <li class="transfer"></li>
+                    </ul>
+                    <dl>
+                        <dt></dt>
+                        <dd></dd>
+                    </dl>
+                    <dl>
+                        <dt></dt>
+                        <dd></dd>
+                    </dl>
+                    <dl>
+                        <dt></dt>
+                        <dd></dd>
+                    </dl>
+                    <dl>
+                        <dt></dt>
+                        <dd></dd>
+                    </dl>
+                    <dl>
+                        <dt></dt>
+                        <dd></dd>
+                    </dl>
+                    <dl>
+                        <dt></dt>
+                        <dd></dd>
+                    </dl>
+                    <dl>
+                        <dt></dt>
+                        <dd></dd>
+                    </dl>
+                    <dl>
+                        <dt></dt>
+                        <dd></dd>
+                    </dl>
+                    <dl>
+                        <dt></dt>
+                        <dd></dd>
+                    </dl>
+                    <p>It is important that we can match up the payment you make to your invoice. Please ensure that the reference used for a bank transfer is the invoice number you are payin</p>
+                </div>
             </section>
 
         </main>
 
-        <aside>
-        </aside>
-
         <footer>
+            <p>
+                <b>Hindawi Limited</b><br>
+                Kirkman House, 12-14 Whitfield Street, London, W1T 2RF, United Kingdom<br>
+                Company Reg. No. : 08671628<br>
+                VAT Reg. No. : GB 181 0941 19<br>
+                <a href="">Contact Us</a>
+            </p>
         </footer>
         <!-- Content Ends -->
         
