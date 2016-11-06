@@ -1,0 +1,57 @@
+
+header {
+    max-width: 113.6rem;
+    margin: 3rem auto 0;
+    padding: 0 1.5rem;
+
+    a.logo {
+	    width: 72px;
+	    height: 72px;
+	    outline: 0 none;
+	    line-height: 0;
+	    float: left;
+	    margin-bottom: 3rem;
+    }
+
+    h1 {
+    	color: #000;
+    	font-family: $myriadLight;
+    	letter-spacing: 2px;
+	    margin: 0 auto 1.5rem;
+	    width: 50%;
+	    position: relative;
+	    text-align: center;
+	    top: 4.8rem;
+    }
+
+    nav {
+    	clear: both;
+    	border-top: 1px solid $color-border-grey;
+
+    	li {
+    		display: inline-block;
+    		margin-right: 3.4rem;
+	    	padding: 0.8rem 0;
+       	
+       		&:first-child:after { // :after is not supported for input or img
+			    width: 9px;
+			    height: 9px;
+			    border-right: 1px solid #6cb33e;
+			    border-bottom: 1px solid #6cb33e;
+			    content: "";
+			    transform: rotate(-45deg);
+			    user-select: none;
+			    display: block;
+			    position: absolute;
+			    top: 1.5rem;
+			    right: -2.2rem;
+       		}
+	    	&.steps--enabled {
+			    color: $color-blue;
+			}
+			&.steps--disabled {
+				color: $color-lightGrey;
+			}
+		}
+    }
+}

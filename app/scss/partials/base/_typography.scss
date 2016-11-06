@@ -2,8 +2,39 @@ html {
 	font-size: 62.5%; 
 }
 body { 
-	font-size: 1.6rem; // =16px 
-	line-height: 1.4;
-	color: #222;
-    -webkit-font-smoothing: antialiased;
+	font-family: $myriadRegular;
+	font-size: $fontSize-default; 
+	font-weight: normal;
+	font-style: normal;
+	line-height: 2.4rem;
+	color: #787878;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-moz-font-feature-settings: "liga" on;
 }
+.author-corresponding, .authors-list {
+	font-size: $fontSize-smaller;
+	line-height: 1.6rem;
+}
+.authors-list a {
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6, b, strong {
+	font-family: $myriadBold;
+	font-weight: normal;
+	font-style: normal;
+}
+section {
+
+    h2 {
+    	font-size: $fontSize-default;
+    }
+	.percent {
+		font-family: $myriadRegular;
+	}
+	dt, .subtotal dd {
+		font-family: $myriadBold;
+	}
+}
+

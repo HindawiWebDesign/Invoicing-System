@@ -1,14 +1,14 @@
+// helpers Styles
+@import 'partials/helpers/functions';
+@import 'partials/helpers/placeholders';
+@import 'partials/helpers/mixins';
+@import 'partials/helpers/variables.scss';
+
 // Base Styles
 @import 'partials/base/normalize';
 @import 'partials/base/global';
 @import 'partials/base/typography';
 @import 'partials/base/print';
-
-// helpers Styles
-@import 'partials/helpers/functions';
-@import 'partials/helpers/placeholders';
-@import 'partials/helpers/mixins';
-@import 'partials/helpers/variables';
 
 // layout Styles
 @import 'partials/layout/grid';
