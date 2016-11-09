@@ -7,21 +7,24 @@ main {
 
 section {
 	background-color: #FFF;
-	margin-bottom: $pica;
+	margin-top: $pica;
 	padding: 0;
-    border-radius: 5px 5px 0 0;
+    border-radius: 0.5rem 0.5rem 0 0;
+	position: relative;
 
     .section-title {
     	background-color: $bgcolor-sectionTitle;
-	    border-radius: 5px 5px 0 0;
+	    border-radius: 0.5rem 0.5rem 0 0;
     }
 
     h2 {
     	margin: 0;
-    	padding: $pica/2 $pica*2;
+    	padding: $pica/2 $pica $pica/2 $pica*2;
     	color: #FFF;
     }
-
+    &.article-details {
+    	margin-top: 0;
+    }
     .section-content, 
     .invoice-details {
     	padding: $pica*2;
@@ -33,10 +36,10 @@ section {
     }
     .section-content--left, 
     .section-content--right {
-	    width: 47%;
+	    width: 46%;
 	    display: inline-block;
 	    vertical-align: top;
-	    padding-right: 30px;
+	    padding-right: $pica*2;
     }
 
     dl {
@@ -49,14 +52,14 @@ section {
     dt {
 	    float: left;
 	    padding: 0 $pica 0 0;
-	    width: 27%;
+	    width: 30%;
         white-space: nowrap;
     }
     dd {
 	    float: right;
-	    width: 68%;
+	    width: 65%;
 	}
-	.invoice-details__checkout {
+	.invoice-details__apc {
 		dl {
 			float: left;
 			width: 70%;
@@ -70,21 +73,187 @@ section {
 		    text-align: right;
 		    white-space: nowrap;
 		}
+		.net-charges {
+			margin-top: $pica/4; 
+		}
 		.net-charges dt {
 			border-top: 1px solid transparent;
-		    padding-top: 0.4rem;
+		    padding-top: $pica/2;
 		}
 		.net-charges dd {
-			border-top: 1px solid $color-border-grey;
-		    padding-top: 0.4rem;
+			border-top: 1px solid $color-border-darkGrey;
+		    padding-top: $pica/2;
 		}
 		.subtotal {
-			border-top: 1px solid $color-border-grey;
-			margin: 0.8rem 0 1.6rem;
-			padding-top: 1.6rem;
+			border-top: 1px solid $color-border-darkGrey;
+			margin: $pica/4 0 1.2rem;
+			padding-top: $pica;
+		}
+	}
+	.icon-help {
+		background-color: transparent;
+	    background-image: url(../images/help.svg);
+	    background-repeat: no-repeat;
+	    background-size: 24px 24px;
+		-webkit-background-size: 24px 24px;
+		-moz-background-size: 24px 24px;
+		-o-background-size: 24px 24px;
+		-ms-background-size: 24px 24px;
+	    background-position: center center;
+	    display: inline-block;
+	    width: 24px;
+	    height: 24px;
+	    vertical-align: text-bottom;
+	    cursor: pointer;
+	    margin-left: $pica/4;
+	    &:hover, &:focus, &:active {
+	    	background-image: url(../images/help-hover.svg);
+	    }
+	}
+	form {
+		width: 70%;
+		.icon-help {
+			margin-top: $pica/4;
+		}
+	}
+	p {
+		margin: 0 0 $pica 0;
+	}
+	header {
+		border-bottom: 1px solid $color-border-grey;
+		padding: 0 $pica*2 $pica $pica*2;
+    	margin-top: $pica;
+
+		span {
+
+			margin-right: $pica*2;
+		    display: inline-block;
+
+			label{
+				padding-top: 0.15rem;
+			    display: inline-block;
+			    float: right;
+			}
+		}
+	}
+
+	.payment-options__list {
+		margin-bottom: $pica*2;
+		height: 75px;
+
+		li {
+			display: inline-block;
+			float: left;
+			width: 150px;
+			height: 75px;
+			margin-right: $pica;
 		}
 	}
 }
+
+
+
+.section-content.formdt {
+	.section-content--right {
+		padding-top: 0;
+		padding-right: 0;
+		width: 49.5333%; 
+
+		.nofloat{
+			float: none;
+			width: 100%;
+
+			textarea {
+				margin: $pica 0 0;
+				height: 16.6rem;
+			}
+		}
+	}
+	dl {
+		margin-bottom: 0;
+	}
+	dt {
+	    padding: 1.4rem 0 0;
+	}
+	input[type="submit"] {
+	margin-top: $pica*2;
+	}
+}
+
+
+.align-right {
+	text-align: right;
+	margin-bottom: $pica;
+
+	*:last-child {
+		margin-right: 0;
+	}
+}
+
+.inputtext50 input[type="text"]{
+		width: 47.53333%;
+		float: left;
+		
+
+		&:last-child {
+			margin-right: 0;
+			float: right;
+		}
+}
+
+.no-screen {
+	display: none;
+}
+
+.validation-message {
+	color: red;
+	line-height: $pica*1.5;
+}
+
+/* lightbox */
+
+#lightbox { 
+	z-index: 90;
+	position: absolute;
+	background-color: rgba(0,0,0,0.4);
+	width: 100%;
+	height: 100%;
+	display: none;
+	top: 0;
+	border-radius: 0.5rem 0.5rem 0 0;
+}
+#lightbox_panel { 
+	position: absolute;
+	z-index: 99;
+	width: 800px;
+	height: auto;
+	margin: 0 auto;
+	background-color: #fff;
+	display: none;
+	padding: 0px;
+	left: 15%;
+	top: 26%;
+	border-radius: 0.5rem;
+}
+#lightbox_panel .lightbox_panel__content {
+	padding: 0 $pica*2 $pica;
+
+	p {
+		margin: $pica 0;
+	}
+}
+#close_lightbox {
+	color: $color-btn-text;
+	padding: $pica/4 $pica/2;
+
+	&:hover {
+		color: $color-btn-text;
+	}
+}
+.float-right {
+	float: right;
+}
+
 
 
 

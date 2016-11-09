@@ -3,23 +3,24 @@
 // Config -----------------------------
 
 // Font
-$fh-font-family: 'Raleway', sans-serif !default;
-$fh-font-size: 16px !default;
-$fh-font-color: rgb(40, 40, 40) !default;
+$fh-font-family: $myriadRegular, sans-serif !default;
+$fh-font-size: $fontSize-default !default;
+$fh-font-color: #787878 !default;
 
 // Borders
-$fh-border-radius: 5px !default;
+$fh-border-radius: 0 !default;
 $fh-border-width: 1px !default;
 $fh-border-style: solid !default;
-$fh-border-color: rgb(200, 200, 200) !default;
+$fh-border-color: #C8C8C8 !default;
 
 // Inputs, Textareas, Select, Option
-$fh-input-height: 40px !default;
+$fh-input-height: 4rem !default;
 $fh-input-width: 100% !default;
-$fh-input-max-width: 400px !default;
-$fh-input-bg-color: #fff !default;
-$fh-focus-bg-color: rgb(220, 220, 220) !default;
-$fh-focus-border-color: $fh-border-color !default;
+$fh-input-max-width: 100% !default;
+$fh-input-bg-color: #FFFFFF !default;
+$fh-focus-bg-color: transparent !default;
+$fh-focus-border-color: #787878 !default;
+
 $fh-focus-font-color: $fh-font-color !default;
 
 // Select Vendor Styling
@@ -29,27 +30,28 @@ $fh-allow-select-vendor-styling: true !default;
 $fh-fieldset-bare: false !default;
 
 // Buttons & Input Submits
-$fh-button-height: 40px !default;
+$fh-button-height: 4rem !default;
 $fh-button-width: 100% !default;
 $fh-button-max-width: 200px !default;
-$fh-button-font-color: $fh-font-color !default;
-$fh-button-bg-color: $fh-focus-bg-color !default;
-$fh-button-hover-bg-color: $fh-border-color !default;
-$fh-button-hover-font-color: $fh-font-color !default;
+$fh-button-font-color: $color-btn-text !default;
+$fh-button-bg-color: $bgcolor-btn;
+$fh-button-hover-bg-color: $bgcolor-btn-hover !default;
+$fh-button-hover-font-color: $color-btn-text !default;
+$fh-button-radius: 0.5rem;
 
 // Layout
 $fh-centered: false !default;
-$fh-display: block !default;
+$fh-display: !default;
 
 
 // Center/Left-Aligned Layout
 @mixin center-layout {
 	@if $fh-centered == true {
-		margin: 10px auto;
+		margin: 0 auto;
 		text-align: center;
 	}
 	@else {
-		margin: 10px 0;
+		margin: 0 0;
 	}
 }
 
@@ -82,8 +84,10 @@ datalist {
 }
 
 label {
+	
 	display: $fh-display;
-	@include center-layout;
+	margin: 0 0 0 $pica/2;
+	
 }
 
 
@@ -106,15 +110,31 @@ input[type="url"],
 input[type="week"],
 input[list],
 input[type="file"],
-select,
-textarea {
+select
+{
 	width: $fh-input-width;
 	max-width: $fh-input-max-width;
-	padding: $fh-input-height / 5;
+	padding: 1.3rem 0 0;
 	background-color: $fh-input-bg-color;
 
-	border-radius: $fh-border-radius;
-	border: $fh-border-width $fh-border-style $fh-border-color;
+	border: none;
+	border-bottom: 1px solid $fh-border-color;
+}
+
+.invoice-details__apc {
+
+	input[type="text"] {
+		border: 1px solid $fh-border-color;
+		width: 60%;
+		padding: 0 0.8rem;
+		height: 3.2rem;
+		border-radius: $fh-button-radius;
+
+		&:focus {
+			background-color: $fh-input-bg-color;
+			border-color: $fh-focus-border-color;
+		}
+	}
 }
 
 /* Fields with standard height */
@@ -139,8 +159,19 @@ input[list] {
 /* Other */
 
 textarea {
+
+	width: $fh-input-width;
+	max-width: $fh-input-max-width;
+	padding: $fh-input-height / 5;
+	background-color: $fh-input-bg-color;
+
+	border-radius: $fh-border-radius;
+	border: $fh-border-width $fh-border-style $fh-border-color;
+	resize: none;
+
 	-webkit-appearance: none;
 	overflow: auto;
+
 }
 
 input[type="range"] {
@@ -177,16 +208,30 @@ input[type="radio"] {
 /* Select ------------------ */
 
 select {
-	height: $fh-input-height;
+	height: 29px;
+    margin-top: 1.3rem;
+    padding: 0;
+    border-radius: 0;
 
-	@if $fh-allow-select-vendor-styling == false {
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		-ms-appearance: none;
-		-o-appearance: none;
-		&::-ms-expand {
-			display: none;
-		}
+	background-attachment: scroll;
+	background-clip: padding-box;
+	background-color: transparent;
+	background-image: url("../images/arrow-down.svg");
+	background-origin: padding-box;
+	background-repeat: no-repeat;
+	background-size: 12px 12px;
+	-webkit-background-size: 12px 12px;
+	-moz-background-size: 12px 12px;
+	-o-background-size: 12px 12px;
+	-ms-background-size: 12px 12px;
+	background-position: right center;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	&::-ms-expand {
+		display: none;
 	}
 }
 
@@ -209,7 +254,7 @@ fieldset {
 		border: 0;
 	}
 	@else {
-		padding: 10px 25px;
+		padding: 1rem 2.5rem;
 		border-radius: $fh-border-radius;
 		border: $fh-border-width $fh-border-style $fh-border-color;
 	}
@@ -221,33 +266,56 @@ legend {
 		font-weight: inherit;
 	}
 	@else {
-		padding: 0 5px;
+		padding: 0 0.5rem;
 		font-weight: 700;
 	}
 }
 
 /* Buttons, Input Type Submit/Reset ------------------ */
 
+ 
+
+
+%button {
+    display: inline-block;
+    text-decoration: none;
+    margin: $pica 1.2rem 0 0;
+	font: #{$fontSize-small}/1.7rem $myriadBold;
+    color: $color-btn-text;
+    height: 32px;
+	-webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+    text-decoration: none;
+	padding: $pica/2 $pica $pica/2;
+	border-width: 0;
+	border-radius: $fh-button-radius;
+	cursor: pointer;
+}
+.button-default, 
 button,
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
 input[type="image"] {
-	height: $fh-button-height;
-	width: $fh-button-width;
-	max-width: $fh-button-max-width;
-	background-color: $fh-button-bg-color;
-	padding: $fh-input-height / 5;
-	cursor: pointer;
+	@extend %button;
+	background-color: $bgcolor-btn;
+    position: relative;
 
-	color: $fh-button-font-color;
-	font-weight: 700;
+	&:hover,&:active,&:focus {
+	    background-color: $bgcolor-btn-hover;
+	    color: $color-btn-text;
+	    border-color: $fh-focus-border-color;
+	}
+}
+a.button-default {
+	height: 16px;
+}
 
-	-webkit-appearance: none;
-	-moz-appearance: none;
+.invoice-details__apc {
 
-	border-radius: $fh-border-radius;
-	border: $fh-border-width $fh-border-style $fh-border-color;
+	.button-default  {
+		margin: 0 0 0 1px;
+	}
 }
 
 input[type="image"] {
@@ -255,30 +323,10 @@ input[type="image"] {
 	padding: $fh-input-height / 5;
 }
 
+
 /* States ------------------ */
 
-input[disabled],
-textarea[disabled],
-select[disabled],
-option[disabled],
-button[disabled] {
-	cursor: not-allowed;
-}
-
-input:focus,
-textarea:focus,
-select:focus,
-option:focus,
-button:focus  {
-	background-color: $fh-focus-bg-color;
-	border-color: $fh-focus-border-color;
-}
-
-input[type="checkbox"]:focus,
-input[type="radio"]:focus {
-	outline: $fh-focus-border-color solid 2px;
-}
-
+a.button-default:hover, 
 button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover,
@@ -289,4 +337,36 @@ input[type="submit"]:focus,
 input[type="reset"]:focus {
 	background-color: $fh-button-hover-bg-color;
 	color: $fh-button-hover-font-color;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+option:focus,
+button:focus  {
+	background-color: $fh-input-bg-color;
+	border-color: $fh-focus-border-color;
+}
+
+a.button-default[disabled], 
+input[disabled],
+textarea[disabled],
+select[disabled],
+option[disabled],
+button[disabled] {
+	cursor: default;
+	opacity: 0.35;
+	filter: alpha(opacity=35);
+	background-color: $bgcolor-btn;
+
+	&:hover {
+		background-color: $bgcolor-btn;
+		cursor: default;
+	}
+}
+
+
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+	outline: $fh-focus-border-color solid 0;
 }

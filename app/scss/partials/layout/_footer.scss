@@ -1,16 +1,14 @@
 
 footer {
+	font-size: $fontSize-small;
     max-width: 113.6rem;
     margin: 0 auto;
     text-align: center;
     width: 100%;
     clear: both;
     padding: $pica 0;
-
+	border-top: 1px solid $color-border-grey;
     p {
     	margin: 0;
     }
-}
-section footer {
-	border-top: 1px solid $color-border-grey;
 }

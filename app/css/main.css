@@ -508,7 +508,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "liga" on; }
 
-.author-corresponding, .authors-list {
+.author-corresponding, .authors-list, .validation-message {
   font-size: 1.4rem;
   line-height: 1.6rem; }
 
@@ -528,6 +528,542 @@ section .percent {
 
 section dt, section .subtotal dd {
   font-family: "Myriad W01 Bd", sans-serif; }
+
+/*
+Flex Grid Framework
+Platform: Sass (.scss)
+
+Original repository:
+https://github.com/afonsopacifer/flex-grid-framework
+Website:
+http://flexgridframework.com/
+Author:
+Afonso Pacifer (afonsopacifer.com)
+Version: 1.3.1
+Licence:
+MIT - https://github.com/afonsopacifer/flex-grid-framework/blob/master/licence.md
+* /
+
+/* Configs
+------------------------------------------------*/
+/* Row
+------------------------------------------------*/
+/* Columns
+------------------------------------------------*/
+/* Offset
+------------------------------------------------*/
+/* Flex Container
+------------------------------------------------*/
+/* Flex Items
+------------------------------------------------*/
+header {
+  max-width: 113.6rem;
+  margin: 3rem auto 0;
+  padding: 0 1.5rem; }
+  header .container {
+    min-height: 88px; }
+  header a.logo {
+    width: 72px;
+    height: 72px;
+    outline: 0 none;
+    line-height: 0;
+    float: left;
+    margin-bottom: 3rem; }
+  header h1 {
+    color: #000;
+    font-family: "Myriad W01 Lt", sans-serif;
+    letter-spacing: 2px;
+    margin: 0 auto 1.5rem;
+    width: 50%;
+    position: relative;
+    text-align: center;
+    top: 4.8rem; }
+  header nav {
+    clear: both;
+    border-top: 1px solid #D1D1D1; }
+    header nav li {
+      display: inline-block;
+      margin-right: 3.4rem;
+      padding: 0.8rem 0; }
+      header nav li:first-child:after {
+        width: 9px;
+        height: 9px;
+        border-right: 1px solid #6cb33e;
+        border-bottom: 1px solid #6cb33e;
+        content: "";
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: -2.2rem; }
+      header nav li.steps--enabled {
+        color: #00718f; }
+      header nav li.steps--disabled {
+        color: #BABABA; }
+
+main {
+  max-width: 113.6rem;
+  margin: 0 auto;
+  padding: 0 1.6rem; }
+
+section {
+  background-color: #FFF;
+  margin-top: 1.6rem;
+  padding: 0;
+  border-radius: 0.5rem 0.5rem 0 0;
+  position: relative; }
+  section .section-title {
+    background-color: #00718f;
+    border-radius: 0.5rem 0.5rem 0 0; }
+  section h2 {
+    margin: 0;
+    padding: 0.8rem 1.6rem 0.8rem 3.2rem;
+    color: #FFF; }
+  section.article-details {
+    margin-top: 0; }
+  section .section-content,
+  section .invoice-details {
+    padding: 3.2rem; }
+  section .invoice-details,
+  section footer {
+    background-color: #F5F5F5; }
+  section .section-content--left,
+  section .section-content--right {
+    width: 46%;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 3.2rem; }
+  section dl {
+    float: right;
+    height: auto;
+    width: 100%;
+    margin-bottom: 0.4rem; }
+  section dt {
+    float: left;
+    padding: 0 1.6rem 0 0;
+    width: 30%;
+    white-space: nowrap; }
+  section dd {
+    float: right;
+    width: 65%; }
+  section .invoice-details__apc dl {
+    float: left;
+    width: 70%; }
+  section .invoice-details__apc dt {
+    width: 62%;
+    white-space: nowrap; }
+  section .invoice-details__apc dd {
+    width: 33%;
+    text-align: right;
+    white-space: nowrap; }
+  section .invoice-details__apc .net-charges {
+    margin-top: 0.4rem; }
+  section .invoice-details__apc .net-charges dt {
+    border-top: 1px solid transparent;
+    padding-top: 0.8rem; }
+  section .invoice-details__apc .net-charges dd {
+    border-top: 1px solid #B5B5B5;
+    padding-top: 0.8rem; }
+  section .invoice-details__apc .subtotal {
+    border-top: 1px solid #B5B5B5;
+    margin: 0.4rem 0 1.2rem;
+    padding-top: 1.6rem; }
+  section .icon-help {
+    background-color: transparent;
+    background-image: url(../images/help.svg);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    -webkit-background-size: 24px 24px;
+    -moz-background-size: 24px 24px;
+    -o-background-size: 24px 24px;
+    -ms-background-size: 24px 24px;
+    background-position: center center;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: text-bottom;
+    cursor: pointer;
+    margin-left: 0.4rem; }
+    section .icon-help:hover, section .icon-help:focus, section .icon-help:active {
+      background-image: url(../images/help-hover.svg); }
+  section form {
+    width: 70%; }
+    section form .icon-help {
+      margin-top: 0.4rem; }
+  section p {
+    margin: 0 0 1.6rem 0; }
+  section header {
+    border-bottom: 1px solid #D1D1D1;
+    padding: 0 3.2rem 1.6rem 3.2rem;
+    margin-top: 1.6rem; }
+    section header span {
+      margin-right: 3.2rem;
+      display: inline-block; }
+      section header span label {
+        padding-top: 0.15rem;
+        display: inline-block;
+        float: right; }
+  section .payment-options__list {
+    margin-bottom: 3.2rem;
+    height: 75px; }
+    section .payment-options__list li {
+      display: inline-block;
+      float: left;
+      width: 150px;
+      height: 75px;
+      margin-right: 1.6rem; }
+
+.section-content.formdt .section-content--right {
+  padding-top: 0;
+  padding-right: 0;
+  width: 49.5333%; }
+  .section-content.formdt .section-content--right .nofloat {
+    float: none;
+    width: 100%; }
+    .section-content.formdt .section-content--right .nofloat textarea {
+      margin: 1.6rem 0 0;
+      height: 16.6rem; }
+
+.section-content.formdt dl {
+  margin-bottom: 0; }
+
+.section-content.formdt dt {
+  padding: 1.4rem 0 0; }
+
+.section-content.formdt input[type="submit"] {
+  margin-top: 3.2rem; }
+
+.align-right {
+  text-align: right;
+  margin-bottom: 1.6rem; }
+  .align-right *:last-child {
+    margin-right: 0; }
+
+.inputtext50 input[type="text"] {
+  width: 47.53333%;
+  float: left; }
+  .inputtext50 input[type="text"]:last-child {
+    margin-right: 0;
+    float: right; }
+
+.no-screen {
+  display: none; }
+
+.validation-message {
+  color: red;
+  line-height: 2.4rem; }
+
+/* lightbox */
+#lightbox {
+  z-index: 90;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  display: none;
+  top: 0;
+  border-radius: 0.5rem 0.5rem 0 0; }
+
+#lightbox_panel {
+  position: absolute;
+  z-index: 99;
+  width: 800px;
+  height: auto;
+  margin: 0 auto;
+  background-color: #fff;
+  display: none;
+  padding: 0px;
+  left: 15%;
+  top: 26%;
+  border-radius: 0.5rem; }
+
+#lightbox_panel .lightbox_panel__content {
+  padding: 0 3.2rem 1.6rem; }
+  #lightbox_panel .lightbox_panel__content p {
+    margin: 1.6rem 0; }
+
+#close_lightbox {
+  color: #FFF;
+  padding: 0.4rem 0.8rem; }
+  #close_lightbox:hover {
+    color: #FFF; }
+
+.float-right {
+  float: right; }
+
+footer {
+  font-size: 1.6rem;
+  max-width: 113.6rem;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  clear: both;
+  padding: 1.6rem 0;
+  border-top: 1px solid #D1D1D1; }
+  footer p {
+    margin: 0; }
+
+/* FormHack v1.2.0 (formhack.io) */
+/* Global Reset Styles ------------------ */
+input,
+textarea,
+select,
+option,
+optgroup,
+button,
+legend,
+fieldset {
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Myriad W01 Regular", sans-serif, sans-serif;
+  font-size: 1.8rem;
+  color: #787878;
+  vertical-align: top;
+  margin: 0 0; }
+
+datalist {
+  font-family: "Myriad W01 Regular", sans-serif, sans-serif;
+  font-size: 1.8rem; }
+
+label {
+  margin: 0 0 0 0.8rem; }
+
+/* Input & Textarea ------------------ */
+/* Fields with standard width */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="number"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[list],
+input[type="file"],
+select {
+  width: 100%;
+  max-width: 100%;
+  padding: 1.3rem 0 0;
+  background-color: #FFFFFF;
+  border: none;
+  border-bottom: 1px solid #C8C8C8; }
+
+.invoice-details__apc input[type="text"] {
+  border: 1px solid #C8C8C8;
+  width: 60%;
+  padding: 0 0.8rem;
+  height: 3.2rem;
+  border-radius: 0.5rem; }
+  .invoice-details__apc input[type="text"]:focus {
+    background-color: #FFFFFF;
+    border-color: #787878; }
+
+/* Fields with standard height */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="number"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[list] {
+  height: 4rem;
+  -webkit-appearance: none; }
+
+/* Other */
+textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.8rem;
+  background-color: #FFFFFF;
+  border-radius: 0;
+  border: 1px solid #C8C8C8;
+  resize: none;
+  -webkit-appearance: none;
+  overflow: auto; }
+
+input[type="range"] {
+  height: 4rem;
+  width: 100%;
+  max-width: 100%; }
+
+input[type="file"] {
+  min-height: 4rem; }
+
+input[type="search"] {
+  height: 4rem;
+  -webkit-appearance: none; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline-block;
+  vertical-align: middle; }
+
+/* Select ------------------ */
+select {
+  height: 29px;
+  margin-top: 1.3rem;
+  padding: 0;
+  border-radius: 0;
+  background-attachment: scroll;
+  background-clip: padding-box;
+  background-color: transparent;
+  background-image: url("../images/arrow-down.svg");
+  background-origin: padding-box;
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  -webkit-background-size: 12px 12px;
+  -moz-background-size: 12px 12px;
+  -o-background-size: 12px 12px;
+  -ms-background-size: 12px 12px;
+  background-position: right center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none; }
+  select::-ms-expand {
+    display: none; }
+
+select[multiple] {
+  height: auto;
+  min-height: 4rem;
+  padding: 0; }
+  select[multiple] option {
+    margin: 0;
+    padding: 0.8rem; }
+
+/* Fieldset ------------------ */
+fieldset {
+  padding: 1rem 2.5rem;
+  border-radius: 0;
+  border: 1px solid #C8C8C8; }
+
+legend {
+  padding: 0 0.5rem;
+  font-weight: 700; }
+
+/* Buttons, Input Type Submit/Reset ------------------ */
+.button-default,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="image"] {
+  display: inline-block;
+  text-decoration: none;
+  margin: 1.6rem 1.2rem 0 0;
+  font: 1.6rem/1.7rem "Myriad W01 Bd", sans-serif;
+  color: #FFF;
+  height: 32px;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  text-decoration: none;
+  padding: 0.8rem 1.6rem 0.8rem;
+  border-width: 0;
+  border-radius: 0.5rem;
+  cursor: pointer; }
+
+.button-default,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="image"] {
+  background-color: #6cb33e;
+  position: relative; }
+  .button-default:hover, .button-default:active, .button-default:focus,
+  button:hover,
+  button:active,
+  button:focus,
+  input[type="button"]:hover,
+  input[type="button"]:active,
+  input[type="button"]:focus,
+  input[type="submit"]:hover,
+  input[type="submit"]:active,
+  input[type="submit"]:focus,
+  input[type="reset"]:hover,
+  input[type="reset"]:active,
+  input[type="reset"]:focus,
+  input[type="image"]:hover,
+  input[type="image"]:active,
+  input[type="image"]:focus {
+    background-color: #568f32;
+    color: #FFF;
+    border-color: #787878; }
+
+a.button-default {
+  height: 16px; }
+
+.invoice-details__apc .button-default {
+  margin: 0 0 0 1px; }
+
+input[type="image"] {
+  text-align: center;
+  padding: 0.8rem; }
+
+/* States ------------------ */
+a.button-default:hover,
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus {
+  background-color: #568f32;
+  color: #FFF; }
+
+input:focus,
+textarea:focus,
+select:focus,
+option:focus,
+button:focus {
+  background-color: #FFFFFF;
+  border-color: #787878; }
+
+a.button-default[disabled],
+input[disabled],
+textarea[disabled],
+select[disabled],
+option[disabled],
+button[disabled] {
+  cursor: default;
+  opacity: 0.35;
+  filter: alpha(opacity=35);
+  background-color: #6cb33e; }
+  a.button-default[disabled]:hover,
+  input[disabled]:hover,
+  textarea[disabled]:hover,
+  select[disabled]:hover,
+  option[disabled]:hover,
+  button[disabled]:hover {
+    background-color: #6cb33e;
+    cursor: default; }
+
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+  outline: #787878 solid 0; }
 
 /* ==========================================================================
    Print styles.
@@ -582,362 +1118,10 @@ section dt, section .subtotal dd {
     widows: 3; }
   h2,
   h3 {
-    page-break-after: avoid; } }
-
-/*
-Flex Grid Framework
-Platform: Sass (.scss)
-
-Original repository:
-https://github.com/afonsopacifer/flex-grid-framework
-Website:
-http://flexgridframework.com/
-Author:
-Afonso Pacifer (afonsopacifer.com)
-Version: 1.3.1
-Licence:
-MIT - https://github.com/afonsopacifer/flex-grid-framework/blob/master/licence.md
-* /
-
-/* Configs
-------------------------------------------------*/
-/* Row
-------------------------------------------------*/
-/* Columns
-------------------------------------------------*/
-/* Offset
-------------------------------------------------*/
-/* Flex Container
-------------------------------------------------*/
-/* Flex Items
-------------------------------------------------*/
-header {
-  max-width: 113.6rem;
-  margin: 3rem auto 0;
-  padding: 0 1.5rem; }
-  header a.logo {
-    width: 72px;
-    height: 72px;
-    outline: 0 none;
-    line-height: 0;
-    float: left;
-    margin-bottom: 3rem; }
-  header h1 {
-    color: #000;
-    font-family: "Myriad W01 Lt", sans-serif;
-    letter-spacing: 2px;
-    margin: 0 auto 1.5rem;
-    width: 50%;
-    position: relative;
-    text-align: center;
-    top: 4.8rem; }
-  header nav {
-    clear: both;
-    border-top: 1px solid #B5B5B5; }
-    header nav li {
-      display: inline-block;
-      margin-right: 3.4rem;
-      padding: 0.8rem 0; }
-      header nav li:first-child:after {
-        width: 9px;
-        height: 9px;
-        border-right: 1px solid #6cb33e;
-        border-bottom: 1px solid #6cb33e;
-        content: "";
-        -webkit-transform: rotate(-45deg);
-                transform: rotate(-45deg);
-        -webkit-user-select: none;
-           -moz-user-select: none;
-            -ms-user-select: none;
-                user-select: none;
-        display: block;
-        position: absolute;
-        top: 1.5rem;
-        right: -2.2rem; }
-      header nav li.steps--enabled {
-        color: #00718f; }
-      header nav li.steps--disabled {
-        color: #BABABA; }
-
-main {
-  max-width: 113.6rem;
-  margin: 0 auto;
-  padding: 0 1.6rem; }
-
-section {
-  background-color: #FFF;
-  margin-bottom: 1.6rem;
-  padding: 0;
-  border-radius: 5px 5px 0 0; }
-  section .section-title {
-    background-color: #00718f;
-    border-radius: 5px 5px 0 0; }
-  section h2 {
-    margin: 0;
-    padding: 0.8rem 3.2rem;
-    color: #FFF; }
-  section .section-content,
-  section .invoice-details {
-    padding: 3.2rem; }
-  section .invoice-details,
-  section footer {
-    background-color: #F5F5F5; }
-  section .section-content--left,
-  section .section-content--right {
-    width: 47%;
-    display: inline-block;
-    vertical-align: top;
-    padding-right: 30px; }
-  section dl {
-    float: right;
-    height: auto;
-    width: 100%;
-    margin-bottom: 0.4rem; }
-  section dt {
-    float: left;
-    padding: 0 1.6rem 0 0;
-    width: 27%;
-    white-space: nowrap; }
-  section dd {
-    float: right;
-    width: 68%; }
-  section .invoice-details__checkout dl {
-    float: left;
-    width: 70%; }
-  section .invoice-details__checkout dt {
-    width: 62%;
-    white-space: nowrap; }
-  section .invoice-details__checkout dd {
-    width: 33%;
-    text-align: right;
-    white-space: nowrap; }
-  section .invoice-details__checkout .net-charges dt {
-    border-top: 1px solid transparent;
-    padding-top: 0.4rem; }
-  section .invoice-details__checkout .net-charges dd {
-    border-top: 1px solid #B5B5B5;
-    padding-top: 0.4rem; }
-  section .invoice-details__checkout .subtotal {
-    border-top: 1px solid #B5B5B5;
-    margin: 0.8rem 0 1.6rem;
-    padding-top: 1.6rem; }
-
-footer {
-  max-width: 113.6rem;
-  margin: 0 auto;
-  text-align: center;
-  width: 100%;
-  clear: both;
-  padding: 1.6rem 0; }
-  footer p {
-    margin: 0; }
-
-section footer {
-  border-top: 1px solid #B5B5B5; }
-
-.button-default,
-input[type=button],
-input[type=submit] {
-  display: inline-block;
-  text-decoration: none;
-  margin: 0;
-  text-transform: uppercase;
-  font: 1.4rem/1.7rem "Myriad W01 Regular", sans-serif;
-  color: #FFF;
-  height: 20px;
-  -webkit-transition: all ease 0.3s;
-  transition: all ease 0.3s;
-  text-decoration: none;
-  padding: 0.8rem 1.6rem 0.8rem;
-  border-width: 0;
-  border-radius: 0.5rem; }
-
-.button-default,
-input[type=button],
-input[type=submit] {
-  background-color: #6cb33e;
-  position: relative; }
-  .button-default:hover, .button-default:active, .button-default:focus,
-  input[type=button]:hover,
-  input[type=button]:active,
-  input[type=button]:focus,
-  input[type=submit]:hover,
-  input[type=submit]:active,
-  input[type=submit]:focus {
-    background-color: #568f32;
-    color: #FFF; }
-
-/* FormHack v1.2.0 (formhack.io) */
-/* Global Reset Styles ------------------ */
-input,
-textarea,
-select,
-option,
-optgroup,
-button,
-legend,
-fieldset {
-  box-sizing: border-box;
-  outline: none;
-  font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  color: #282828;
-  vertical-align: top;
-  display: block;
-  margin: 10px 0; }
-
-datalist {
-  font-family: "Raleway", sans-serif;
-  font-size: 16px; }
-
-label {
-  display: block;
-  margin: 10px 0; }
-
-/* Input & Textarea ------------------ */
-/* Fields with standard width */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="search"],
-input[type="color"],
-input[type="date"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="number"],
-input[type="tel"],
-input[type="time"],
-input[type="url"],
-input[type="week"],
-input[list],
-input[type="file"],
-select,
-textarea {
-  width: 100%;
-  max-width: 400px;
-  padding: 8px;
-  background-color: #fff;
-  border-radius: 5px;
-  border: 1px solid #c8c8c8; }
-
-/* Fields with standard height */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="search"],
-input[type="color"],
-input[type="date"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="number"],
-input[type="tel"],
-input[type="time"],
-input[type="url"],
-input[type="week"],
-input[list] {
-  height: 40px;
-  -webkit-appearance: none; }
-
-/* Other */
-textarea {
-  -webkit-appearance: none;
-  overflow: auto; }
-
-input[type="range"] {
-  height: 40px;
-  width: 100%;
-  max-width: 400px; }
-
-input[type="file"] {
-  min-height: 40px; }
-
-input[type="search"] {
-  height: 40px;
-  -webkit-appearance: none; }
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
-
-input[type="checkbox"],
-input[type="radio"] {
-  display: inline-block;
-  vertical-align: middle; }
-
-/* Select ------------------ */
-select {
-  height: 40px; }
-
-select[multiple] {
-  height: auto;
-  min-height: 40px;
-  padding: 0; }
-  select[multiple] option {
-    margin: 0;
-    padding: 8px; }
-
-/* Fieldset ------------------ */
-fieldset {
-  padding: 10px 25px;
-  border-radius: 5px;
-  border: 1px solid #c8c8c8; }
-
-legend {
-  padding: 0 5px;
-  font-weight: 700; }
-
-/* Buttons, Input Type Submit/Reset ------------------ */
-button,
-input[type="button"],
-input[type="submit"],
-input[type="reset"],
-input[type="image"] {
-  height: 40px;
-  width: 100%;
-  max-width: 200px;
-  background-color: gainsboro;
-  padding: 8px;
-  cursor: pointer;
-  color: #282828;
-  font-weight: 700;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border-radius: 5px;
-  border: 1px solid #c8c8c8; }
-
-input[type="image"] {
-  text-align: center;
-  padding: 8px; }
-
-/* States ------------------ */
-input[disabled],
-textarea[disabled],
-select[disabled],
-option[disabled],
-button[disabled] {
-  cursor: not-allowed; }
-
-input:focus,
-textarea:focus,
-select:focus,
-option:focus,
-button:focus {
-  background-color: gainsboro;
-  border-color: #c8c8c8; }
-
-input[type="checkbox"]:focus,
-input[type="radio"]:focus {
-  outline: #c8c8c8 solid 2px; }
-
-button:hover,
-input[type="button"]:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-button:focus,
-input[type="button"]:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus {
-  background-color: #c8c8c8;
-  color: #282828; }
+    page-break-after: avoid; }
+  .no-print {
+    display: none; }
+  .no-screen {
+    display: block; } }
 
 /*# sourceMappingURL=main.css.map */

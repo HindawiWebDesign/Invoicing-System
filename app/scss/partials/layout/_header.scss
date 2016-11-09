@@ -4,6 +4,10 @@ header {
     margin: 3rem auto 0;
     padding: 0 1.5rem;
 
+    .container {
+   	    min-height: 88px;
+    }
+
     a.logo {
 	    width: 72px;
 	    height: 72px;

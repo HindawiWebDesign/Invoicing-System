@@ -13,7 +13,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	-moz-font-feature-settings: "liga" on;
 }
-.author-corresponding, .authors-list {
+.author-corresponding, .authors-list, .validation-message {
 	font-size: $fontSize-smaller;
 	line-height: 1.6rem;
 }

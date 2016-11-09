@@ -178,36 +178,79 @@
        
 
         <!-- Paid By / Bill To section -->
-            <section class="bill-to">
+            <section class="billing-details">
                 <div class="section-title">
                    <h2>Bill to</h2>
                 </div>
-                <div class="section-content">
+
+                <header>
+                <div>
+                    <span><input type="radio" name="Bill-to" id="option1" value="Author" checked> <label for="option1">Author</label></span>
+                    <span><input type="radio" name="Bill-to" id="option2" value="Institution"> <label for="option2">Institution</label></span>
+                    <span><input type="radio" name="Bill-to" id="option3" value="Other"> <label for="option3">Other</label></span>
+                </div>  
+                </header>              
+                
+                <div class="section-content formdt">
+
+                
                     <div class="section-content--left">
                         <dl>
-                            <dt>Payer Name</dt>
-                            <dd>Jing Zhao</dd>
+                            <dt>Payer name</dt>
+                            <dd class="inputtext50">
+                                <input type="text" id="first-name" value="" placeholder="First Name">
+                                <input type="text" id="last-name" value="" placeholder="Last Name">
+                            </dd>
                         </dl>
+
                         <dl>
                             <dt>Email</dt>
-                            <dd>sample@sample.com</dd>
+                            <dd><input type="text" id="Email" value=""></dd>
                         </dl>
+                                         
                         <dl>
                             <dt>Address</dt>
-                            <dd>University of Cambridge</dd>
+                            <dd><input type="text" id="City" value="">
+                            <input type="text" id="City" value="">
+                            <input type="text" id="City" value="">
+
+                            </dd>
+                        </dl>
+                        
+                        <dl>
+                            <dt>City</dt>
+                            <dd><input type="text" id="City" value=""></dd>
                         </dl>
                         <dl>
                             <dt>Country</dt>
-                            <dd>United Kingdom</dd>
+                            <dd><select id="Country">
+                                <option value="Select Country">Select Country</option>
+                                <option value="Afghanistan">Afghanistan</option>
+                                <option value="Albania">Albania</option>
+                                <option value="Algeria">Algeria</option>
+                                </select>
+                            </dd>
                         </dl>
-                        <a href="" class="button-default">Edit / Change</a>
+
                     </div>
+                    <div class="section-content--right">
+                        <dl>
+                            <dt>Additional info
+                            <div class="percent">E.g (PO No. 000)</div>
+                            </dt>
+                            <dd class="nofloat"><textarea></textarea></dd>
+                        </dl>                                
+                                              
+                    </div>
+                    <input type="submit" name="" value="Save" class="button-default">
                 </div>
+                               
             </section>
 
             <div class="align-right">
-                <input type="submit" name="" value="Create Invoice" class="button-default">
+                <input type="submit" name="" value="Create Invoice" class="button-default" disabled="disabled">
             </div>
+
         </main>
 
         <footer>

@@ -178,31 +178,71 @@
        
 
         <!-- Paid By / Bill To section -->
-            <section class="bill-to">
+            <section class="billing-details">
                 <div class="section-title">
                    <h2>Bill to</h2>
-                </div>
-                <div class="section-content">
+                </div>                             
+                
+                <div class="section-content formdt">
+
+                <p>You have been designated by Jing Zhao to pay the Article Processing Charges of Article 1406304</p>
                     <div class="section-content--left">
-                        <dl>
-                            <dt>Payer Name</dt>
-                            <dd>Jing Zhao</dd>
+                       <dl>
+                            <dt>Institution name</dt>
+                            <dd><input type="text" id="Institution name" value=""></dd>
                         </dl>
+
+                        <dt>Contact Person</dt>
+                            <dd class="inputtext50">
+                                <input type="text" id="first-name" value="" placeholder="First Name">
+                                <input type="text" id="last-name" value="" placeholder="Last Name">
+                               
+                            </dd>
+
                         <dl>
                             <dt>Email</dt>
-                            <dd>sample@sample.com</dd>
+                            <dd><input type="text" id="Email" value=""></dd>
                         </dl>
                         <dl>
                             <dt>Address</dt>
-                            <dd>University of Cambridge</dd>
+                            <dd><input type="text" id="Address" value="">
+                            <input type="text" id="Address" value="">
+                            <input type="text" id="Address" value="">
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt>City</dt>
+                            <dd><input type="text" id="City" value=""></dd>
                         </dl>
                         <dl>
                             <dt>Country</dt>
-                            <dd>United Kingdom</dd>
+                            <dd><select id="Country">
+                                <option value="Select Country">Select Country</option>
+                                <option value="Afghanistan">Afghanistan</option>
+                                <option value="Albania">Albania</option>
+                                <option value="Algeria">Algeria</option>
+                                </select>
+                            </dd>
                         </dl>
-                        <a href="" class="button-default">Edit / Change</a>
+                        <dl>
+                            <dt>EC VAT Reg. No.</dt>
+                            <dd><input type="text" id="VAT" value=""></dd>
+                        </dl>
+
                     </div>
+                    <div class="section-content--right">
+                        <dl>
+                            <dt>Additional info
+                            <div class="percent">E.g (PO No. 000)</div>
+                            </dt>
+                            <dd class="nofloat"><textarea></textarea></dd>
+                        </dl>                                
+                                              
+                    </div>
+                    <input type="submit" name="" value="Save" class="button-default">
                 </div>
+                               
             </section>
 
             <div class="align-right">

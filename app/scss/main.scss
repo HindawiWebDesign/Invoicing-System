@@ -8,7 +8,6 @@
 @import 'partials/base/normalize';
 @import 'partials/base/global';
 @import 'partials/base/typography';
-@import 'partials/base/print';
 
 // layout Styles
 @import 'partials/layout/grid';
@@ -18,12 +17,15 @@
 @import 'partials/layout/footer';
 
 // components Styles
-@import 'partials/components/buttons';
 @import 'partials/components/forms';
 @import 'partials/components/navigation';
 
 // pages Styles
 @import 'partials/pages/home';
 
+// Print Styles
+@import 'partials/base/print';
+
 // plugins Styles
 //@import 'partials/plugins/';
+
