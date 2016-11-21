@@ -310,12 +310,32 @@ input[type="image"] {
 a.button-default {
 	height: 16px;
 }
-
 .invoice-details__apc {
 
 	.button-default  {
 		margin: 0 0 0 1px;
 	}
+}
+
+.paypal {
+	.button-paypal  {
+		background-color: transparent;
+		font-size: 0;
+	    height: 73px;
+		line-height: 0;
+		margin: 0;
+		padding: $pica;
+	    width: 155px;
+	}
+	img {
+		width: 123px;
+	}
+}
+
+.transfer div {
+	padding: $pica $pica 0;
+	text-transform: uppercase;
+    white-space: nowrap;
 }
 
 input[type="image"] {

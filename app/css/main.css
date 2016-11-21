@@ -512,9 +512,6 @@ body {
   font-size: 1.4rem;
   line-height: 1.6rem; }
 
-.authors-list a {
-  text-decoration: underline; }
-
 h1, h2, h3, h4, h5, h6, b, strong {
   font-family: "Myriad W01 Bd", sans-serif;
   font-weight: normal;
@@ -528,6 +525,9 @@ section .percent {
 
 section dt, section .subtotal dd {
   font-family: "Myriad W01 Bd", sans-serif; }
+
+section a {
+  text-decoration: underline; }
 
 /*
 Flex Grid Framework
@@ -696,7 +696,11 @@ section {
     section form .icon-help {
       margin-top: 0.4rem; }
   section p {
-    margin: 0 0 1.6rem 0; }
+    margin: 1.6rem 0; }
+    section p:first-child {
+      margin-top: 0; }
+    section p:last-child {
+      margin-bottom: 0; }
   section header {
     border-bottom: 1px solid #D1D1D1;
     padding: 0 3.2rem 1.6rem 3.2rem;
@@ -714,9 +718,14 @@ section {
     section .payment-options__list li {
       display: inline-block;
       float: left;
-      width: 150px;
-      height: 75px;
-      margin-right: 1.6rem; }
+      width: 155px;
+      height: 73px;
+      margin-right: 1.6rem;
+      border: 1px solid #D1D1D1;
+      text-align: center; }
+  section .paypal form {
+    width: 100%;
+    height: 100%; }
 
 .section-content.formdt .section-content--right {
   padding-top: 0;
@@ -788,10 +797,10 @@ section {
     margin: 1.6rem 0; }
 
 #close_lightbox {
-  color: #FFF;
+  color: #FFFFFF;
   padding: 0.4rem 0.8rem; }
   #close_lightbox:hover {
-    color: #FFF; }
+    color: #FFFFFF; }
 
 .float-right {
   float: right; }
@@ -973,7 +982,7 @@ input[type="image"] {
   text-decoration: none;
   margin: 1.6rem 1.2rem 0 0;
   font: 1.6rem/1.7rem "Myriad W01 Bd", sans-serif;
-  color: #FFF;
+  color: #FFFFFF;
   height: 32px;
   -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
@@ -1008,7 +1017,7 @@ input[type="image"] {
   input[type="image"]:active,
   input[type="image"]:focus {
     background-color: #568f32;
-    color: #FFF;
+    color: #FFFFFF;
     border-color: #787878; }
 
 a.button-default {
@@ -1016,6 +1025,23 @@ a.button-default {
 
 .invoice-details__apc .button-default {
   margin: 0 0 0 1px; }
+
+.paypal .button-paypal {
+  background-color: transparent;
+  font-size: 0;
+  height: 73px;
+  line-height: 0;
+  margin: 0;
+  padding: 1.6rem;
+  width: 155px; }
+
+.paypal img {
+  width: 123px; }
+
+.transfer div {
+  padding: 1.6rem 1.6rem 0;
+  text-transform: uppercase;
+  white-space: nowrap; }
 
 input[type="image"] {
   text-align: center;
@@ -1032,7 +1058,7 @@ input[type="button"]:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus {
   background-color: #568f32;
-  color: #FFF; }
+  color: #FFFFFF; }
 
 input:focus,
 textarea:focus,

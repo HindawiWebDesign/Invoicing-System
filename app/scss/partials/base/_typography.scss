@@ -7,7 +7,7 @@ body {
 	font-weight: normal;
 	font-style: normal;
 	line-height: 2.4rem;
-	color: #787878;
+	color: $color-body-text;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -17,9 +17,7 @@ body {
 	font-size: $fontSize-smaller;
 	line-height: 1.6rem;
 }
-.authors-list a {
-	text-decoration: underline;
-}
+
 h1, h2, h3, h4, h5, h6, b, strong {
 	font-family: $myriadBold;
 	font-weight: normal;
@@ -35,6 +33,9 @@ section {
 	}
 	dt, .subtotal dd {
 		font-family: $myriadBold;
+	}
+	a {
+		text-decoration: underline;
 	}
 }
 
