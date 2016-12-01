@@ -493,6 +493,49 @@ a {
   a:hover {
     color: #00718f; }
 
+/* ==========================================================================
+   General Display/Float/Align/V. Align/Wrap
+   ========================================================================== */
+/* General Display */
+.display-none,
+.display_none,
+.no-screen {
+  display: none; }
+
+.display-inl_block {
+  display: inline-block; }
+
+.display-block {
+  display: block; }
+
+/* General Float */
+.float-right {
+  float: right; }
+
+.float-left {
+  float: left; }
+
+/* General Align */
+.align-right {
+  text-align: right; }
+
+.align-left {
+  text-align: left; }
+
+.align-center {
+  text-align: center; }
+
+/* General Vertical Align */
+.valign-top {
+  vertical-align: top; }
+
+/* General Wrap */
+.nowrap {
+  white-space: nowrap; }
+
+.pre_line {
+  white-space: pre-line; }
+
 html {
   font-size: 62.5%; }
 
@@ -508,7 +551,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "liga" on; }
 
-.author-corresponding, .authors-list, .validation-message {
+.author-corresponding, .author-orcid, .validation-message {
+  font-family: "Myriad W01 Regular", sans-serif;
   font-size: 1.4rem;
   line-height: 1.6rem; }
 
@@ -748,7 +792,6 @@ section {
   margin-top: 3.2rem; }
 
 .align-right {
-  text-align: right;
   margin-bottom: 1.6rem; }
   .align-right *:last-child {
     margin-right: 0; }
@@ -760,50 +803,9 @@ section {
     margin-right: 0;
     float: right; }
 
-.no-screen {
-  display: none; }
-
 .validation-message {
   color: red;
   line-height: 2.4rem; }
-
-/* lightbox */
-#lightbox {
-  z-index: 90;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.4);
-  width: 100%;
-  height: 100%;
-  display: none;
-  top: 0;
-  border-radius: 0.5rem 0.5rem 0 0; }
-
-#lightbox_panel {
-  position: absolute;
-  z-index: 99;
-  width: 800px;
-  height: auto;
-  margin: 0 auto;
-  background-color: #fff;
-  display: none;
-  padding: 0px;
-  left: 15%;
-  top: 26%;
-  border-radius: 0.5rem; }
-
-#lightbox_panel .lightbox_panel__content {
-  padding: 0 3.2rem 1.6rem; }
-  #lightbox_panel .lightbox_panel__content p {
-    margin: 1.6rem 0; }
-
-#close_lightbox {
-  color: #FFFFFF;
-  padding: 0.4rem 0.8rem; }
-  #close_lightbox:hover {
-    color: #FFFFFF; }
-
-.float-right {
-  float: right; }
 
 footer {
   font-size: 1.6rem;
@@ -1026,6 +1028,9 @@ a.button-default {
 .invoice-details__apc .button-default {
   margin: 0 0 0 1px; }
 
+.billing-details header span .button-default {
+  margin: 0 0 0 -2.4rem; }
+
 .paypal .button-paypal {
   background-color: transparent;
   font-size: 0;
@@ -1090,6 +1095,96 @@ button[disabled] {
 input[type="checkbox"]:focus,
 input[type="radio"]:focus {
   outline: #787878 solid 0; }
+
+input.invalid,
+textarea.invalid,
+select.invalid,
+input.invalid:focus,
+textarea.invalid:focus,
+select.invalid:focus {
+  border-color: #FF0000;
+  color: #FF0000; }
+
+.modal {
+  display: block;
+  padding: 0 1em;
+  width: 100%;
+  border-radius: 0.5rem 0.5rem 0 0; }
+
+label.for-modal {
+  cursor: pointer;
+  margin: 0;
+  padding: 0; }
+
+label.for-modal:hover {
+  -webkit-transform: scale(0.97);
+  transform: scale(0.97); }
+
+.modal input {
+  position: absolute;
+  right: 100px;
+  top: 30px;
+  z-index: -10;
+  display: none; }
+
+.modal__overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -800;
+  border-radius: 0.5rem 0.5rem 0 0; }
+
+.modal__box {
+  padding: 0;
+  position: relative;
+  margin: 1em auto;
+  max-width: 500px;
+  width: 90%;
+  background-color: #fff;
+  border-radius: 0.5rem 0.5rem 0 0;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -80%);
+  transform: translate(-50%, -80%); }
+
+.modal__box label {
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1.5em;
+  right: .5em;
+  top: .5em;
+  width: 24px;
+  height: 24px; }
+
+.modal__overlay {
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1); }
+
+input:checked ~ .modal__overlay {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: 800; }
+
+input:focus + label {
+  -webkit-transform: scale(0.97);
+  transform: scale(0.97); }
+
+.modal__box__content {
+  padding: 1.6rem 3.2rem 1.6rem; }
+  .modal__box__content p {
+    margin: 1.6rem 0; }
 
 /* ==========================================================================
    Print styles.

@@ -13,7 +13,8 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	-moz-font-feature-settings: "liga" on;
 }
-.author-corresponding, .authors-list, .validation-message {
+.author-corresponding, .author-orcid, .validation-message {
+	font-family: $myriadRegular;
 	font-size: $fontSize-smaller;
 	line-height: 1.6rem;
 }

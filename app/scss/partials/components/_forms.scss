@@ -311,9 +311,13 @@ a.button-default {
 	height: 16px;
 }
 .invoice-details__apc {
-
 	.button-default  {
 		margin: 0 0 0 1px;
+	}
+}
+.billing-details header span {
+	.button-default  {
+		margin: 0 0 0 -2.4rem;
 	}
 }
 
@@ -389,4 +393,14 @@ button[disabled] {
 input[type="checkbox"]:focus,
 input[type="radio"]:focus {
 	outline: $fh-focus-border-color solid 0;
+}
+
+input.invalid, 
+textarea.invalid, 
+select.invalid, 
+input.invalid:focus, 
+textarea.invalid:focus, 
+select.invalid:focus {
+	border-color: $color-border-red;
+	color: $color-red;
 }

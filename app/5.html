@@ -18,7 +18,6 @@
         <!--build:css css/main.min.css-->
         <link rel="stylesheet" href="css/main.css">
         <!-- endbuild -->
-        
     </head>
     <body>
         <!--[if lt IE 9]>
@@ -42,26 +41,32 @@
                    <h2>Article Details</h2>
                 </div>
 
-                <div id="lightbox">
-                    <div id="lightbox_panel">
-                        <div class="section-title">
-                           <h2>The Coupon or The list of Authors
-                                <span class="float-right">
-                                    <a id="close_lightbox" href="#">X</a>
-                                </span>
-                           </h2>
-                        </div>
-                        <div class="lightbox_panel__content">
-                            <p>This box will open will display the list of Authors or the detailed information about the coupon policy.</p>
-                            <ul>
-                                <li>Author 1</li>
-                                <li>Author 2</li>
-                                <li>Author 3</li>
-                                <li>Author 4</li>
-                            </ul>
+                <!-- Modal start -->
+                <div class="modal">
+                    <input id="modal" type="checkbox" name="modal" tabindex="1">
+                    <div class="modal__overlay">
+                        <div class="modal__box">
+                            <div class="section-title">
+                                <h2>The Coupon or The list of Authors
+                                    <span class="float-right">
+                                        <label for="modal">&#10005;</label>
+                                    </span>
+                                </h2>
+                            </div>
+                            <div class="modal__box__content">
+                                <p>This box will open to display the list of Authors or the detailed information about the coupon policy.</p>
+                                <ul>
+                                    <li>Author 1</li>
+                                    <li>Author 2</li>
+                                    <li>Author 3</li>
+                                    <li>Author 4</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!-- Modal end -->
+
 
                 <div class="section-content">
                     <div class="section-content--left">
@@ -88,7 +93,11 @@
                     </div>
                     <div class="section-content--right">
                         <dl>
-                            <dt>Type</dt>
+                            <dt>Article ID</dt>
+                            <dd>1406304</dd>
+                        </dl> 
+                        <dl>
+                            <dt>Article Type</dt>
                             <dd>Research Article</dd>
                         </dl>
                         <dl>
@@ -96,43 +105,30 @@
                             <dd>CC-BY 4.0</dd>
                         </dl>
                         <dl class="no-print">
-                            <dt>Author</dt>
-                            <dd>Jing Zhao 
-                                <span class="author-corresponding">(corresponding author)</span> 
-                                <div class="authors-list"><a href="#" class="lightbox_button">View authors list</a></div>
+                            <dt>
+                                Author
+                                <span class="author-corresponding">(Corresponding)</span>
+                            </dt>
+                            <dd>
+                                Jing Zhao 
+                                <span class="author-orcid nowrap">(ORCID: 0000-0002-8140-3658)</span>
                             </dd>
                         </dl>
                         <dl class="no-print">
-                            <dt>ORCID ID</dt>
-                            <dd>0000-0002-8140-3658</dd>
+                            <dt>Additional Authors</dt>
+                            <dd>
+                                <div class="authors-list"> 
+                                    <label class="for-modal" for="modal" >
+                                        <a>View authors list</a>
+                                    </label>
+                                </div>
+                            </dd>
                         </dl>
-                        <dl>
-                            <dt>Article ID</dt>
-                            <dd>1406304</dd>
-                        </dl> 
                     </div>
                 </div>
                 <div class="invoice-details">
                     <p>Charges for article publication as per article details above</p>
                     <div class="section-content--left">
-                        <dl>
-                            <dt>Invoice Issue Date</dt>
-                            <dd>20 October 2016</dd>
-                        </dl>
-                        <dl>
-                            <dt>Date of Supply</dt>
-                            <dd>20 October 2016</dd>
-                        </dl>
-                        <dl>
-                            <dt>Invoice/Ref. No.</dt>
-                            <dd>5686/2016</dd>
-                        </dl>
-                        <dl>
-                            <dt>Terms</dt>
-                            <dd>Payable upon Receipt</dd>
-                        </dl>
-                    </div>
-                    <div class="section-content--right">
                         <div class="invoice-details__apc">
                             <dl>
                                 <dt>Article Processing Charges</dt>
@@ -149,7 +145,9 @@
                             <dl class="vat">
                                 <dt>Vat 
                                     <span class="percent">(+20%)</span>
-                                    <a class="icon-help"></a>
+                                    <label class="for-modal" for="modal" >
+                                        <a class="icon-help"></a>
+                                    </label>
                                 </dt>
                                 <dd>150.00</dd>
                             </dl>
@@ -164,6 +162,24 @@
                                 <div class="validation-message">Coupon Expired</div>
                             </form> -->
                         </div>
+                    </div>
+                    <div class="section-content--right">
+                        <dl>
+                            <dt>Invoice Issue Date</dt>
+                            <dd>20 October 2016</dd>
+                        </dl>
+                        <dl>
+                            <dt>Date of Supply</dt>
+                            <dd>20 October 2016</dd>
+                        </dl>
+                        <dl>
+                            <dt>Invoice/Ref. No.</dt>
+                            <dd>5686/2016</dd>
+                        </dl>
+                        <dl>
+                            <dt>Terms</dt>
+                            <dd>Payable upon Receipt</dd>
+                        </dl>
                     </div>
                 </div>
                 <footer>

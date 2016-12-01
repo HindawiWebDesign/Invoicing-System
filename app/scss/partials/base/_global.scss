@@ -111,3 +111,30 @@ a {
     }
 }
 
+/* ==========================================================================
+   General Display/Float/Align/V. Align/Wrap
+   ========================================================================== */
+
+/* General Display */
+.display-none, 
+.display_none, 
+.no-screen         {display: none;}
+.display-inl_block {display: inline-block;}
+.display-block     {display: block;}
+
+/* General Float */
+.float-right       {float: right;}
+.float-left        {float: left;}
+
+/* General Align */
+.align-right       {text-align: right;}
+.align-left        {text-align: left;}
+.align-center      {text-align: center;}
+
+/* General Vertical Align */
+.valign-top        {vertical-align: top;}
+
+/* General Wrap */
+.nowrap            {white-space: nowrap;}
+.pre_line          {white-space: pre-line;}
+
