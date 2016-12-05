@@ -33,7 +33,7 @@
                 <h1>PAYMENT DETAILS</h1>
                 <nav class="steps"> 
                     <ul>
-                        <li class="steps--disabled">Confirm  information</li>
+                        <li class="steps--disabled">Confirm information</li>
                         <li class="steps--enabled">Select Payment Method</li>
                     </ul>
                 </nav>
@@ -47,25 +47,63 @@
                 </div>
 
                 <!-- Modal start -->
+                <!-- Modal 1 -->
                 <div class="modal">
-                    <input id="modal" type="checkbox" name="modal" tabindex="1">
+                    <input id="modal1" type="checkbox" name="modal1" tabindex="1">
                     <div class="modal__overlay">
                         <div class="modal__box">
                             <div class="section-title">
-                                <h2>The Coupon or The list of Authors
+                                <h2>Authors List
                                     <span class="float-right">
-                                        <label for="modal">&#10005;</label>
+                                        <label for="modal1">&#10005;</label>
+                                    </span>
+                                </h2>
+                            </div>
+                            <div class="modal__box__content">
+                                <ul>
+                                    <li>Author 1 <span class="author-corresponding">(Corresponding)</span></li>
+                                    <li>Author 2</li>
+                                    <li>Author 3</li>
+                                    <li>Author 4</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal 2 -->
+                <div class="modal">
+                    <input id="modal2" type="checkbox" name="modal2" tabindex="2">
+                    <div class="modal__overlay">
+                        <div class="modal__box">
+                            <div class="section-title">
+                                <h2>VAT
+                                    <span class="float-right">
+                                        <label for="modal2">&#10005;</label>
                                     </span>
                                 </h2>
                             </div>
                             <div class="modal__box__content">
                                 <p>This box will open to display the list of Authors or the detailed information about the coupon policy.</p>
-                                <ul>
-                                    <li>Author 1</li>
-                                    <li>Author 2</li>
-                                    <li>Author 3</li>
-                                    <li>Author 4</li>
-                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal 3 -->
+                <div class="modal">
+                    <input id="modal3" type="checkbox" name="modal3" tabindex="3">
+                    <div class="modal__overlay">
+                        <div class="modal__box">
+                            <div class="section-title">
+                                <h2>The Coupon
+                                    <span class="float-right">
+                                        <label for="modal3">&#10005;</label>
+                                    </span>
+                                </h2>
+                            </div>
+                            <div class="modal__box__content">
+                                <p>This box will open to display the list of Authors or the detailed information about the coupon policy.</p>
                             </div>
                         </div>
                     </div>
@@ -123,7 +161,7 @@
                             <dt>Additional Authors</dt>
                             <dd>
                                 <div class="authors-list"> 
-                                    <label class="for-modal" for="modal" >
+                                    <label class="for-modal" for="modal1" >
                                         <a>View authors list</a>
                                     </label>
                                 </div>
@@ -150,7 +188,7 @@
                             <dl class="vat">
                                 <dt>Vat 
                                     <span class="percent">(+20%)</span>
-                                    <label class="for-modal" for="modal" >
+                                    <label class="for-modal" for="modal2" >
                                         <a class="icon-help"></a>
                                     </label>
                                 </dt>
@@ -163,7 +201,7 @@
                             <form>
                                 <input type="text" name="" placeholder="Enter coupon code">
                                 <input type="submit" name="" value="Redeem" class="button-default">
-                                <label class="for-modal" for="modal" >
+                                <label class="for-modal" for="modal3" >
                                     <a class="icon-help"></a>
                                 </label>
                                 <div class="validation-message">Coupon Expired</div>
@@ -218,7 +256,7 @@
                             <dt>Country</dt>
                             <dd>United Kingdom</dd>
                         </dl>
-                        <a href="" class="button-default">Edit / Change</a>
+                        <!-- <a href="" class="button-default">Edit / Change</a> -->
                     </div>
                 </div>
             </section>

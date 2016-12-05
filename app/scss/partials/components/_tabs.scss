@@ -1,0 +1,29 @@
+.tabs {
+padding-top: $pica;
+}
+.tabs:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.tabs input[type=radio] {
+	margin-left: $pica*2;
+    margin-top: -0.5rem;
+    display: inline-block;
+}
+.tabs label {
+	cursor: pointer;
+}
+.tab-content {
+	display: none;
+	// width: 100%;
+	// box-sizing: border-box;
+	border-top: 1px solid $color-border-grey;
+	margin: $pica 0 0;
+}
+/*.tabs [id^="tab"]:checked + label {}*/
+#tab1:checked ~ #tab-content1,
+#tab2:checked ~ #tab-content2,
+#tab3:checked ~ #tab-content3 {
+	display: block;
+}

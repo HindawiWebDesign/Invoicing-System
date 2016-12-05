@@ -745,17 +745,6 @@ section {
       margin-top: 0; }
     section p:last-child {
       margin-bottom: 0; }
-  section header {
-    border-bottom: 1px solid #D1D1D1;
-    padding: 0 3.2rem 1.6rem 3.2rem;
-    margin-top: 1.6rem; }
-    section header span {
-      margin-right: 3.2rem;
-      display: inline-block; }
-      section header span label {
-        padding-top: 0.15rem;
-        display: inline-block;
-        float: right; }
   section .payment-options__list {
     margin-bottom: 3.2rem;
     height: 75px; }
@@ -842,7 +831,7 @@ datalist {
   font-size: 1.8rem; }
 
 label {
-  margin: 0 0 0 0.8rem; }
+  padding: 0 0 0 0.8rem; }
 
 /* Input & Textarea ------------------ */
 /* Fields with standard width */
@@ -934,7 +923,7 @@ input[type="radio"] {
 select {
   height: 29px;
   margin-top: 1.3rem;
-  padding: 0;
+  padding: 0 1.6rem 0 0;
   border-radius: 0;
   background-attachment: scroll;
   background-clip: padding-box;
@@ -1185,6 +1174,33 @@ input:focus + label {
   padding: 1.6rem 3.2rem 1.6rem; }
   .modal__box__content p {
     margin: 1.6rem 0; }
+
+.tabs {
+  padding-top: 1.6rem; }
+
+.tabs:after {
+  content: '';
+  display: table;
+  clear: both; }
+
+.tabs input[type=radio] {
+  margin-left: 3.2rem;
+  margin-top: -0.5rem;
+  display: inline-block; }
+
+.tabs label {
+  cursor: pointer; }
+
+.tab-content {
+  display: none;
+  border-top: 1px solid #D1D1D1;
+  margin: 1.6rem 0 0; }
+
+/*.tabs [id^="tab"]:checked + label {}*/
+#tab1:checked ~ #tab-content1,
+#tab2:checked ~ #tab-content2,
+#tab3:checked ~ #tab-content3 {
+  display: block; }
 
 /* ==========================================================================
    Print styles.

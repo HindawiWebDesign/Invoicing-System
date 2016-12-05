@@ -126,23 +126,23 @@ section {
 			margin-bottom: 0; 
 		}	
 	}
-	header {
-		border-bottom: 1px solid $color-border-grey;
-		padding: 0 $pica*2 $pica $pica*2;
-    	margin-top: $pica;
+	// header {
+	// 	border-bottom: 1px solid $color-border-grey;
+	// 	padding: 0 $pica*2 $pica $pica*2;
+ //    	margin-top: $pica;
 
-		span {
+	// 	span {
 
-			margin-right: $pica*2;
-		    display: inline-block;
+	// 		margin-right: $pica*2;
+	// 	    display: inline-block;
 
-			label{
-				padding-top: 0.15rem;
-			    display: inline-block;
-			    float: right;
-			}
-		}
-	}
+	// 		label{
+	// 			padding-top: 0.15rem;
+	// 		    display: inline-block;
+	// 		    float: right;
+	// 		}
+	// 	}
+	// }
 
 	.payment-options__list {
 		margin-bottom: $pica*2;
