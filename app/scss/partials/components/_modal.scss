@@ -28,6 +28,7 @@ label.for-modal:hover {
 	position: absolute;
 	right: 0;
 	top: 0;
+	height: 100%;
 	z-index: -800;
 	border-radius: 0.5rem 0.5rem 0 0;
 }
@@ -40,6 +41,8 @@ label.for-modal:hover {
 	border-radius: 0.5rem 0.5rem 0 0;
 	position: relative;
 	top: 48%;
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 .modal__box label {

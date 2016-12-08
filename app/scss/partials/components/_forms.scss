@@ -374,9 +374,6 @@ button:focus  {
 
 a.button-default[disabled], 
 input[disabled],
-textarea[disabled],
-select[disabled],
-option[disabled],
 button[disabled] {
 	cursor: default;
 	opacity: 0.35;
@@ -389,6 +386,20 @@ button[disabled] {
 	}
 }
 
+textarea[disabled],
+select[disabled],
+option[disabled], 
+input[type="text"]:disabled {
+	cursor: default;
+	opacity: 0.45;
+	filter: alpha(opacity=45);
+	background-color: transparent;
+
+	&:hover {
+		background-color: transparent;
+		cursor: default;
+	}
+}
 
 input[type="checkbox"]:focus,
 input[type="radio"]:focus {
