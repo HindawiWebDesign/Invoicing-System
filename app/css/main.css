@@ -746,7 +746,6 @@ section {
     section p:last-child {
       margin-bottom: 0; }
   section .payment-options__list {
-    margin-bottom: 3.2rem;
     height: 75px; }
     section .payment-options__list li {
       display: inline-block;
@@ -759,6 +758,8 @@ section {
   section .paypal form {
     width: 100%;
     height: 100%; }
+  section #details1-content {
+    margin-top: 3.2rem; }
 
 .section-content.formdt .section-content--right {
   padding-top: 0;
@@ -1064,9 +1065,6 @@ button:focus {
 
 a.button-default[disabled],
 input[disabled],
-textarea[disabled],
-select[disabled],
-option[disabled],
 button[disabled] {
   cursor: default;
   opacity: 0.35;
@@ -1074,11 +1072,23 @@ button[disabled] {
   background-color: #6cb33e; }
   a.button-default[disabled]:hover,
   input[disabled]:hover,
+  button[disabled]:hover {
+    background-color: #6cb33e;
+    cursor: default; }
+
+textarea[disabled],
+select[disabled],
+option[disabled],
+input[type="text"]:disabled {
+  cursor: default;
+  opacity: 0.45;
+  filter: alpha(opacity=45);
+  background-color: transparent; }
   textarea[disabled]:hover,
   select[disabled]:hover,
   option[disabled]:hover,
-  button[disabled]:hover {
-    background-color: #6cb33e;
+  input[type="text"]:disabled:hover {
+    background-color: transparent;
     cursor: default; }
 
 input[type="checkbox"]:focus,
@@ -1123,6 +1133,7 @@ label.for-modal:hover {
   position: absolute;
   right: 0;
   top: 0;
+  height: 100%;
   z-index: -800;
   border-radius: 0.5rem 0.5rem 0 0; }
 
@@ -1136,7 +1147,7 @@ label.for-modal:hover {
   position: relative;
   top: 48%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%); }
+  transform: translateY(-50%); }
 
 .modal__box label {
   color: white;
@@ -1188,18 +1199,27 @@ input:focus + label {
   margin-top: -0.5rem;
   display: inline-block; }
 
-.tabs label {
+.tabs label,
+.transfer label {
   cursor: pointer; }
+
+.transfer label {
+  padding: 0; }
 
 .tab-content {
   display: none;
   border-top: 1px solid #D1D1D1;
   margin: 1.6rem 0 0; }
 
+#details1,
+#details1-content {
+  display: none; }
+
 /*.tabs [id^="tab"]:checked + label {}*/
 #tab1:checked ~ #tab-content1,
 #tab2:checked ~ #tab-content2,
-#tab3:checked ~ #tab-content3 {
+#tab3:checked ~ #tab-content3,
+#details1:checked ~ #details1-content {
   display: block; }
 
 /* ==========================================================================
