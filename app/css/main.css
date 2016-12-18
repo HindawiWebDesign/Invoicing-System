@@ -561,7 +561,7 @@ h1, h2, h3, h4, h5, h6, b, strong {
   font-weight: normal;
   font-style: normal; }
 
-section h2 {
+h2 {
   font-size: 1.8rem; }
 
 section .percent {
@@ -661,15 +661,6 @@ section {
   padding: 0;
   border-radius: 0.5rem 0.5rem 0 0;
   position: relative; }
-  section .section-title {
-    background-color: #00718f;
-    border-radius: 0.5rem 0.5rem 0 0; }
-  section h2 {
-    margin: 0;
-    padding: 0.8rem 1.6rem 0.8rem 3.2rem;
-    color: #FFF; }
-  section.article-details {
-    margin-top: 0; }
   section .section-content,
   section .invoice-details {
     padding: 3.2rem; }
@@ -760,6 +751,18 @@ section {
     height: 100%; }
   section #details1-content {
     margin-top: 3.2rem; }
+
+.section-title {
+  background-color: #00718f;
+  border-radius: 0.5rem 0.5rem 0 0; }
+
+h2 {
+  margin: 0;
+  padding: 0.8rem 1.6rem 0.8rem 3.2rem;
+  color: #FFF; }
+
+.article-details {
+  margin-top: 0; }
 
 .section-content.formdt .section-content--right {
   padding-top: 0;
@@ -1185,6 +1188,16 @@ input:focus + label {
   overflow-y: scroll; }
   .modal__box__content p {
     margin: 1.6rem 0; }
+
+main .modal__overlay.full-overlay {
+  position: fixed; }
+
+main .modal__overlay.full-overlay .button-default {
+  position: relative;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  right: 0; }
 
 .tabs {
   padding-top: 1.6rem; }

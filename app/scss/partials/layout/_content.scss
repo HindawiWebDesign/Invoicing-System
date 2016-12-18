@@ -12,19 +12,6 @@ section {
     border-radius: 0.5rem 0.5rem 0 0;
 	position: relative;
 
-    .section-title {
-    	background-color: $bgcolor-sectionTitle;
-	    border-radius: 0.5rem 0.5rem 0 0;
-    }
-
-    h2 {
-    	margin: 0;
-    	padding: $pica/2 $pica $pica/2 $pica*2;
-    	color: #FFF;
-    }
-    &.article-details {
-    	margin-top: 0;
-    }
     .section-content, 
     .invoice-details {
     	padding: $pica*2;
@@ -164,6 +151,20 @@ section {
 	#details1-content {
 		margin-top: $pica*2;
 	}
+}
+
+    .section-title {
+    	background-color: $bgcolor-sectionTitle;
+	    border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+h2 {
+   	margin: 0;
+   	padding: $pica/2 $pica $pica/2 $pica*2;
+	color: #FFF;
+}
+&.article-details {
+   	margin-top: 0;
 }
 
 .section-content.formdt {

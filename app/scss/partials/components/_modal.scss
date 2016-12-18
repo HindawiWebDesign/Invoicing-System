@@ -87,3 +87,13 @@ input:focus + label {
 		margin: $pica 0;
 	}
 }
+main .modal__overlay.full-overlay {
+	position: fixed;
+}
+main .modal__overlay.full-overlay .button-default {
+	position: relative;
+	display: inline-block;
+	top: 0;
+	left: 0;
+	right: 0;
+}
