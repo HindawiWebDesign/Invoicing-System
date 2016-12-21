@@ -5,15 +5,20 @@
 	border-radius: 0.5rem 0.5rem 0 0;
 }
 label.for-modal {
+	display: inline-block;
 	cursor: pointer;
 	margin: 0;
 	padding: 0;
+
+	// a {
+	// 	pointer-events: none;
+	// }
 }
-label.for-modal:hover {
-	-webkit-transform: scale(0.97);
-	-ms-transform: scale(0.97);
-	transform: scale(0.97);
-}
+// label.for-modal:hover {
+// 	-webkit-transform: scale(0.97);
+// 	-ms-transform: scale(0.97);
+// 	transform: scale(0.97);
+// }
 .modal input {
 	position: absolute;
 	right: 100px;
@@ -31,6 +36,13 @@ label.for-modal:hover {
 	height: 100%;
 	z-index: -800;
 	border-radius: 0.5rem 0.5rem 0 0;
+	opacity: 0;
+	overflow: hidden;
+	-webkit-transform: scale(0.5);
+	-ms-transform: scale(0.5);
+	transform: scale(0.5);
+	// -webkit-transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+	// transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .modal__box {
 	padding: 0;
@@ -54,15 +66,6 @@ label.for-modal:hover {
 	top: .5em;
 	width: 24px;
 	height: 24px;
-}
-.modal__overlay {
-	opacity: 0;
-	overflow: hidden;
-	-webkit-transform: scale(0.5);
-	-ms-transform: scale(0.5);
-	transform: scale(0.5);
-	-webkit-transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
-	transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
 }
 input:checked ~ .modal__overlay {
 	opacity: 1;
@@ -90,10 +93,14 @@ input:focus + label {
 main .modal__overlay.full-overlay {
 	position: fixed;
 }
-main .modal__overlay.full-overlay .button-default {
+main .modal__overlay.full-overlay .button-default, 
+main .modal__box form label {
 	position: relative;
 	display: inline-block;
 	top: 0;
 	left: 0;
 	right: 0;
+	width: auto;
+	height: auto;
+    margin-top: 0;
 }

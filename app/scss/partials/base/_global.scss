@@ -102,12 +102,13 @@ ul, li, dl, dt, dd {
   border: 0;
 }
 
-a {
+a, .authors-list label span, .transfer label span {
     color: $color-green;
-    text-decoration: none;
+    text-decoration: underline;
 
     &:hover {
         color: $color-blue;
+        text-decoration: none;
     }
 }
 
@@ -138,3 +139,5 @@ a {
 .nowrap            {white-space: nowrap;}
 .pre_line          {white-space: pre-line;}
 
+/* General Margins */
+.margin-t-6  {margin-top: 6px;}

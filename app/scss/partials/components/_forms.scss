@@ -290,6 +290,7 @@ legend {
 	border-width: 0;
 	border-radius: $fh-button-radius;
 	cursor: pointer;
+    box-sizing: border-box;
 }
 .button-default, 
 button,
@@ -366,8 +367,7 @@ input[type="reset"]:focus {
 input:focus,
 textarea:focus,
 select:focus,
-option:focus,
-button:focus  {
+option:focus {
 	background-color: $fh-input-bg-color;
 	border-color: $fh-focus-border-color;
 }

@@ -1,5 +1,6 @@
 
 main {
+	width: 113.6rem;
     max-width: 113.6rem;
     margin: 0 auto;
     padding: 0 $pica;
@@ -49,14 +50,14 @@ section {
 	.invoice-details__apc {
 		dl {
 			float: left;
-			width: 70%;
+			width: 80%;
 		}
 	    dt {
-		    width: 62%;
+		    width: 63%;
 		    white-space: nowrap;
 	    }
 	    dd {
-		    width: 33%;
+		    width: 31%;
 		    text-align: right;
 		    white-space: nowrap;
 		}
@@ -97,8 +98,8 @@ section {
 	    	background-image: url(../images/help-hover.svg);
 	    }
 	}
-	form {
-		width: 70%;
+	.coupon {
+		width: 90%;
 		.icon-help {
 			margin-top: $pica/4;
 		}

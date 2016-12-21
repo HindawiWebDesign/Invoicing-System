@@ -13,7 +13,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	-moz-font-feature-settings: "liga" on;
 }
-.author-corresponding, .author-orcid, .validation-message {
+.smaller-font {
 	font-family: $myriadRegular;
 	font-size: $fontSize-smaller;
 	line-height: 1.6rem;
@@ -33,9 +33,6 @@ section {
 	}
 	dt, .subtotal dd {
 		font-family: $myriadBold;
-	}
-	a {
-		text-decoration: underline;
 	}
 }
 

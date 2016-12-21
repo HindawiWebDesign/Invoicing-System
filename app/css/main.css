@@ -487,11 +487,12 @@ ul, li, dl, dt, dd {
   position: relative;
   border: 0; }
 
-a {
+a, .authors-list label span, .transfer label span {
   color: #6cb33e;
-  text-decoration: none; }
-  a:hover {
-    color: #00718f; }
+  text-decoration: underline; }
+  a:hover, .authors-list label span:hover, .transfer label span:hover {
+    color: #00718f;
+    text-decoration: none; }
 
 /* ==========================================================================
    General Display/Float/Align/V. Align/Wrap
@@ -536,6 +537,10 @@ a {
 .pre_line {
   white-space: pre-line; }
 
+/* General Margins */
+.margin-t-6 {
+  margin-top: 6px; }
+
 html {
   font-size: 62.5%; }
 
@@ -551,7 +556,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "liga" on; }
 
-.author-corresponding, .author-orcid, .validation-message {
+.smaller-font {
   font-family: "Myriad W01 Regular", sans-serif;
   font-size: 1.4rem;
   line-height: 1.6rem; }
@@ -569,9 +574,6 @@ section .percent {
 
 section dt, section .subtotal dd {
   font-family: "Myriad W01 Bd", sans-serif; }
-
-section a {
-  text-decoration: underline; }
 
 /*
 Flex Grid Framework
@@ -601,6 +603,7 @@ MIT - https://github.com/afonsopacifer/flex-grid-framework/blob/master/licence.m
 /* Flex Items
 ------------------------------------------------*/
 header {
+  width: 113.6rem;
   max-width: 113.6rem;
   margin: 3rem auto 0;
   padding: 0 1.5rem; }
@@ -651,6 +654,7 @@ header {
         color: #BABABA; }
 
 main {
+  width: 113.6rem;
   max-width: 113.6rem;
   margin: 0 auto;
   padding: 0 1.6rem; }
@@ -688,12 +692,12 @@ section {
     width: 65%; }
   section .invoice-details__apc dl {
     float: left;
-    width: 70%; }
+    width: 80%; }
   section .invoice-details__apc dt {
-    width: 62%;
+    width: 63%;
     white-space: nowrap; }
   section .invoice-details__apc dd {
-    width: 33%;
+    width: 31%;
     text-align: right;
     white-space: nowrap; }
   section .invoice-details__apc .net-charges {
@@ -726,9 +730,9 @@ section {
     margin-left: 0.4rem; }
     section .icon-help:hover, section .icon-help:focus, section .icon-help:active {
       background-image: url(../images/help-hover.svg); }
-  section form {
-    width: 70%; }
-    section form .icon-help {
+  section .coupon {
+    width: 90%; }
+    section .coupon .icon-help {
       margin-top: 0.4rem; }
   section p {
     margin: 1.6rem 0; }
@@ -802,10 +806,10 @@ h2 {
 
 footer {
   font-size: 1.6rem;
+  width: 113.6rem;
   max-width: 113.6rem;
   margin: 0 auto;
   text-align: center;
-  width: 100%;
   clear: both;
   padding: 1.6rem 0;
   border-top: 1px solid #D1D1D1; }
@@ -985,7 +989,8 @@ input[type="image"] {
   padding: 0.8rem 1.6rem 0.8rem;
   border-width: 0;
   border-radius: 0.5rem;
-  cursor: pointer; }
+  cursor: pointer;
+  box-sizing: border-box; }
 
 .button-default,
 button,
@@ -1061,8 +1066,7 @@ input[type="reset"]:focus {
 input:focus,
 textarea:focus,
 select:focus,
-option:focus,
-button:focus {
+option:focus {
   background-color: #FFFFFF;
   border-color: #787878; }
 
@@ -1114,13 +1118,10 @@ select.invalid:focus {
   border-radius: 0.5rem 0.5rem 0 0; }
 
 label.for-modal {
+  display: inline-block;
   cursor: pointer;
   margin: 0;
   padding: 0; }
-
-label.for-modal:hover {
-  -webkit-transform: scale(0.97);
-  transform: scale(0.97); }
 
 .modal input {
   position: absolute;
@@ -1138,7 +1139,11 @@ label.for-modal:hover {
   top: 0;
   height: 100%;
   z-index: -800;
-  border-radius: 0.5rem 0.5rem 0 0; }
+  border-radius: 0.5rem 0.5rem 0 0;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5); }
 
 .modal__box {
   padding: 0;
@@ -1162,14 +1167,6 @@ label.for-modal:hover {
   width: 24px;
   height: 24px; }
 
-.modal__overlay {
-  opacity: 0;
-  overflow: hidden;
-  -webkit-transform: scale(0.5);
-  transform: scale(0.5);
-  -webkit-transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1); }
-
 input:checked ~ .modal__overlay {
   opacity: 1;
   -webkit-transform: scale(1);
@@ -1192,12 +1189,16 @@ input:focus + label {
 main .modal__overlay.full-overlay {
   position: fixed; }
 
-main .modal__overlay.full-overlay .button-default {
+main .modal__overlay.full-overlay .button-default,
+main .modal__box form label {
   position: relative;
   display: inline-block;
   top: 0;
   left: 0;
-  right: 0; }
+  right: 0;
+  width: auto;
+  height: auto;
+  margin-top: 0; }
 
 .tabs {
   padding-top: 1.6rem; }

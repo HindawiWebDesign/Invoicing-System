@@ -41,303 +41,320 @@
         </header>
 
         <main>
-            <section class="article-details">
-                <div class="section-title">
-                   <h2>Article Details</h2>
-                </div>
-
-                <!-- Modal start -->
-                <!-- Modal 1 -->
-                <div class="modal">
-                    <input id="modal1" type="checkbox" name="modal1" tabindex="1">
-                    <div class="modal__overlay">
-                        <div class="modal__box">
-                            <div class="section-title">
-                                <h2>Authors List
-                                    <span class="float-right">
-                                        <label for="modal1">&#10005;</label>
-                                    </span>
-                                </h2>
-                            </div>
-                            <div class="modal__box__content">
-                                <ul>
-                                    <li>Author 1 <span class="author-corresponding">(Corresponding)</span></li>
-                                    <li>Author 2</li>
-                                    <li>Author 3</li>
-                                    <li>Author 4</li>
-                                </ul>
-                            </div>
-                        </div>
+            <form>
+                <section class="article-details">
+                    <div class="section-title">
+                       <h2>Article Details</h2>
                     </div>
-                </div>
 
-                <!-- Modal 2 -->
-                <div class="modal">
-                    <input id="modal2" type="checkbox" name="modal2" tabindex="2">
-                    <div class="modal__overlay">
-                        <div class="modal__box">
-                            <div class="section-title">
-                                <h2>VAT
-                                    <span class="float-right">
-                                        <label for="modal2">&#10005;</label>
-                                    </span>
-                                </h2>
-                            </div>
-                            <div class="modal__box__content">
-                                <p>This box will open to display the list of Authors or the detailed information about the coupon policy.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Modal 3 -->
-                <div class="modal">
-                    <input id="modal3" type="checkbox" name="modal3" tabindex="3">
-                    <div class="modal__overlay">
-                        <div class="modal__box">
-                            <div class="section-title">
-                                <h2>The Coupon
-                                    <span class="float-right">
-                                        <label for="modal3">&#10005;</label>
-                                    </span>
-                                </h2>
-                            </div>
-                            <div class="modal__box__content">
-                                <p>This box will open to display the list of Authors or the detailed information about the coupon policy.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Modal end -->
-
-
-                <div class="section-content">
-                    <div class="section-content--left">
-                        <dl>
-                            <dt>Journal Title</dt>
-                            <dd>International Journal of Mathematics and Mathematical Science</dd>
-                        </dl>
-                        <dl>
-                            <dt>Article Title</dt>
-                            <dd>Disrupted Endothelial Cell Layer and Exposed Extracellular Matrix Proteins Promote Capture of Late Outgrowth Endothelial Progenitor Cells</dd>
-                        </dl>
-                        <dl class="no-screen">
-                            <dt>List of Authors</dt>
-                            <dd>
-                                <ul>
-                                    <li>Jing Zhao (ORCID ID: 0000-0003-3696-7507)</li>
-                                    <li>Bingfang Yan</li>
-                                    <li>Zhiyong Liu</li>
-                                    <li>Jinzhong Han</li>
-                                    <li>Guang Yang</li>
-                                </ul>
-                            </dd>
-                        </dl>
-                    </div>
-                    <div class="section-content--right">
-                        <dl>
-                            <dt>Article ID</dt>
-                            <dd>1406304</dd>
-                        </dl> 
-                        <dl>
-                            <dt>Article Type</dt>
-                            <dd>Research Article</dd>
-                        </dl>
-                        <dl>
-                            <dt>CC License</dt>
-                            <dd>CC-BY 4.0</dd>
-                        </dl>
-                        <dl class="no-print">
-                            <dt>
-                                Author
-                                <span class="author-corresponding">(Corresponding)</span>
-                            </dt>
-                            <dd>
-                                Jing Zhao 
-                                <span class="author-orcid nowrap">(ORCID: 0000-0002-8140-3658)</span>
-                            </dd>
-                        </dl>
-                        <dl class="no-print">
-                            <dt>Additional Authors</dt>
-                            <dd>
-                                <div class="authors-list"> 
-                                    <label class="for-modal" for="modal1" >
-                                        <a>View authors list</a>
-                                    </label>
+                    <!-- Modal start -->
+                    <!-- Modal 1 -->
+                    <div class="modal">
+                        <input id="modal1" type="checkbox" name="modal1" tabindex="1">
+                        <div class="modal__overlay">
+                            <div class="modal__box">
+                                <div class="section-title">
+                                    <h2>Authors List
+                                        <span class="float-right">
+                                            <label for="modal1">&#10005;</label>
+                                        </span>
+                                    </h2>
                                 </div>
-                            </dd>
-                        </dl>
-                    </div>
-                </div>
-                <div class="invoice-details">
-                    <p>Charges for article publication as per article details above</p>
-                    <div class="section-content--left">
-                        <div class="invoice-details__apc">
-                            <dl>
-                                <dt>Article Processing Charges</dt>
-                                <dd>1,500.00</dd>
-                            </dl>
-                            <dl>
-                                <dt>Special Issue Discount <span class="percent">(-50%)</span></dt>
-                                <dd>750.00</dd>
-                            </dl>
-                            <dl class="net-charges">
-                                <dt>Net Charges</dt>
-                                <dd>-750.00</dd>
-                            </dl>
-                            <dl class="vat">
-                                <dt>Vat 
-                                    <span class="percent">(+20%)</span>
-                                    <label class="for-modal" for="modal2" >
-                                        <a class="icon-help"></a>
-                                    </label>
-                                </dt>
-                                <dd>150.00</dd>
-                            </dl>
-                            <dl class="subtotal">
-                                <dt>Total</dt>
-                                <dd>USD 900.00</dd>
-                            </dl>
-                            <form>
-                                <input type="text" name="" placeholder="Enter coupon code">
-                                <input type="submit" name="" value="Redeem" class="button-default">
-                                <label class="for-modal" for="modal3" >
-                                    <a class="icon-help"></a>
-                                </label>
-                                <div class="validation-message">Coupon Expired</div>
-                            </form>
+                                <div class="modal__box__content">
+                                    <ul>
+                                        <li>Author 1 <span class="author-corresponding">(Corresponding)</span></li>
+                                        <li>Author 2</li>
+                                        <li>Author 3</li>
+                                        <li>Author 4</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="section-content--right">
-                        <dl>
-                            <dt>Invoice Issue Date</dt>
-                            <dd>20 October 2016</dd>
-                        </dl>
-                        <dl>
-                            <dt>Date of Supply</dt>
-                            <dd>20 October 2016</dd>
-                        </dl>
-                        <dl>
-                            <dt>Invoice/Ref. No.</dt>
-                            <dd>5686/2016</dd>
-                        </dl>
-                        <dl>
-                            <dt>Terms</dt>
-                            <dd>Payable upon Receipt</dd>
-                        </dl>
+
+                    <!-- Modal 2 -->
+                    <div class="modal">
+                        <input id="modal2" type="checkbox" name="modal2" tabindex="2">
+                        <div class="modal__overlay">
+                            <div class="modal__box">
+                                <div class="section-title">
+                                    <h2>VAT
+                                        <span class="float-right">
+                                            <label for="modal2">&#10005;</label>
+                                        </span>
+                                    </h2>
+                                </div>
+                                <div class="modal__box__content">
+                                <p>
+                                Hindawi Limited is based in the United Kingdom and must charge a 20% Value Added Tax (VAT) on qualifying transactions.
+                                </p>
+                                <p>
+                                UK VAT applies when we supply services to any individual or organization based in the UK. 
+                                </p>
+                                <p>
+                                When our customer is a non-VAT registered individual or organization based outside the UK but within the EU, Article 45 of 2006/112/EC applies. The place of supply is where the supplier, Hindawi Limited, is established and UK VAT therefore applies.
+                                </p>
+                                <p>
+                                When our customer is a VAT-registered individual or organization based outside the UK but within the EU, Article 44 of the 2006/112/EC applies. The place of supply is where the customer is established, which puts the invoice outside the scope of UK VAT.
+                                </p>
+                                <p>
+                                When our customer is an individual or organization based outside of the EU, all transactions are outside the scope of UK VAT.
+                                </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <footer>
-                    <p>UK VAT applies to this invoice, based on the country of the payer.</p>
-                </footer>
-            </section>
-       
 
-        <!-- Paid By / Bill To section -->
-            <section class="bill-to">
-                <div class="section-title">
-                   <h2>Bill to</h2>
-                </div>
-                <div class="section-content">
-                    <div class="section-content--left">
-                        <dl>
-                            <dt>Payer Name</dt>
-                            <dd>Jing Zhao</dd>
-                        </dl>
-                        <dl>
-                            <dt>Email</dt>
-                            <dd>sample@sample.com</dd>
-                        </dl>
-                        <dl>
-                            <dt>Address</dt>
-                            <dd>University of Cambridge</dd>
-                        </dl>
-                        <dl>
-                            <dt>Country</dt>
-                            <dd>United Kingdom</dd>
-                        </dl>
-                        <!-- <a href="" class="button-default">Edit / Change</a> -->
+                    <!-- Modal 3 -->
+                    <div class="modal">
+                        <input id="modal3" type="checkbox" name="modal3" tabindex="3">
+                        <div class="modal__overlay">
+                            <div class="modal__box">
+                                <div class="section-title">
+                                    <h2>The Coupon
+                                        <span class="float-right">
+                                            <label for="modal3">&#10005;</label>
+                                        </span>
+                                    </h2>
+                                </div>
+                                <div class="modal__box__content">
+                                    <p>This box will open to display the list of Authors or the detailed information about the coupon policy.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </section>
+                    <!-- Modal end -->
 
 
-        <!-- Payment options section -->
-            <section class="payment-options">
-                <div class="section-title">
-                   <h2>Payment options</h2>
-                </div>
-                <div class="section-content"> 
-                    <ul class="payment-options__list">
-                        <li class="paypal">
-                        	<form>
-	                        	<button type="submit" value="sandbox.paypal.submit" class="button-paypal">
-	                        		<img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_150x38.png" alt="paypal"/>
-	                        	</button>
-	                        </form>
-                        </li>
-                        <li class="transfer">
-                        		<div>BANK TRANSFER</div>
-                        		<label for="details1"><a>view details</a></label>
-                        	</a>
-                        </li>
-                    </ul>
-
-                    <input type="radio" name="details1" id="details1" >
-
-                    <div id="details1-content">
+                    <div class="section-content">
                         <div class="section-content--left">
                             <dl>
-                                <dt>Account Name</dt>
-                                <dd>Hindawi Limited</dd>
+                                <dt>Journal Title</dt>
+                                <dd>International Journal of Mathematics and Mathematical Science</dd>
                             </dl>
                             <dl>
-                                <dt>Account No</dt>
-                                <dd>76474011</dd>
+                                <dt>Article Title</dt>
+                                <dd>Disrupted Endothelial Cell Layer and Exposed Extracellular Matrix Proteins Promote Capture of Late Outgrowth Endothelial Progenitor Cells</dd>
+                            </dl>
+                            <dl class="no-screen">
+                                <dt>List of Authors</dt>
+                                <dd>
+                                    <ul>
+                                        <li>Jing Zhao (ORCID ID: 0000-0003-3696-7507)</li>
+                                        <li>Bingfang Yan</li>
+                                        <li>Zhiyong Liu</li>
+                                        <li>Jinzhong Han</li>
+                                        <li>Guang Yang</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="section-content--right">
+                            <dl>
+                                <dt>Article ID</dt>
+                                <dd>1406304</dd>
+                            </dl> 
+                            <dl>
+                                <dt>Article Type</dt>
+                                <dd>Research Article</dd>
                             </dl>
                             <dl>
-                                <dt>Sort Code</dt>
-                                <dd>400515</dd>
+                                <dt>CC License</dt>
+                                <dd>CC-BY 4.0</dd>
+                            </dl>
+                            <dl class="no-print">
+                                <dt>
+                                    Author
+                                    <span class="smaller-font">(Corresponding)</span>
+                                </dt>
+                                <dd>
+                                    Jing Zhao 
+                                    <span class="smaller-font nowrap">(ORCID: 0000-0002-8140-3658)</span>
+                                </dd>
+                            </dl>
+                            <dl class="no-print">
+                                <dt>Additional Authors</dt>
+                                <dd>
+                                    <div class="authors-list"> 
+                                        <label class="for-modal" for="modal1" >
+                                            <span>view authors list</span>
+                                        </label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="invoice-details">
+                        <p>The charges for this article are listed below.</p>
+                        <div class="section-content--left">
+                            <div class="invoice-details__apc">
+                                <dl>
+                                    <dt>Article Processing Charges</dt>
+                                    <dd>1,500.00</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Special Issue Discount <span class="percent">(-50%)</span></dt>
+                                    <dd>750.00</dd>
+                                </dl>
+                                <dl class="net-charges">
+                                    <dt>Net Charges</dt>
+                                    <dd>-750.00</dd>
+                                </dl>
+                                <dl class="vat">
+                                    <dt>Vat 
+                                        <span class="percent">(+20%)</span>
+                                        <label class="for-modal" for="modal2" >
+                                            <span class="icon-help"></span>
+                                        </label>
+                                        <div class="smaller-font margin-t-6">(VAT amount in GBP is 120.977 GBP, 1 GBP = 1.2399 USD)</div>
+                                    </dt>
+                                    <dd>150.00</dd>
+                                </dl>
+                                <dl class="subtotal">
+                                    <dt>Total</dt>
+                                    <dd>USD 900.00</dd>
+                                </dl>
+                                <div class="coupon">
+                                    <input type="text" name="" placeholder="Enter coupon code">
+                                    <input type="submit" name="" value="Redeem" class="button-default">
+                                    <label class="for-modal" for="modal3" >
+                                        <span class="icon-help"></span>
+                                    </label>
+                                    <div class="smaller-font validation-message">Coupon Expired</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-content--right">
+                            <dl>
+                                <dt>Invoice Issue Date</dt>
+                                <dd>20 October 2016</dd>
                             </dl>
                             <dl>
-                                <dt>Swift Code</dt>
-                                <dd>MIDLGB22</dd>
-                            </dl>
-                            <dl>
-                                <dt>IBAN</dt>
-                                <dd>GB59MIDL40051576474011</dd>
-                            </dl>
-                            <dl>
-                                <dt>Bank Name</dt>
-                                <dd>HSBC Bank</dd>
-                            </dl>
-                            <dl>
-                                <dt>UK</dt>
-                                <dd>Bank Address</dd>
-                            </dl>
-                            <dl>
-                                <dt>HSBC Bank</dt>
-                                <dd>PLC, International Branch, 60 Fenchurch Street, London. EC3M 4BA</dd>
-                            </dl>
-                            <dl>
-                                <dt>Beneficiary Address </dt>
-                                <dd>Kirkman House, 12-14 Whitfield St, London, W1T 2RF</dd>
+                                <dt>Date of Supply</dt>
+                                <dd>20 October 2016</dd>
                             </dl>
                             <dl>
                                 <dt>Invoice/Ref. No.</dt>
                                 <dd>5686/2016</dd>
                             </dl>
+                            <dl>
+                                <dt>Terms</dt>
+                                <dd>Payable upon Receipt</dd>
+                            </dl>
                         </div>
-                        <p>It is important that we can match up the payment you make to your invoice. Please ensure that the reference used for a bank transfer is the invoice number you are payin</p>
                     </div>
+                    <footer>
+                        <p>UK VAT applies to this invoice, based on the country of the payer.</p>
+                    </footer>
+                </section>
+           
+
+                <!-- Paid By / Bill To section -->
+                <section class="bill-to">
+                    <div class="section-title">
+                       <h2>Bill to</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="section-content--left">
+                            <dl>
+                                <dt>Payer Name</dt>
+                                <dd>Jing Zhao</dd>
+                            </dl>
+                            <dl>
+                                <dt>Email</dt>
+                                <dd>sample@sample.com</dd>
+                            </dl>
+                            <dl>
+                                <dt>Address</dt>
+                                <dd>University of Cambridge</dd>
+                            </dl>
+                            <dl>
+                                <dt>Country</dt>
+                                <dd>United Kingdom</dd>
+                            </dl>
+                            <button type="submit" name="SubmitButton" value="EditBillToData">Edit / Change</button>
+                        </div>
+                    </div>
+                </section>
+            </form>
+
+            <!-- Payment options section -->
+                <section class="payment-options">
+                    <div class="section-title">
+                       <h2>Payment options</h2>
+                    </div>
+                    <div class="section-content"> 
+                        <ul class="payment-options__list">
+                            <li class="paypal">
+                            	<form>
+    	                        	<button type="submit" value="sandbox.paypal.submit" class="button-paypal">
+    	                        		<img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_150x38.png" alt="paypal"/>
+    	                        	</button>
+    	                        </form>
+                            </li>
+                            <li class="transfer">
+                            		<div>BANK TRANSFER</div>
+                            		<label for="details1">
+                                        <span>Details</span>
+                                    </label>
+                            	</a>
+                            </li>
+                        </ul>
+
+                        <input type="checkbox" name="details1" id="details1" >
+
+                        <div id="details1-content">
+                            <div class="section-content--left">
+                                <dl>
+                                    <dt>Account Name</dt>
+                                    <dd>Hindawi Limited</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Account No</dt>
+                                    <dd>76474011</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Sort Code</dt>
+                                    <dd>400515</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Swift Code</dt>
+                                    <dd>MIDLGB22</dd>
+                                </dl>
+                                <dl>
+                                    <dt>IBAN</dt>
+                                    <dd>GB59MIDL40051576474011</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Bank Name</dt>
+                                    <dd>HSBC Bank</dd>
+                                </dl>
+                                <dl>
+                                    <dt>UK</dt>
+                                    <dd>Bank Address</dd>
+                                </dl>
+                                <dl>
+                                    <dt>HSBC Bank</dt>
+                                    <dd>PLC, International Branch, 60 Fenchurch Street, London. EC3M 4BA</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Beneficiary Address </dt>
+                                    <dd>Kirkman House, 12-14 Whitfield St, London, W1T 2RF</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Invoice/Ref. No.</dt>
+                                    <dd>5686/2016</dd>
+                                </dl>
+                            </div>
+                            <p>It is important that we can match up the payment you make to your invoice. Please ensure that the reference used for a bank transfer is the invoice number you are payin</p>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="align-right">
+                    <input type="submit" name="" value="Go Back" class="button-default">
+                    <input type="submit" name="" value="Download Invoice" class="button-default">
                 </div>
-            </section>
-
-            <div class="align-right">
-                <input type="submit" name="" value="Go Back" class="button-default">
-                <input type="submit" name="" value="Download Invoice" class="button-default">
-            </div>
-
         </main>
 
         <footer>
@@ -346,7 +363,7 @@
                 Kirkman House, 12-14 Whitfield Street, London, W1T 2RF, United Kingdom<br>
                 Company Reg. No. : 08671628<br>
                 VAT Reg. No. : GB 181 0941 19<br>
-                <a href="#">Contact Us</a>
+                For any assistance, please contact <a href="mailto:accounts.receivable@hindawi.com">accounts.receivable@hindawi.com</a>.
             </p>
         </footer>
         <!-- Content Ends -->

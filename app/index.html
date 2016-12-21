@@ -41,6 +41,31 @@
         </header>
 
         <main>
+            <div class="modal">
+                <input id="confirmationModal" type="checkbox" name="modal4" tabindex="1">
+                <div class="modal__overlay full-overlay">
+                    <div class="modal__box">
+                        <div class="section-title">
+                            <h2>
+                                Confirmation <span class="float-right">
+                                </span>
+                            </h2>
+                        </div>
+                        <div class="modal__box__content">
+                            <p>After clicking this button, you will not be able to make changes to your invoice online. If you require further assistance, please contact <a href="mailto:accounts.receivable@hindawi.com">accounts.receivable@hindawi.com</a></p>
+                            <div>
+                                <form action="/author/4624976/apc/" method="post">
+                                    <button type="submit" name="SubmitButton" value="Ok" class="button-default">Ok</button>
+                                    <label class="for-modal" for="confirmationModal">
+                                        <a class="button-default">Cancel</a>
+                                    </label>                        
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form>
             <section class="article-details">
                 <div class="section-title">
                    <h2>Article Details</h2>
@@ -164,11 +189,11 @@
                         <dl class="no-print">
                             <dt>
                                 Author
-                                <span class="author-corresponding">(Corresponding)</span>
+                                    <span class="smaller-font">(Corresponding)</span>
                             </dt>
                             <dd>
                                 Jing Zhao 
-                                <span class="author-orcid nowrap">(ORCID: 0000-0002-8140-3658)</span>
+                                    <span class="smaller-font nowrap">(ORCID: 0000-0002-8140-3658)</span>
                             </dd>
                         </dl>
                         <dl class="no-print">
@@ -176,7 +201,7 @@
                             <dd>
                                 <div class="authors-list"> 
                                     <label class="for-modal" for="modal1" >
-                                        <a>View authors list</a>
+                                            <span>view authors list</span>
                                     </label>
                                 </div>
                             </dd>
@@ -184,7 +209,7 @@
                     </div>
                 </div>
                 <div class="invoice-details">
-                    <p>Charges for article publication as per article details above</p>
+                        <p>The charges for this article are listed below.</p>
                     <div class="section-content--left">
                         <div class="invoice-details__apc">
                             <dl>
@@ -203,8 +228,9 @@
                                 <dt>Vat 
                                     <span class="percent">(+20%)</span>
                                     <label class="for-modal" for="modal2" >
-                                        <a class="icon-help"></a>
+                                            <span class="icon-help"></span>
                                     </label>
+                                        <div class="smaller-font margin-t-6">(VAT amount in GBP is 120.977 GBP, 1 GBP = 1.2399 USD)</div>
                                 </dt>
                                 <dd>150.00</dd>
                             </dl>
@@ -212,14 +238,14 @@
                                 <dt>Total</dt>
                                 <dd>USD 900.00</dd>
                             </dl>
-                            <form>
+                                <div class="coupon">
                                 <input type="text" name="" placeholder="Enter coupon code">
                                 <input type="submit" name="" value="Redeem" class="button-default">
                                 <label class="for-modal" for="modal3" >
-                                    <a class="icon-help"></a>
+                                        <span class="icon-help"></span>
                                 </label>
-                                <div class="validation-message">Coupon Expired</div>
-                            </form>
+                                    <div class="smaller-font validation-message">Coupon Expired</div>
+                                </div>
                         </div>
                     </div>
                     <div class="section-content--right">
@@ -274,8 +300,11 @@
                     </div>
                 </div>
             </section>
-
+            </form>
             <div class="align-right">
+                <label class="for-modal" for="confirmationModal">
+                    <a class="button-default">Cancel</a>
+                </label>
                 <input type="submit" name="" value="Create Invoice" class="button-default">
             </div>
         </main>
@@ -286,7 +315,7 @@
                 Kirkman House, 12-14 Whitfield Street, London, W1T 2RF, United Kingdom<br>
                 Company Reg. No. : 08671628<br>
                 VAT Reg. No. : GB 181 0941 19<br>
-                <a href="#">Contact Us</a>
+                For any assistance, please contact <a href="mailto:accounts.receivable@hindawi.com">accounts.receivable@hindawi.com</a>.
             </p>
         </footer>
         <!-- Content Ends -->
