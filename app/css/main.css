@@ -1020,9 +1020,6 @@ input[type="image"] {
     color: #FFFFFF;
     border-color: #787878; }
 
-a.button-default {
-  height: 16px; }
-
 .invoice-details__apc .button-default {
   margin: 0 0 0 1px; }
 
