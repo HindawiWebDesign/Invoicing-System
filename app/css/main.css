@@ -606,7 +606,7 @@ header {
   width: 113.6rem;
   max-width: 113.6rem;
   margin: 3rem auto 0;
-  padding: 0 1.5rem; }
+  padding: 0 1.6rem; }
   header .container {
     min-height: 88px; }
   header a.logo {
@@ -1232,6 +1232,51 @@ main .modal__box form label {
 #tab3:checked ~ #tab-content3,
 #details1:checked ~ #details1-content {
   display: block; }
+
+/* Cookies Notification */
+.notification {
+  background-color: #758285;
+  padding: 1.6rem;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  min-width: 116.8rem;
+  /* For non-responsive */
+  position: relative;
+  box-sizing: border-box; }
+  .notification div {
+    max-width: 113.6rem;
+    margin: 0 auto;
+    position: relative;
+    text-align: center; }
+  .notification p {
+    display: inline-block;
+    margin: 0.3rem 1.6rem 0.3rem 0;
+    line-height: 2rem;
+    vertical-align: top;
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    font-family: "Myriad W01 Regular", sans-serif; }
+  .notification a.btn_accept {
+    font-family: "Myriad W01 Regular", sans-serif;
+    font-size: 2.4rem;
+    cursor: pointer;
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    line-height: 2.2rem;
+    text-decoration: none;
+    position: absolute;
+    margin-right: -0.7rem;
+    right: 0; }
+  .notification a {
+    color: #FFFFFF;
+    text-decoration: underline;
+    background-color: transparent; }
+    .notification a:hover {
+      background-color: transparent;
+      text-decoration: none; }
+  .notification a.btn_accept:hover {
+    text-decoration: none; }
 
 /* ==========================================================================
    Print styles.

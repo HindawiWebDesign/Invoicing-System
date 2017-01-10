@@ -1,0 +1,51 @@
+/* Cookies Notification */
+.notification {
+    background-color: $color-cookies;
+    padding: 1.6rem;
+    transition: all .2s ease-in-out;
+    min-width: 116.8rem; /* For non-responsive */
+    position: relative;
+    box-sizing: border-box;
+
+	div {
+	    max-width: 113.6rem;
+	    margin: $margin-center;
+	    position: relative;
+	    text-align: center;
+	}
+	p {
+	    display: inline-block;
+	    margin: 0.3rem 1.6rem 0.3rem 0;
+	    line-height: 2rem;
+	    vertical-align: top;
+	    font-size: 1.6rem;
+	    color: $color-white-text;
+	    font-family: $myriadRegular;
+	}
+	a.btn_accept {
+	    font-family: $myriadRegular;
+	    font-size: 2.4rem;
+	    cursor: pointer;
+	    display: inline-block;
+	    width: 2.4rem;
+	    height: 2.4rem;
+	    line-height: 2.2rem;
+	    text-decoration: none;
+	    position: absolute;
+	    margin-right: -0.7rem;
+	    right: 0;
+	}
+	a {
+	    color: $color-white-text;
+	    text-decoration: underline;
+	    background-color: transparent;
+
+	    &:hover {
+		    background-color: transparent;
+		    text-decoration: none;
+		}
+	}
+	a.btn_accept:hover {
+	    text-decoration: none;
+	}
+}
