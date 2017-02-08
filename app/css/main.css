@@ -1233,6 +1233,18 @@ main .modal__box form label {
 #details1:checked ~ #details1-content {
   display: block; }
 
+#tab4:checked ~ #tab-content4 {
+  display: block; }
+
+#tab3:checked ~ #tab-content3 {
+  display: block; }
+
+#tab2:checked ~ #tab-content2 {
+  display: block; }
+
+#tab1:checked ~ #tab-content1 {
+  display: block; }
+
 /* Cookies Notification */
 .notification {
   background-color: #758285;
