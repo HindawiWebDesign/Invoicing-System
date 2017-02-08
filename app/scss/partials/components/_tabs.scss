@@ -36,3 +36,12 @@ padding-top: $pica;
 #details1:checked ~ #details1-content {
 	display: block;
 }
+
+$tab-number: 4;
+
+@while $tab-number > 0 {
+  #tab#{$tab-number}:checked ~ #tab-content#{$tab-number} {
+    display: block;
+  $tab-number: $tab-number - 1
+  }
+}
