@@ -18,6 +18,7 @@
         <!--build:css css/main.min.css-->
         <link rel="stylesheet" href="css/main.css">
         <!-- endbuild -->
+
     </head>
     <body>
         <!--[if lt IE 9]>
@@ -31,12 +32,12 @@
                     <img src="images/hindawi.svg" alt="Hindawi Publishing Corporation">
                 </a>
                 <h1>PAYMENT DETAILS</h1>
-                <nav class="steps"> 
+                <!-- <nav class="steps"> 
                     <ul>
                         <li class="steps--enabled">Confirm payment information</li>
                         <li class="steps--disabled">Select Payment Method</li>
                     </ul>
-                </nav>
+                </nav> -->
             </div>
         </header>
 
@@ -152,6 +153,372 @@
 
                 <div class="section-content">
                     <div class="section-content--left">
+                        
+                        <div class="steps">
+                            <!-- <h3>Payment Steps:</h3> -->
+
+
+<div class="wizard clearfix" id="wizard_example_1-box">
+    <div class="wizard-wrap clearfix">
+        <ul class="clearfix">
+            <li id="choose-payer" class="wizard-step active-step">
+                <span class="wizard-subtext">Choose Payer</span>
+                <div class="wizard-number">
+                    <span class="wizard-number-inner">1</span>
+                </div>
+            </li>
+
+            <li id="payer-details" class="wizard-step">
+                <span class="wizard-subtext">Billing Address</span>
+                <div class="wizard-number">
+                    <span class="wizard-number-inner">2</span>
+                </div>
+            </li>
+
+            <li id="confirm" class="wizard-step">
+                <span class="wizard-subtext">Confirm</span>
+                <div class="wizard-number">
+                    <span class="wizard-number-inner">3</span>
+                </div>
+            </li>
+
+            <li id="payment-method" class="wizard-step">
+                <span class="wizard-subtext">Payment Methods</span>
+                <div class="wizard-number">
+                    <span class="wizard-number-inner">4</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+                            
+                            <div class="tabs">
+
+                                <!-- Step 1 -->
+                                <div class="container">
+                                    <h3>Choose Payer</h3>
+                                    <div class="padding-2">
+                                        
+                                        <!-- <label for="tab1" class="disabled"> -->
+                                        <label for="tab1" id="author-label"><span class="icon-author"></span>Author</label> 
+                                           
+                                        
+                                        <!-- <label for="tab2" id="institution-label" class="active"> -->
+                                        <label for="tab2" id="institution-label"><span class="icon-institution"></span>Institution</label>
+                                        
+                                        <!-- <label for="tab3" id="other-label" class="active"> -->
+                                        <label for="tab3" id="other-label"><span class="icon-author"></span>Other</label>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <input type="radio" name="tabs" id="tab1" class="toggle-tab">
+                                    <input type="radio" name="tabs" id="tab2" class="toggle-tab">
+                                    <input type="radio" name="tabs" id="tab3" class="toggle-tab">
+
+                                    <!-- Step 2 -->
+                                    <!-- #tab-content1 -->
+                                    <div id="tab-content1" class="tab-content formdt container">
+                                        <h3>Billing Address</h3>
+                                        <div class="padding-2">
+                                            <div class="smaller-font validation-message">
+                                                <ul>
+                                                    <li>Please check the required fields.</li>
+                                                    <li>Invalid Email address.</li>
+                                                </ul>
+                                            </div>
+
+                                                <dl>
+                                                    <dt>Payer name</dt>
+                                                    <dd>
+                                                        <select id="co-author" disabled="disabled">
+                                                        <option value="1">Jing Zhao (corresponding author)</option>
+                                                        <option value="2">co-author2</option>
+                                                        <option value="3">co-author3</option>
+                                                        <option value="4">co-author4</option>
+                                                        </select>
+                                                    </dd>
+                                                </dl>
+                                                                 
+                                                <dl>
+                                                    <dt>Address</dt>
+                                                    <dd><input type="text" id="City" value="" class="invalid">
+                                                    <input type="text" id="City" value="">
+                                                    <input type="text" id="City" value="" disabled="disabled">
+
+                                                    </dd>
+                                                </dl>
+                                                
+                                                <dl>
+                                                    <dt>City</dt>
+                                                    <dd><input type="text" id="City" value="" class="invalid"></dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>Country</dt>
+                                                    <dd><select id="Country">
+                                                        <option value="Select Country">Select Country</option>
+                                                        <option value="Afghanistan">Afghanistan</option>
+                                                        <option value="Albania">Albania</option>
+                                                        <option value="Algeria">Algeria</option>
+                                                        </select>
+                                                    </dd>
+                                                </dl>
+
+                                          
+                                            <div>
+                                                <!-- <input type="submit" name="save-button" value="Save" class="button-default"> -->
+                                                <a href="#" id="save-button1" name="save-button" class="button-default">Save</a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <!-- #tab-content2 -->
+                                    <div id="tab-content2" class="tab-content formdt container">
+                                    <h3>Institution Details</h3>
+                                        <div class="padding-2">
+                                            <dl>
+                                                <dt>Institution name</dt>
+                                                <dd><input type="text" id="Institution name" value=""></dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>Contact Person</dt>
+                                                <dd class="inputtext50">
+                                                    <input type="text" id="first-name" value="" placeholder="First Name">
+                                                    <input type="text" id="last-name" value="" placeholder="Last Name">
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>Email</dt>
+                                                <dd><input type="text" id="Email" value=""></dd>
+                                            </dl>
+
+                                         
+                                            <div>
+                                                <!-- <input type="submit" id="save-button1" name="save-button" value="Save" class="button-default"> -->
+
+                                                <a href="#" id="save-button2" name="save-button" class="button-default">Save</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- #tab-content3 -->
+                                    <div id="tab-content3" class="tab-content formdt container">
+                                        <h3>Billing Address</h3>
+                                        <div class="padding-2">
+                                            <!-- <div class="smaller-font validation-message">
+                                                <ul>
+                                                    <li>Please check the required fields.</li>
+                                                    <li>Invalid Email address.</li>
+                                                </ul>
+                                            </div> -->
+
+
+                                                <dl>
+                                                    <dt>Payer name</dt>
+                                                    <dd>
+                                                        <select id="co-author" disabled="disabled">
+                                                        <option value="1">Jing Zhao (corresponding author)</option>
+                                                        <option value="2">co-author2</option>
+                                                        <option value="3">co-author3</option>
+                                                        <option value="4">co-author4</option>
+                                                        </select>
+                                                    </dd>
+                                                </dl>
+                                                                 
+                                                <dl>
+                                                    <dt>Address</dt>
+                                                    <dd><input type="text" id="City" value="" class="invalid">
+                                                    <input type="text" id="City" value="">
+                                                    <input type="text" id="City" value="" disabled="disabled">
+
+                                                    </dd>
+                                                </dl>
+                                                
+                                                <dl>
+                                                    <dt>City</dt>
+                                                    <dd><input type="text" id="City" value="" class="invalid"></dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>Country</dt>
+                                                    <dd><select id="Country">
+                                                        <option value="Select Country">Select Country</option>
+                                                        <option value="Afghanistan">Afghanistan</option>
+                                                        <option value="Albania">Albania</option>
+                                                        <option value="Algeria">Algeria</option>
+                                                        </select>
+                                                    </dd>
+                                                </dl>
+
+                                          
+                                            <div>
+                                                <!-- <input type="submit" name="save-button" value="Save" class="button-default"> -->
+                                                <a href="#" id="save-button" name="save-button" class="button-default">Save</a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="container" id="confirm-details">
+                                    <!-- Step 3 -->
+                                    <h3>CONFIRM</h3>
+                                    <div class="padding-2">
+                                            <!-- <p>Pay by: <b>Author</b></p> -->
+                                            <dl>
+                                                <dt>Pay by</dt>
+                                                <dd>Author</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>Payer Name</dt>
+                                                <dd>Jing Zhao</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>Address</dt>
+                                                <dd>Kirkman House, 12-14 Whitfield Street</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>City</dt>
+                                                <dd>London</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>Country</dt>
+                                                <dd>United Kingdom</dd>
+                                            </dl>
+
+                                           
+                                            <p><b>Important:</b> By clicking "Confirm" button below, you will not be able to update your data previously entered, if you are not sure click "Back" button.</p>
+                                           
+
+                                            <a href="#" id="back-button" name="back-button" class="button-default">Back</a>
+                                            <a href="#" id="confirm-button" name="confirm-button" class="button-default">Confirm</a>
+                                    </div>
+                                    
+                                </div>
+
+
+                            <div class="container" id="payment">
+                                <!-- Step 3 -->
+                                <h3>Payment Methods</h3>
+                                <div class="padding-2">
+                                    <ul class="payment-options__list">
+                                        <li class="creditcard payment-active">
+                                            <form>
+                                                <a href="#" class="button-creditcard">
+                                                    <img src="images/creditcard.png" alt="creditcard">
+                                                </a>
+                                            </form>
+                                        </li>
+                                        <li class="paypal">
+                                            <form>
+                                                <button type="submit" value="sandbox.paypal.submit" class="button-paypal">
+                                                    <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_150x38.png" alt="paypal">
+                                                </button>
+                                            </form>
+                                        </li>
+                                        <li class="transfer">
+                                                <!-- <div>BANK TRANSFER</div> -->
+                                                <label for="details1">
+                                                    <span>BANK TRANSFER</span>
+                                                </label>
+                                        </li>
+                                    </ul>
+
+                                    <!-- Credit Card -->
+                                            <div id="creditcard-content" class="creditcard-content formdt">
+                                                <img src="images/credit-cards.png">
+                                                <dl>
+                                                    <dt>Card Number</dt>
+                                                    <dd><input type="text" id="" value=""></dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>Expiry Date</dt>
+                                                    <dd class="inputtext50">
+                                                        <input type="text" id="" value="" placeholder="MM">
+                                                        <input type="text" id="" value="" placeholder="YY">
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>Name on Card</dt>
+                                                    <dd>
+                                                        <input type="text" id="" value="">
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>Security Code</dt>
+                                                    <dd class="inputtext50">
+                                                        <input type="text" id="" value="">
+                                                    </dd>
+                                                </dl>
+
+                                             
+                                                <div>
+                                                    <a href="#" id="creditcard-button" name="creditcard-button" class="button-default">Pay $900.00</a>
+                                                </div>
+                                            </div>
+
+                                    <input type="checkbox" name="details1" id="details1">
+
+                                    <div id="transfer-content" class="transfer-content">
+                                        
+                                            <dl>
+                                                <dt>Account Name</dt>
+                                                <dd>Hindawi Limited</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>Account No</dt>
+                                                <dd>76474011</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>Sort Code</dt>
+                                                <dd>400515</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>Swift Code</dt>
+                                                <dd>MIDLGB22</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>IBAN</dt>
+                                                <dd>GB59MIDL40051576474011</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>Bank Name</dt>
+                                                <dd>HSBC Bank</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>UK</dt>
+                                                <dd>Bank Address</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>HSBC Bank</dt>
+                                                <dd>PLC, International Branch, 60 Fenchurch Street, London. EC3M 4BA</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>Beneficiary Address </dt>
+                                                <dd>Kirkman House, 12-14 Whitfield St, London, W1T 2RF</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>Invoice/Ref. No.</dt>
+                                                <dd>5686/2016</dd>
+                                            </dl>
+
+                                            <p>It is important that we can match up the payment you make to your invoice. Please ensure that the reference used for a bank transfer is the invoice number you are payin</p>
+                                    </div>
+                                        
+                                        
+                                        
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="section-content--right">
+
                         <dl>
                             <dt>Journal Title</dt>
                             <dd>International Journal of Mathematics and Mathematical Science</dd>
@@ -172,8 +539,7 @@
                                 </ul>
                             </dd>
                         </dl>
-                    </div>
-                    <div class="section-content--right">
+
                         <dl>
                             <dt>Article ID</dt>
                             <dd>1406304</dd>
@@ -189,11 +555,12 @@
                         <dl class="no-print">
                             <dt>
                                 Author
-                                    <span class="smaller-font">(Corresponding)</span>
+                                    <span class="smaller-font">(Corresponding Author)</span>
                             </dt>
                             <dd>
                                 Jing Zhao 
-                                    <span class="smaller-font nowrap">(ORCID: 0000-0002-8140-3658)</span>
+                                <a href="http://orcid.org/0000-0003-3696-7507" target="_blank"><span class="icon-orcid"></span></a>
+                                    <!-- <span class="smaller-font nowrap">(ORCID: 0000-0002-8140-3658)</span> -->
                             </dd>
                         </dl>
                         <dl class="no-print">
@@ -201,54 +568,15 @@
                             <dd>
                                 <div class="authors-list"> 
                                     <label class="for-modal" for="modal1" >
-                                            <span>view authors list</span>
+                                            <span>view author list</span>
                                     </label>
                                 </div>
                             </dd>
                         </dl>
-                    </div>
-                </div>
-                <div class="invoice-details">
-                        <p>The charges for this article are listed below.</p>
-                    <div class="section-content--left">
-                        <div class="invoice-details__apc">
-                            <dl>
-                                <dt>Article Processing Charges</dt>
-                                <dd>1,500.00</dd>
-                            </dl>
-                            <dl>
-                                <dt>Special Issue Discount <span class="percent">(-50%)</span></dt>
-                                <dd>750.00</dd>
-                            </dl>
-                            <dl class="net-charges">
-                                <dt>Net Charges</dt>
-                                <dd>-750.00</dd>
-                            </dl>
-                            <dl class="vat">
-                                <dt>Vat 
-                                    <span class="percent">(+20%)</span>
-                                    <label class="for-modal" for="modal2" >
-                                            <span class="icon-help"></span>
-                                    </label>
-                                        <div class="smaller-font margin-t-6">(VAT amount in GBP is 120.977 GBP, 1 GBP = 1.2399 USD)</div>
-                                </dt>
-                                <dd>150.00</dd>
-                            </dl>
-                            <dl class="subtotal">
-                                <dt>Total</dt>
-                                <dd>USD 900.00</dd>
-                            </dl>
-                                <div class="coupon">
-                                <input type="text" name="" placeholder="Enter coupon code">
-                                <input type="submit" name="" value="Redeem" class="button-default">
-                                <label class="for-modal" for="modal3" >
-                                        <span class="icon-help"></span>
-                                </label>
-                                    <div class="smaller-font validation-message">Coupon Expired</div>
-                                </div>
-                        </div>
-                    </div>
-                    <div class="section-content--right">
+
+
+                        <hr>
+
                         <dl>
                             <dt>Invoice Issue Date</dt>
                             <dd>20 October 2016</dd>
@@ -265,53 +593,61 @@
                             <dt>Terms</dt>
                             <dd>Payable upon Receipt</dd>
                         </dl>
+                        
+                        <hr>
+
+                        <div class="invoice-details__apc">
+
+                            <dl>
+                                <dt>Article Processing Charges</dt>
+                                <dd>1,500.00</dd>
+                            </dl>
+                            <dl>
+                                <dt>Special Issue Discount <span class="percent">(-50%)</span></dt>
+                                <dd>-750.00</dd>
+                            </dl>
+                            <dl class="net-charges">
+                                <dt>Net Charges</dt>
+                                <dd>750.00</dd>
+                            </dl>
+                            <dl class="vat">
+                                <dt>Vat 
+                                    <span class="percent">(+20%)</span>
+                                    <label class="for-modal" for="modal2" >
+                                            <span class="icon-help"></span>
+                                    </label>
+                                        <div class="smaller-font margin-t-6">(VAT amount in GBP is 120.977 GBP, 1 GBP = 1.2399 USD)</div>
+                                </dt>
+                                <dd>150.00</dd>
+                            </dl>
+                            <dl class="subtotal">
+                                <dt>Total</dt>
+                                <dd>USD 900.00</dd>
+                            </dl>
+                                <div class="coupon">
+                                <input type="text" name="" placeholder="Coupon code">
+                                <input type="submit" name="" value="Redeem" class="button-default">
+                                <label class="for-modal" for="modal3" >
+                                        <span class="icon-help"></span>
+                                </label>
+                                    <div class="smaller-font validation-message">Coupon Expired</div>
+                                </div>
+
+                                <p>Outside the scope of UK VAT as per Article 59 of 2016/112/EC.</p>
+                        </div>
                     </div>
                 </div>
-                <footer>
-                    <p>UK VAT applies to this invoice, based on the country of the payer.</p>
-                </footer>
             </section>
        
 
-        <!-- Paid By / Bill To section -->
-            <section class="bill-to">
-                <div class="section-title">
-                   <h2>Bill to</h2>
-                </div>
-                <div class="section-content">
-                    <div class="section-content--left">
-                        <dl>
-                            <dt>Payer Name</dt>
-                            <dd>Jing Zhao</dd>
-                        </dl>
-                        <dl>
-                            <dt>Email</dt>
-                            <dd>sample@sample.com</dd>
-                        </dl>
-                        <dl>
-                            <dt>Address</dt>
-                            <dd>University of Cambridge</dd>
-                        </dl>
-                        <dl>
-                            <dt>Country</dt>
-                            <dd>United Kingdom</dd>
-                        </dl>
-                        <!-- <a href="" class="button-default">Edit / Change</a> -->
-                    </div>
-                </div>
-            </section>
+
             </form>
-            <div class="align-right">
-                <label class="for-modal" for="confirmationModal">
-                    <a class="button-default">Cancel</a>
-                </label>
-                <input type="submit" name="" value="Create Invoice" class="button-default">
-            </div>
+
         </main>
 
         <footer>
             <p>
-                <b>Hindawi Limited</b><br>
+                <b>Hindawi Ltd.</b><br>
                 Kirkman House, 12-14 Whitfield Street, London, W1T 2RF, United Kingdom<br>
                 Company Reg. No. : 08671628<br>
                 VAT Reg. No. : GB 181 0941 19<br>
@@ -323,6 +659,139 @@
         <!--build:js js/cookieconsent.min.js -->
         <script type="text/javascript" src="js/cookieconsent.js"></script>
         <!-- endbuild -->
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+        <script type="text/javascript" language="javascript">
+
+
+        // $(function() {
+        //     $('.toggle-tab').on('click', function() {
+        //         var tabId = $(this).attr('data-tabid');
+        //         alert(tabId);
+        //         // $('#'+tabId).toggle(); // id on container that should be toggled 
+        //     });
+        // });
+
+
+
+
+            $(document).ready(function() {
+                $('input[type="radio"]').click(function() {
+
+                    // $('#payment').hide();
+
+                    if($(this).attr('id') == 'tab1') {
+                        $('#tab-content1').show();
+                        $('#author-label').addClass("active-payer ");
+
+                        $('#choose-payer').removeClass("active-step");
+                        $('#choose-payer').addClass("success-step");
+                        $('#payer-details').addClass("active-step");
+                        
+                    }
+
+                    else {
+                        $('#tab-content1').hide();
+                        $('#author-label').removeClass("active-payer");
+                        $('#confirm-details').hide();
+                    }
+                });
+            });
+
+            $(document).ready(function() {
+                $('input[type="radio"]').click(function() {
+
+                    // $('#payment').hide();
+
+                    if($(this).attr('id') == 'tab2') {
+                        $('#tab-content2').show();
+                        $('#institution-label').addClass("active-payer");
+
+                        $('#choose-payer').removeClass("active-step");
+                        $('#choose-payer').addClass("success-step");
+                        $('#payer-details').addClass("active-step");
+                    }
+
+                    else {
+                        $('#tab-content2').hide();
+                        $('#institution-label').removeClass("active-payer");
+                        $('#confirm-details').hide();
+                    }
+                });
+            });
+
+            $(document).ready(function() {
+                $('input[type="radio"]').click(function() {
+
+                    // $('#payment').hide();
+
+                    if($(this).attr('id') == 'tab3') {
+                        $('#tab-content3').show();
+                        $('#other-label').addClass("active-payer");
+
+                        $('#choose-payer').removeClass("active-step");
+                        $('#choose-payer').addClass("success-step");
+                        $('#payer-details').addClass("active-step");
+                    }
+
+                    else {
+                        $('#tab-content3').hide();
+                        $('#other-label').removeClass("active-payer");
+                        $('#confirm-details').hide();
+                    }
+                });
+            });
+
+
+            $(document).ready(function() {
+                $('a[name="save-button"]').click(function() {
+
+                        $('#tab-content1').hide();
+                        $('#tab-content2').hide();
+                        $('#tab-content3').hide();
+                        
+                        $('.tabs').hide();
+                        $('#confirm-details').show();
+
+                        $('#payer-details').removeClass("active-step");
+                        $('#payer-details').addClass("success-step");
+                        $('#confirm').addClass("active-step");
+                  
+                });
+            });
+ 
+            $(document).ready(function() {
+                $('a[name="confirm-button"]').click(function() {
+                    
+                        $('#payment').show();
+                        $('#confirm-details').hide();
+
+                        $('#confirm').removeClass("active-step");
+                        $('#confirm').addClass("success-step");
+
+                        $('#payment-method').addClass("active-step");
+   
+                });
+            });
+
+            $('#details1').click(function() {
+                $("#transfer-content").show(this.checked);
+                $('.transfer').addClass("payment-active");
+                $('.creditcard').removeClass("payment-active");
+                $("#creditcard-content").hide(this.checked);
+
+            });
+
+            $('.button-creditcard').click(function() {
+                $("#creditcard-content").show(this.checked);
+                $('.creditcard').addClass("payment-active");
+                $('.transfer').removeClass("payment-active");
+                $("#transfer-content").hide(this.checked);
+
+            });
+
+            </script>
 
     </body>
 </html>

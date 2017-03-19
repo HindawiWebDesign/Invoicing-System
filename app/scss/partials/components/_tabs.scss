@@ -1,5 +1,5 @@
 .tabs {
-padding-top: $pica;
+padding-bottom: 0;
 }
 .tabs:after {
 	content: '';
@@ -7,33 +7,55 @@ padding-top: $pica;
 	clear: both;
 }
 .tabs input[type=radio] {
-	margin-left: $pica*2;
+	/*margin-left: $pica*2;*/
     margin-top: -0.5rem;
-    display: inline-block;
+    /*display: inline-block;*/
 }
 .tabs label, 
 .transfer label {
 	cursor: pointer;
 }
-.transfer label {
-	padding: 0
+.steps .transfer label {
+    padding: 0 0;
+    margin-right: 0;
+    font-size: 1.6rem;
+    width: 134px;
+    vertical-align: middle;
+    height: 66px;
+    display: table;
+
+    span {
+      width: 100%;
+      height: 66px;
+      vertical-align: middle;
+      text-align: center;
+      display: table-cell;
+    }
 }
+
 .tab-content {
 	display: none;
 	// width: 100%;
 	// box-sizing: border-box;
-	border-top: 1px solid $color-border-grey;
-	margin: $pica 0 0;
+	/*border-top: 1px solid $color-border-grey;*/
+	/*margin: $pica 0 0;*/
 }
+
+input.toggle-tab, 
 #details1, 
-#details1-content {
+#transfer-content,
+#confirm-details, 
+#payment {
 	display: none;
 }
+
 /*.tabs [id^="tab"]:checked + label {}*/
-#tab1:checked ~ #tab-content1,
+
+
+/*#tab1:checked ~ #tab-content1,
 #tab2:checked ~ #tab-content2,
-#tab3:checked ~ #tab-content3,
-#details1:checked ~ #details1-content {
+#tab3:checked ~ #tab-content3,*/
+#details1:checked ~ #transfer-content {
 	display: block;
 }
 
@@ -45,3 +67,8 @@ $tab-number: 4;
   $tab-number: $tab-number - 1
   }
 }
+
+.creditcard-content img {
+  margin-bottom: $pica;
+}
+

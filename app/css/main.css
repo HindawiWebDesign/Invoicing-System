@@ -541,6 +541,12 @@ a, .authors-list label span, .transfer label span {
 .margin-t-6 {
   margin-top: 6px; }
 
+.margin-t-12 {
+  margin-top: 12px; }
+
+.padding-2 {
+  padding: 3.2rem; }
+
 html {
   font-size: 62.5%; }
 
@@ -665,53 +671,62 @@ section {
   padding: 0;
   border-radius: 0.5rem 0.5rem 0 0;
   position: relative; }
+  section .section-content--right {
+    width: 49.8333%; }
+    section .section-content--right p {
+      float: left; }
   section .section-content,
   section .invoice-details {
-    padding: 3.2rem; }
+    width: 100%;
+    box-sizing: border-box; }
+  section .section-content--left,
   section .invoice-details,
   section footer {
     background-color: #F5F5F5; }
   section .section-content--left,
   section .section-content--right {
-    width: 46%;
+    width: 49.8333%;
     display: inline-block;
     vertical-align: top;
-    padding-right: 3.2rem; }
+    padding: 3.2rem;
+    box-sizing: border-box;
+    display: table-cell; }
   section dl {
-    float: right;
     height: auto;
     width: 100%;
-    margin-bottom: 0.4rem; }
+    margin-bottom: 0.4rem;
+    display: table; }
   section dt {
     float: left;
     padding: 0 1.6rem 0 0;
-    width: 30%;
+    width: 37%;
     white-space: nowrap; }
   section dd {
     float: right;
-    width: 65%; }
-  section .invoice-details__apc dl {
-    float: left;
-    width: 80%; }
-  section .invoice-details__apc dt {
-    width: 63%;
-    white-space: nowrap; }
-  section .invoice-details__apc dd {
-    width: 31%;
-    text-align: right;
-    white-space: nowrap; }
-  section .invoice-details__apc .net-charges {
-    margin-top: 0.4rem; }
-  section .invoice-details__apc .net-charges dt {
-    border-top: 1px solid transparent;
-    padding-top: 0.8rem; }
-  section .invoice-details__apc .net-charges dd {
-    border-top: 1px solid #B5B5B5;
-    padding-top: 0.8rem; }
-  section .invoice-details__apc .subtotal {
-    border-top: 1px solid #B5B5B5;
-    margin: 0.4rem 0 1.2rem;
-    padding-top: 1.6rem; }
+    width: 58%; }
+  section .invoice-details__apc {
+    float: left; }
+    section .invoice-details__apc dl {
+      float: left; }
+    section .invoice-details__apc dt {
+      width: 63%;
+      white-space: nowrap; }
+    section .invoice-details__apc dd {
+      width: 20%;
+      text-align: right;
+      white-space: nowrap; }
+    section .invoice-details__apc .net-charges {
+      margin-top: 0.4rem; }
+    section .invoice-details__apc .net-charges dt {
+      border-top: 1px solid transparent;
+      padding-top: 0.8rem; }
+    section .invoice-details__apc .net-charges dd {
+      border-top: 1px solid #B5B5B5;
+      padding-top: 0.8rem; }
+    section .invoice-details__apc .subtotal {
+      border-top: 1px solid #B5B5B5;
+      margin: 0.4rem 0 1.2rem;
+      padding-top: 1.6rem; }
   section .icon-help {
     background-color: transparent;
     background-image: url(../images/help.svg);
@@ -730,6 +745,83 @@ section {
     margin-left: 0.4rem; }
     section .icon-help:hover, section .icon-help:focus, section .icon-help:active {
       background-image: url(../images/help-hover.svg); }
+  section .icon-orcid {
+    background-color: transparent;
+    background-image: url(../images/orcid16x16.png);
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    -webkit-background-size: 16px 16px;
+    -moz-background-size: 16px 16px;
+    -o-background-size: 16px 16px;
+    -ms-background-size: 16px 16px;
+    background-position: center center;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 0.53333rem;
+    margin-top: -3px; }
+  section .icon-author {
+    background-color: transparent;
+    background-image: url(../images/people2.svg);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    -webkit-background-size: 24px 24px;
+    -moz-background-size: 24px 24px;
+    -o-background-size: 24px 24px;
+    -ms-background-size: 24px 24px;
+    background-position: center center;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: text-bottom;
+    cursor: pointer;
+    margin-right: 0.53333rem; }
+  section label.active-payer {
+    color: #6cb33e; }
+    section label.active-payer .icon-author {
+      background-image: url(../images/people-active2.svg); }
+    section label.active-payer .icon-institution {
+      background-image: url(../images/institution-active2.svg); }
+    section label.active-payer:hover .icon-author, section label.active-payer:focus .icon-author, section label.active-payer:active .icon-author {
+      background-image: url(../images/people-active2.svg); }
+    section label.active-payer:hover .icon-institution, section label.active-payer:focus .icon-institution, section label.active-payer:active .icon-institution {
+      background-image: url(../images/institution-active2.svg); }
+  section label.disabled {
+    color: #c3c3c3;
+    cursor: default;
+    pointer-events: none; }
+    section label.disabled .icon-author {
+      background-image: url(../images/people-disabled2.svg); }
+    section label.disabled .icon-institution {
+      background-image: url(../images/institution-disabled2.svg); }
+    section label.disabled:hover .icon-author, section label.disabled:focus .icon-author, section label.disabled:active .icon-author {
+      background-image: url(../images/people-disabled2.svg);
+      cursor: default; }
+    section label.disabled:hover .icon-institution, section label.disabled:focus .icon-institution, section label.disabled:active .icon-institution {
+      background-image: url(../images/institution-disabled2.svg);
+      cursor: default; }
+  section label:hover .icon-author, section label:focus .icon-author, section label:active .icon-author {
+    background-image: url(../images/people-hover2.svg); }
+  section label:hover .icon-institution, section label:focus .icon-institution, section label:active .icon-institution {
+    background-image: url(../images/institution-hover2.svg); }
+  section .icon-institution {
+    background-color: transparent;
+    background-image: url(../images/institution2.svg);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    -webkit-background-size: 24px 24px;
+    -moz-background-size: 24px 24px;
+    -o-background-size: 24px 24px;
+    -ms-background-size: 24px 24px;
+    background-position: center center;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: text-bottom;
+    cursor: pointer;
+    margin-right: 0.53333rem; }
   section .coupon {
     width: 90%; }
     section .coupon .icon-help {
@@ -741,20 +833,33 @@ section {
     section p:last-child {
       margin-bottom: 0; }
   section .payment-options__list {
-    height: 75px; }
+    height: 68px; }
     section .payment-options__list li {
       display: inline-block;
       float: left;
-      width: 155px;
-      height: 73px;
+      width: 132.5333px;
+      height: 66px;
       margin-right: 1.6rem;
       border: 1px solid #D1D1D1;
       text-align: center; }
+      section .payment-options__list li.transfer {
+        margin-right: 0; }
+      section .payment-options__list li.payment-active {
+        border: 1px solid #6cb33e; }
   section .paypal form {
     width: 100%;
     height: 100%; }
-  section #details1-content {
+  section #transfer-content,
+  section #creditcard-content {
     margin-top: 3.2rem; }
+  section hr {
+    float: left;
+    width: 100%; }
+  section .container {
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    /*padding: 0 $pica*2 $pica*2;*/
+    margin-top: 1.6rem; }
 
 .section-title {
   background-color: #00718f;
@@ -799,6 +904,8 @@ h2 {
   .inputtext50 input[type="text"]:last-child {
     margin-right: 0;
     float: right; }
+  .inputtext50 input[type="text"]:only-child {
+    float: none; }
 
 .validation-message {
   color: red;
@@ -868,13 +975,18 @@ select {
 
 .invoice-details__apc input[type="text"] {
   border: 1px solid #C8C8C8;
-  width: 60%;
+  width: 30%;
   padding: 0 0.8rem;
   height: 3.2rem;
   border-radius: 0.5rem; }
   .invoice-details__apc input[type="text"]:focus {
     background-color: #FFFFFF;
     border-color: #787878; }
+
+.invoice-details__apc .button-default {
+  background-color: #C3C3C3; }
+  .invoice-details__apc .button-default:focus, .invoice-details__apc .button-default:hover {
+    background-color: #9c9c9c; }
 
 /* Fields with standard height */
 input[type="text"],
@@ -1029,19 +1141,34 @@ input[type="image"] {
 .paypal .button-paypal {
   background-color: transparent;
   font-size: 0;
-  height: 73px;
+  height: 66px;
   line-height: 0;
   margin: 0;
   padding: 1.6rem;
-  width: 155px; }
+  /*width: 155px;*/ }
 
 .paypal img {
-  width: 123px; }
+  width: 100%; }
+
+.creditcard .button-creditcard {
+  background-color: transparent;
+  font-size: 0;
+  height: 67px;
+  line-height: 0;
+  margin: 0;
+  padding: 1.6rem;
+  width: 132px;
+  display: table-cell; }
+
+.creditcard img {
+  width: 56px;
+  height: 35px; }
 
 .transfer div {
-  padding: 1.6rem 1.6rem 0;
-  text-transform: uppercase;
-  white-space: nowrap; }
+  padding: 3.2rem 1.6rem 0;
+  /* text-transform: uppercase; */
+  white-space: nowrap;
+  font-size: 1.8rem; }
 
 input[type="image"] {
   text-align: center;
@@ -1198,7 +1325,7 @@ main .modal__box form label {
   margin-top: 0; }
 
 .tabs {
-  padding-top: 1.6rem; }
+  padding-bottom: 0; }
 
 .tabs:after {
   content: '';
@@ -1206,31 +1333,46 @@ main .modal__box form label {
   clear: both; }
 
 .tabs input[type=radio] {
-  margin-left: 3.2rem;
+  /*margin-left: $pica*2;*/
   margin-top: -0.5rem;
-  display: inline-block; }
+  /*display: inline-block;*/ }
 
 .tabs label,
 .transfer label {
   cursor: pointer; }
 
-.transfer label {
-  padding: 0; }
+.steps .transfer label {
+  padding: 0 0;
+  margin-right: 0;
+  font-size: 1.6rem;
+  width: 134px;
+  vertical-align: middle;
+  height: 66px;
+  display: table; }
+  .steps .transfer label span {
+    width: 100%;
+    height: 66px;
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell; }
 
 .tab-content {
   display: none;
-  border-top: 1px solid #D1D1D1;
-  margin: 1.6rem 0 0; }
+  /*border-top: 1px solid $color-border-grey;*/
+  /*margin: $pica 0 0;*/ }
 
+input.toggle-tab,
 #details1,
-#details1-content {
+#transfer-content,
+#confirm-details,
+#payment {
   display: none; }
 
 /*.tabs [id^="tab"]:checked + label {}*/
-#tab1:checked ~ #tab-content1,
+/*#tab1:checked ~ #tab-content1,
 #tab2:checked ~ #tab-content2,
-#tab3:checked ~ #tab-content3,
-#details1:checked ~ #details1-content {
+#tab3:checked ~ #tab-content3,*/
+#details1:checked ~ #transfer-content {
   display: block; }
 
 #tab4:checked ~ #tab-content4 {
@@ -1244,6 +1386,9 @@ main .modal__box form label {
 
 #tab1:checked ~ #tab-content1 {
   display: block; }
+
+.creditcard-content img {
+  margin-bottom: 1.6rem; }
 
 /* Cookies Notification */
 .notification {
@@ -1289,6 +1434,169 @@ main .modal__box form label {
       text-decoration: none; }
   .notification a.btn_accept:hover {
     text-decoration: none; }
+
+.steps h3 {
+  margin: 0;
+  font-size: 1.6rem;
+  padding: 0.2rem 3.2rem 0.1rem;
+  background-color: #EDEDED;
+  /*border-bottom: 1px solid $color-border-grey;*/
+  text-transform: uppercase;
+  font-family: "Myriad W01 Regular", sans-serif; }
+
+.steps label {
+  margin-right: 3.2rem; }
+
+.steps .wizard {
+  position: relative; }
+
+.steps .wizard-wrap, .steps .wizard ul {
+  height: 63px; }
+
+.steps .wizard ul {
+  list-style: none;
+  width: 430px;
+  margin: 0 auto;
+  padding: 0;
+  z-index: 4;
+  text-align: right;
+  /*float: right;*/ }
+
+.steps .clearfix:before, .steps .clearfix:after {
+  display: table;
+  content: " "; }
+
+.steps .wizard *, .steps .wizard *:after, .steps .wizard *:before {
+  box-sizing: border-box; }
+
+.steps .wizard ul li {
+  float: left;
+  position: relative;
+  margin-right: 10px; }
+
+.steps .wizard ul li {
+  font-size: 13px;
+  height: 40px;
+  line-height: 30px;
+  text-align: center;
+  margin-right: 40px;
+  padding: 40px 0 0 0;
+  min-width: 66px;
+  position: relative; }
+
+.steps .wizard-number {
+  position: absolute;
+  margin-left: -35px;
+  top: 0;
+  left: 50%;
+  font-size: 2rem;
+  line-height: 66px;
+  text-align: center;
+  color: #929292;
+  background-color: #fff; }
+
+.steps .wizard ul li.active-step .wizard-number-inner {
+  background-color: #787878;
+  font-family: "Myriad W01 Bd", sans-serif;
+  color: #fff;
+  border-width: 0px; }
+
+.steps .wizard ul .wizard-number:after {
+  /* line */
+  content: "";
+  display: block;
+  width: 100px;
+  height: 1px;
+  top: 21px;
+  left: 36px;
+  position: absolute;
+  background: #d1d1d1;
+  z-index: -2; }
+
+.steps .wizard ul .wizard-step:last-child .wizard-number:after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 15px;
+  top: 27px;
+  left: 75px;
+  position: absolute;
+  background: #000;
+  z-index: -2; }
+
+.steps .wizard ul li .wizard-number-inner:before {
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  margin-left: -25px;
+  top: 0;
+  left: 50%;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px; }
+
+.steps .wizard ul li.active-step .wizard-number-inner:after {
+  background: #f4f4f4;
+  color: #40464b;
+  box-shadow: 0 3px 4px #dbf3ef inset;
+  top: 0;
+  left: 50%;
+  margin-left: -25px;
+  line-height: 50px;
+  height: 50px;
+  width: 50px; }
+
+.steps .wizard *, .steps .wizard *:after, .steps .wizard *:before {
+  box-sizing: border-box; }
+
+.steps .wizard ul li .wizard-number-inner {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  margin-left: auto;
+  line-height: 40px;
+  display: block;
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  color: #787878;
+  border: 1px solid #d1d1d1;
+  background-color: #f5f5f5;
+  font-family: "Myriad W01 Regular", sans-serif; }
+
+.steps span.wizard-subtext {
+  position: absolute;
+  width: 110px;
+  left: -4px;
+  font-size: 1.4rem; }
+
+.steps li.active-step span.wizard-subtext {
+  /*font-family: "Myriad W01 Bd", sans-serif;*/ }
+
+.steps .formdt dt {
+  width: 30%;
+  padding: 1.4rem 0 0; }
+
+.steps .formdt dd {
+  width: 65%; }
+
+.steps .wizard ul li.success-step .wizard-subtext {
+  color: #6cb33e; }
+
+.steps .wizard ul li.success-step span.wizard-number-inner {
+  background-image: url(../images/success.svg);
+  background-repeat: no-repeat;
+  background-size: 24px 18px;
+  -webkit-background-size: 24px 18px;
+  -moz-background-size: 24px 18px;
+  -o-background-size: 24px 18px;
+  -ms-background-size: 24px 18px;
+  background-position: center center;
+  display: inline-block;
+  font-size: 0;
+  border-color: #6cb33e; }
 
 /* ==========================================================================
    Print styles.

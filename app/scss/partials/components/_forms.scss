@@ -125,7 +125,7 @@ select
 
 	input[type="text"] {
 		border: 1px solid $fh-border-color;
-		width: 60%;
+		width: 30%;
 		padding: 0 0.8rem;
 		height: 3.2rem;
 		border-radius: $fh-button-radius;
@@ -134,6 +134,13 @@ select
 			background-color: $fh-input-bg-color;
 			border-color: $fh-focus-border-color;
 		}
+	}
+	.button-default {
+		background-color: $bgcolor-btn-grey;
+
+	&:focus, &:hover {
+		background-color: $bgcolor-btn-grey-hover;
+	}
 	}
 }
 
@@ -321,23 +328,41 @@ input[type="image"] {
 
 .paypal {
 	.button-paypal  {
-		background-color: transparent;
-		font-size: 0;
-	    height: 73px;
-		line-height: 0;
-		margin: 0;
-		padding: $pica;
-	    width: 155px;
+	    background-color: transparent;
+	    font-size: 0;
+	    height: 66px;
+	    line-height: 0;
+	    margin: 0;
+	    padding: $pica;
+	    /*width: 155px;*/
 	}
 	img {
-		width: 123px;
+		width: 100%;
+	}
+}
+
+.creditcard {
+	.button-creditcard  {
+	    background-color: transparent;
+	    font-size: 0;
+	    height: 67px;
+	    line-height: 0;
+	    margin: 0;
+	    padding: 1.6rem;
+	    width: 132px;
+		display: table-cell;
+	}
+	img {
+		width: 56px;
+   		height: 35px;
 	}
 }
 
 .transfer div {
-	padding: $pica $pica 0;
-	text-transform: uppercase;
+	padding: $pica*2 $pica 0;
+    /* text-transform: uppercase; */
     white-space: nowrap;
+    font-size: 1.8rem;
 }
 
 input[type="image"] {

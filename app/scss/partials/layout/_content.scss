@@ -13,51 +13,67 @@ section {
     border-radius: 0.5rem 0.5rem 0 0;
 	position: relative;
 
+	.section-content--right {
+		width: 49.8333%;
+
+		p {
+			float: left;
+		}
+	}
+
     .section-content, 
     .invoice-details {
-    	padding: $pica*2;
+		width: 100%;
+		box-sizing: border-box;
     }
 
+    .section-content--left, 
     .invoice-details, 
     footer {
     	background-color: $bgcolor-lightGrey;
     }
     .section-content--left, 
     .section-content--right {
-	    width: 46%;
+		width: 49.8333%;
 	    display: inline-block;
 	    vertical-align: top;
-	    padding-right: $pica*2;
+	    padding: $pica*2;
+		box-sizing: border-box;
+
+		    display: table-cell;
     }
 
     dl {
-   	    float: right;
+   	    // float: right;
 	    height: auto;
         width: 100%;
         margin-bottom: $pica/4;
+		display: table;
     }
 
     dt {
 	    float: left;
 	    padding: 0 $pica 0 0;
-	    width: 30%;
+	    width: 37%;
         white-space: nowrap;
     }
     dd {
 	    float: right;
-	    width: 65%;
+	    width: 58%;
 	}
 	.invoice-details__apc {
+
+		float: left;
+		
 		dl {
 			float: left;
-			width: 80%;
 		}
 	    dt {
 		    width: 63%;
 		    white-space: nowrap;
 	    }
 	    dd {
-		    width: 31%;
+		    width: 20%;
 		    text-align: right;
 		    white-space: nowrap;
 		}
@@ -98,6 +114,110 @@ section {
 	    	background-image: url(../images/help-hover.svg);
 	    }
 	}
+
+	.icon-orcid {
+		background-color: transparent;
+	    background-image: url(../images/orcid16x16.png);
+	    background-repeat: no-repeat;
+	    background-size: 16px 16px;
+		-webkit-background-size: 16px 16px;
+		-moz-background-size: 16px 16px;
+		-o-background-size: 16px 16px;
+		-ms-background-size: 16px 16px;
+	    background-position: center center;
+	    display: inline-block;
+	    width: 16px;
+	    height: 16px;
+	    vertical-align: middle;
+	    cursor: pointer;
+	    margin-right: $pica/3;
+		margin-top: -3px;	
+	}
+
+	.icon-author {
+		background-color: transparent;
+	    background-image: url(../images/people2.svg);
+	    background-repeat: no-repeat;
+	    background-size: 24px 24px;
+		-webkit-background-size: 24px 24px;
+		-moz-background-size: 24px 24px;
+		-o-background-size: 24px 24px;
+		-ms-background-size: 24px 24px;
+	    background-position: center center;
+	    display: inline-block;
+	    width: 24px;
+	    height: 24px;
+	    vertical-align: text-bottom;
+	    cursor: pointer;
+	    margin-right: $pica/3;		
+	}
+	label {
+	    &.active-payer {
+	    	color: #6cb33e;
+
+		    .icon-author {
+		    	background-image: url(../images/people-active2.svg);
+		    }
+		    .icon-institution {
+		    	background-image: url(../images/institution-active2.svg);
+		    }
+			&:hover .icon-author, &:focus .icon-author, &:active .icon-author {
+		    	background-image: url(../images/people-active2.svg);
+		    }
+			&:hover .icon-institution, &:focus .icon-institution, &:active .icon-institution {
+		    	background-image: url(../images/institution-active2.svg);
+		    }
+		}
+
+		&.disabled {
+			color: #c3c3c3;
+			cursor: default;
+			pointer-events: none;
+
+		    .icon-author {
+		    	background-image: url(../images/people-disabled2.svg);
+		    }
+		    .icon-institution {
+		    	background-image: url(../images/institution-disabled2.svg);
+		    }
+			&:hover .icon-author, &:focus .icon-author, &:active .icon-author {
+		    	background-image: url(../images/people-disabled2.svg);
+		    	cursor: default;
+		    }
+			&:hover .icon-institution, &:focus .icon-institution, &:active .icon-institution {
+		    	background-image: url(../images/institution-disabled2.svg);
+		    	cursor: default;
+		    }
+		}
+
+		&:hover .icon-author, &:focus .icon-author, &:active .icon-author {
+	    	background-image: url(../images/people-hover2.svg);
+	    }
+
+		&:hover .icon-institution, &:focus .icon-institution, &:active .icon-institution {
+	    	background-image: url(../images/institution-hover2.svg);
+	    }
+	}	    
+
+
+	.icon-institution {
+		background-color: transparent;
+	    background-image: url(../images/institution2.svg);
+	    background-repeat: no-repeat;
+	    background-size: 24px 24px;
+		-webkit-background-size: 24px 24px;
+		-moz-background-size: 24px 24px;
+		-o-background-size: 24px 24px;
+		-ms-background-size: 24px 24px;
+	    background-position: center center;
+	    display: inline-block;
+	    width: 24px;
+	    height: 24px;
+	    vertical-align: text-bottom;
+	    cursor: pointer;
+	    margin-right: $pica/3;		
+	}
+
 	.coupon {
 		width: 90%;
 		.icon-help {
@@ -133,24 +253,44 @@ section {
 	// }
 
 	.payment-options__list {
-		height: 75px;
+		height: 68px;
 
 		li {
-			display: inline-block;
-			float: left;
-			width: 155px;
-    		height: 73px;
-			margin-right: $pica;
-			border: 1px solid $color-border-grey;
-			text-align: center;
+		    display: inline-block;
+		    float: left;
+		    width: 132.5333px;
+		    height: 66px;
+		    margin-right: $pica;
+		    border: 1px solid #D1D1D1;
+		    text-align: center;
+
+		    &.transfer {
+		    	margin-right: 0;
+		    }
+
+		    &.payment-active {
+		    	border: 1px solid #6cb33e;
+		    }
 		}
 	}
 	.paypal form {
 		width: 100%;
 		height: 100%;
 	}
-	#details1-content {
+	#transfer-content, 
+	#creditcard-content {
 		margin-top: $pica*2;
+	}
+
+	hr {
+	    float: left;
+	    width: 100%;
+	}
+	.container {
+		background-color: #ffffff;
+		border: 1px solid #eaeaea;
+		/*padding: 0 $pica*2 $pica*2;*/
+		margin-top: $pica;
 	}
 }
 
@@ -211,9 +351,15 @@ h2 {
 			margin-right: 0;
 			float: right;
 		}
+		&:only-child {
+			float: none;
+		}
 }
 .validation-message {
 	color: red;
 	line-height: $pica*1.5;
 }
+
+
+
 
