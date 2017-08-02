@@ -509,6 +509,9 @@ a, .authors-list label span, .transfer label span {
 .display-block {
   display: block; }
 
+.display-table {
+  display: table; }
+
 /* General Float */
 .float-right {
   float: right; }
@@ -837,11 +840,12 @@ section {
     section .payment-options__list li {
       display: inline-block;
       float: left;
-      width: 132.5333px;
+      width: 95.43333px;
       height: 66px;
       margin-right: 1.6rem;
       border: 1px solid #D1D1D1;
-      text-align: center; }
+      text-align: center;
+      border-radius: 5px; }
       section .payment-options__list li.transfer {
         margin-right: 0; }
       section .payment-options__list li.payment-active {
@@ -911,6 +915,10 @@ h2 {
   color: red;
   line-height: 2.4rem; }
 
+.download-invoice img {
+  width: 3.2rem;
+  margin-right: 1.6rem; }
+
 footer {
   font-size: 1.6rem;
   width: 113.6rem;
@@ -946,7 +954,7 @@ datalist {
   font-size: 1.8rem; }
 
 label {
-  padding: 0 0 0 0.8rem; }
+  padding: 0; }
 
 /* Input & Textarea ------------------ */
 /* Fields with standard width */
@@ -1095,7 +1103,6 @@ input[type="image"] {
   font: 1.6rem/1.7rem "Myriad W01 Bd", sans-serif;
   color: #FFFFFF;
   height: 32px;
-  -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
   text-decoration: none;
   padding: 0.8rem 1.6rem 0.8rem;
@@ -1144,11 +1151,12 @@ input[type="image"] {
   height: 66px;
   line-height: 0;
   margin: 0;
-  padding: 1.6rem;
+  padding: 0;
+  /*$pica*/
   /*width: 155px;*/ }
 
 .paypal img {
-  width: 100%; }
+  height: 70%; }
 
 .creditcard .button-creditcard {
   background-color: transparent;
@@ -1164,7 +1172,37 @@ input[type="image"] {
   width: 56px;
   height: 35px; }
 
-.transfer div {
+.checkout .button-checkout {
+  background-color: transparent;
+  font-size: 0;
+  height: 67px;
+  line-height: 0;
+  margin: 0;
+  padding: 1.6rem;
+  width: 132px;
+  display: table-cell; }
+
+.checkout img {
+  width: 36px;
+  height: 36px; }
+
+.transfer .button-transfer {
+  background-color: transparent;
+  font-size: 0;
+  height: 67px;
+  line-height: 0;
+  margin: 0;
+  padding: 1.6rem;
+  width: 132px;
+  display: block;
+  box-sizing: border-box; }
+
+.transfer img {
+  width: 68px;
+  height: 24px;
+  margin: 2.1rem 1.4rem; }
+
+.transfer label {
   padding: 3.2rem 1.6rem 0;
   /* text-transform: uppercase; */
   white-space: nowrap;
@@ -1258,7 +1296,7 @@ label.for-modal {
   background-color: rgba(0, 0, 0, 0.5);
   bottom: 0;
   left: 0;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   height: 100%;
@@ -1295,7 +1333,6 @@ input:checked ~ .modal__overlay {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
   transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
   z-index: 800; }
 
@@ -1344,17 +1381,8 @@ main .modal__box form label {
 .steps .transfer label {
   padding: 0 0;
   margin-right: 0;
-  font-size: 1.6rem;
-  width: 134px;
-  vertical-align: middle;
-  height: 66px;
-  display: table; }
-  .steps .transfer label span {
-    width: 100%;
-    height: 66px;
-    vertical-align: middle;
-    text-align: center;
-    display: table-cell; }
+  width: 100%;
+  height: 66px; }
 
 .tab-content {
   display: none;
@@ -1394,7 +1422,6 @@ input.toggle-tab,
 .notification {
   background-color: #758285;
   padding: 1.6rem;
-  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   min-width: 116.8rem;
   /* For non-responsive */
@@ -1415,7 +1442,7 @@ input.toggle-tab,
     font-family: "Myriad W01 Regular", sans-serif; }
   .notification a.btn_accept {
     font-family: "Myriad W01 Regular", sans-serif;
-    font-size: 2.4rem;
+    font-size: 1.6rem;
     cursor: pointer;
     display: inline-block;
     width: 2.4rem;
@@ -1424,7 +1451,8 @@ input.toggle-tab,
     text-decoration: none;
     position: absolute;
     margin-right: -0.7rem;
-    right: 0; }
+    right: 0;
+    top: 2px; }
   .notification a {
     color: #FFFFFF;
     text-decoration: underline;
@@ -1445,7 +1473,7 @@ input.toggle-tab,
   font-family: "Myriad W01 Regular", sans-serif; }
 
 .steps label {
-  margin-right: 3.2rem; }
+  margin-right: 6.4rem; }
 
 .steps .wizard {
   position: relative; }
@@ -1525,7 +1553,6 @@ input.toggle-tab,
   z-index: -2; }
 
 .steps .wizard ul li .wizard-number-inner:before {
-  -webkit-transition: all 300ms;
   transition: all 300ms;
   content: "";
   position: absolute;

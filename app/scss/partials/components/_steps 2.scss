@@ -1,0 +1,164 @@
+.steps {
+
+	h3 {
+		margin: 3.2rem 0 0.8rem 0;
+		font-size: 1.8rem;
+		border-top: 1px solid $color-border-grey;
+		padding-top: 1.6rem;
+	}
+
+	label {
+		margin-right: 3.2rem;
+	}
+
+
+
+.wizard {
+     position: relative; 
+}
+.sf-t5 .sf-nav-top, .sf-t5 .sf-nav-bottom {
+    height: 63px;
+}
+.sf-nav {
+    list-style: none;
+    width: 318px;
+    margin: 0;
+    padding: 0;
+    z-index: 4;
+    text-align: right;
+    float: right;
+}
+.clearfix:before, .clearfix:after {
+    display: table;
+    content: " ";
+}
+.wizard *, .wizard *:after, .wizard *:before {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.sf-nav-top .sf-nav, .sf-nav-bottom .sf-nav {
+    height: 73px;
+}
+.sf-nav li {
+    float: left;
+    position: relative;
+    margin-right: 10px;
+}
+.sf-t5 .sf-nav li {
+    font-size: 13px;
+    height: 40px;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 40px;
+    padding: 40px 0 0 0;
+    min-width: 66px;
+    position: relative;
+}
+.sf-t5 .sf-nav-number {
+    position: absolute;
+    margin-left: -35px;
+    top: 0;
+    left: 50%;
+    font-size: 2rem;
+    line-height: 66px;
+    text-align: center;
+    color: #929292;
+    background-color: #fff;
+}
+
+.sf-t5 .sf-nav li.sf-active .sf-nav-number-inner, .sf-t5 .sf-nav li.sf-nav-mark-step .sf-nav-number-inner {
+    color: #787878;
+    font-family: "Myriad W01 Bd", sans-serif;
+}
+.sf-t5 .sf-nav .sf-nav-number:after { /* line */
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    top: 21px;
+    left: 36px;
+    position: absolute;
+    background: #d1d1d1;
+    z-index: -2;
+}
+.sf-t5 .sf-nav .sf-nav-step:last-child .sf-nav-number:after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 15px;
+    top: 27px;
+    left: 75px;
+    position: absolute;
+    background: #000;
+    z-index: -2;
+}
+.sf-t5 .sf-nav li .sf-nav-number-inner:before {
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    -ms-transition: all 300ms;
+    -o-transition: all 300ms;
+    transition: all 300ms;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    margin-left: -25px;
+    top: 0;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+.sf-t5 .sf-nav li.sf-active .sf-nav-number-inner:after {
+    background: #f4f4f4;
+    color: #40464b;
+    box-shadow: 0 3px 4px #dbf3ef inset;
+    top: 0;
+    left: 50%;
+    margin-left: -25px;
+    line-height: 50px;
+    height: 50px;
+    width: 50px;
+}
+.wizard *, .wizard *:after, .wizard *:before {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.sf-t5 .sf-nav li .sf-nav-number-inner {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    margin-left: auto;
+    line-height: 40px;
+    display: block;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    color: #787878;
+    border: 1px solid #d1d1d1;
+    background-color: #f5f5f5;
+    font-family: "Myriad W01 Regular", sans-serif;
+}
+
+span.sf-nav-subtext {
+    position: absolute;
+    width: 110px;
+    left: -4px;
+    font-size: 1.4rem;
+}
+li.sf-active span.sf-nav-subtext {
+    font-family: "Myriad W01 Bd", sans-serif;
+}
+
+
+
+    dt {
+	    width: 30%;
+	    padding: 1.4rem 0 0;
+    }
+    dd {
+	    width: 65%;
+	}
+
+}

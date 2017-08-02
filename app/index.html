@@ -14,10 +14,56 @@
         <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.jpg" />
         <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-touch-icon-144x144.jpg" />
         <link rel="SHORTCUT ICON" href="/favicon.ico" type="image/x-icon" />
-        
+
         <!--build:css css/main.min.css-->
         <link rel="stylesheet" href="css/main.css">
         <!-- endbuild -->
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+        <!--build:js js/jquery-1.4.2.min.js -->
+        <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+        <!-- endbuild -->
+
+
+        <script type="text/javascript" language="javascript">
+        // $(document).ready(function() {
+        //     $('input[type="radio"]').click(function() {
+        //         if ($(this).attr('id') == 'showhide') {
+        //             $('#include_coi').show();
+        //         } else {
+        //             $('#include_coi').hide();
+        //         }
+        //     });
+        // });
+
+        $(document).ready(function() {
+            $('input[type="radio"]').click(function() {
+                if ($(this).attr('id') == 'showhide') {
+                    $('#include_coi').removeClass("display_none");
+                    $('#include_coi').addClass("display_inl_block");
+                } else {
+                    $('#include_coi').removeClass("display_inl_block");
+                    $('#include_coi').addClass("display_none");
+                }
+            });
+
+            $("#select-country").change(function() {
+                    if ($("#select-country option[value='UK']").attr('selected')) {
+                                $('#vat-reg').show();
+                        // $("#vat-reg").removeClass("display-none");
+                        // $("#vat-reg").addClass("display-table");
+
+                        } else {
+                                $('#vat-reg').hide();
+                        // $("#vat-reg").removeClass("display-table");
+                        // $("#vat-reg").addClass("display-none");
+
+                    }
+                });
+        });
+
+    </script>
 
     </head>
     <body>
@@ -25,14 +71,14 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Content Starts --> 
+        <!-- Content Starts -->
         <header>
             <div class="container">
                 <a href="http://checkout.hindawi.com/" class="logo">
                     <img src="images/hindawi.svg" alt="Hindawi Publishing Corporation">
                 </a>
                 <h1>PAYMENT DETAILS</h1>
-                <!-- <nav class="steps"> 
+                <!-- <nav class="steps">
                     <ul>
                         <li class="steps--enabled">Confirm payment information</li>
                         <li class="steps--disabled">Select Payment Method</li>
@@ -59,7 +105,7 @@
                                     <button type="submit" name="SubmitButton" value="Ok" class="button-default">Ok</button>
                                     <label class="for-modal" for="confirmationModal">
                                         <a class="button-default">Cancel</a>
-                                    </label>                        
+                                    </label>
                                 </form>
                             </div>
                         </div>
@@ -72,88 +118,10 @@
                    <h2>Article Details</h2>
                 </div>
 
-                <!-- Modal start -->
-                <!-- Modal 1 -->
-                <div class="modal">
-                    <input id="modal1" type="checkbox" name="modal1" tabindex="1">
-                    <div class="modal__overlay">
-                        <div class="modal__box">
-                            <div class="section-title">
-                                <h2>Authors List
-                                    <span class="float-right">
-                                        <label for="modal1">&#10005;</label>
-                                    </span>
-                                </h2>
-                            </div>
-                            <div class="modal__box__content">
-                                <ul>
-                                    <li>Author 1 <span class="author-corresponding">(Corresponding)</span></li>
-                                    <li>Author 2</li>
-                                    <li>Author 3</li>
-                                    <li>Author 4</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Modal 2 -->
-                <div class="modal">
-                    <input id="modal2" type="checkbox" name="modal2" tabindex="2">
-                    <div class="modal__overlay">
-                        <div class="modal__box">
-                            <div class="section-title">
-                                <h2>VAT
-                                    <span class="float-right">
-                                        <label for="modal2">&#10005;</label>
-                                    </span>
-                                </h2>
-                            </div>
-                            <div class="modal__box__content">
-                                <p>
-                                Hindawi Limited is based in the United Kingdom and must charge a 20% Value Added Tax (VAT) on qualifying transactions.
-                                </p>
-                                <p>
-                                UK VAT applies when we supply services to any individual or organization based in the UK. 
-                                </p>
-                                <p>
-                                When our customer is a non-VAT registered individual or organization based outside the UK but within the EU, Article 45 of 2006/112/EC applies. The place of supply is where the supplier, Hindawi Limited, is established and UK VAT therefore applies.
-                                </p>
-                                <p>
-                                When our customer is a VAT-registered individual or organization based outside the UK but within the EU, Article 44 of the 2006/112/EC applies. The place of supply is where the customer is established, which puts the invoice outside the scope of UK VAT.
-                                </p>
-                                <p>
-                                When our customer is an individual or organization based outside of the EU, all transactions are outside the scope of UK VAT.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Modal 3 -->
-                <div class="modal">
-                    <input id="modal3" type="checkbox" name="modal3" tabindex="3">
-                    <div class="modal__overlay">
-                        <div class="modal__box">
-                            <div class="section-title">
-                                <h2>The Coupon
-                                    <span class="float-right">
-                                        <label for="modal3">&#10005;</label>
-                                    </span>
-                                </h2>
-                            </div>
-                            <div class="modal__box__content">
-                                <p>This box will open to display the list of Authors or the detailed information about the coupon policy.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Modal end -->
-
 
                 <div class="section-content">
                     <div class="section-content--left">
-                        
+
                         <div class="steps">
                             <!-- <h3>Payment Steps:</h3> -->
 
@@ -183,7 +151,7 @@
             </li>
 
             <li id="payment-method" class="wizard-step">
-                <span class="wizard-subtext">Payment Methods</span>
+                <span class="wizard-subtext">Invoice & Payment</span>
                 <div class="wizard-number">
                     <span class="wizard-number-inner">4</span>
                 </div>
@@ -192,23 +160,21 @@
     </div>
 </div>
 
-                            
+
                             <div class="tabs">
 
                                 <!-- Step 1 -->
                                 <div class="container">
                                     <h3>Choose Payer</h3>
                                     <div class="padding-2">
-                                        
+
                                         <!-- <label for="tab1" class="disabled"> -->
-                                        <label for="tab1" id="author-label"><span class="icon-author"></span>Author</label> 
-                                           
-                                        
+                                        <label for="tab1" id="author-label"><span class="icon-author"></span>Individual</label>
+
+
                                         <!-- <label for="tab2" id="institution-label" class="active"> -->
                                         <label for="tab2" id="institution-label"><span class="icon-institution"></span>Institution</label>
-                                        
-                                        <!-- <label for="tab3" id="other-label" class="active"> -->
-                                        <label for="tab3" id="other-label"><span class="icon-author"></span>Other</label>
+
                                     </div>
                                 </div>
 
@@ -225,31 +191,29 @@
                                             <div class="smaller-font validation-message">
                                                 <ul>
                                                     <li>Please check the required fields.</li>
-                                                    <li>Invalid Email address.</li>
+                                                    <!-- <li>Invalid Email address.</li> -->
                                                 </ul>
                                             </div>
 
                                                 <dl>
                                                     <dt>Payer name</dt>
                                                     <dd>
-                                                        <select id="co-author" disabled="disabled">
-                                                        <option value="1">Jing Zhao (corresponding author)</option>
-                                                        <option value="2">co-author2</option>
-                                                        <option value="3">co-author3</option>
-                                                        <option value="4">co-author4</option>
-                                                        </select>
+                                                        <dd class="inputtext50">
+                                                            <input type="text" id="first-name" value="" placeholder="First Name">
+                                                            <input type="text" id="last-name" value="" placeholder="Last Name">
+                                                        </dd>
                                                     </dd>
                                                 </dl>
-                                                                 
+
                                                 <dl>
                                                     <dt>Address</dt>
                                                     <dd><input type="text" id="City" value="" class="invalid">
                                                     <input type="text" id="City" value="">
+                                                    <input type="text" id="City" value="">
                                                     <input type="text" id="City" value="" disabled="disabled">
-
                                                     </dd>
                                                 </dl>
-                                                
+
                                                 <dl>
                                                     <dt>City</dt>
                                                     <dd><input type="text" id="City" value="" class="invalid"></dd>
@@ -265,7 +229,7 @@
                                                     </dd>
                                                 </dl>
 
-                                          
+
                                             <div>
                                                 <!-- <input type="submit" name="save-button" value="Save" class="button-default"> -->
                                                 <a href="#" id="save-button1" name="save-button" class="button-default">Save</a>
@@ -295,8 +259,36 @@
                                                 <dt>Email</dt>
                                                 <dd><input type="text" id="Email" value=""></dd>
                                             </dl>
+                                            <dl>
+                                                    <dt>Address</dt>
+                                                    <dd>
+                                                        <input type="text" id="City" value="" class="invalid">
+                                                        <input type="text" id="City" value="">
+                                                        <input type="text" id="City" value="">
+                                                        <input type="text" id="City" value="" disabled="disabled">
+                                                    </dd>
+                                                </dl>
 
-                                         
+                                                <dl>
+                                                    <dt>City</dt>
+                                                    <dd><input type="text" id="City" value="" class="invalid"></dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>Country</dt>
+                                                    <dd><select id="select-country">
+                                                        <option value="Select Country">Select Country</option>
+                                                        <option value="Afghanistan">Afghanistan</option>
+                                                        <option value="Albania">Albania</option>
+                                                        <option value="Algeria">Algeria</option>
+                                                        <option value="UK">United Kingdom</option>
+                                                        </select>
+                                                    </dd>
+                                                </dl>
+                                                <dl id="vat-reg" style="display: none">
+                                                    <dt>EC VAT Reg. No.</dt>
+                                                    <dd><input type="text" id="City" value=""></dd>
+                                                </dl>
+
                                             <div>
                                                 <!-- <input type="submit" id="save-button1" name="save-button" value="Save" class="button-default"> -->
 
@@ -305,62 +297,8 @@
                                         </div>
                                     </div>
 
-                                    <!-- #tab-content3 -->
-                                    <div id="tab-content3" class="tab-content formdt container">
-                                        <h3>Billing Address</h3>
-                                        <div class="padding-2">
-                                            <!-- <div class="smaller-font validation-message">
-                                                <ul>
-                                                    <li>Please check the required fields.</li>
-                                                    <li>Invalid Email address.</li>
-                                                </ul>
-                                            </div> -->
 
 
-                                                <dl>
-                                                    <dt>Payer name</dt>
-                                                    <dd>
-                                                        <select id="co-author" disabled="disabled">
-                                                        <option value="1">Jing Zhao (corresponding author)</option>
-                                                        <option value="2">co-author2</option>
-                                                        <option value="3">co-author3</option>
-                                                        <option value="4">co-author4</option>
-                                                        </select>
-                                                    </dd>
-                                                </dl>
-                                                                 
-                                                <dl>
-                                                    <dt>Address</dt>
-                                                    <dd><input type="text" id="City" value="" class="invalid">
-                                                    <input type="text" id="City" value="">
-                                                    <input type="text" id="City" value="" disabled="disabled">
-
-                                                    </dd>
-                                                </dl>
-                                                
-                                                <dl>
-                                                    <dt>City</dt>
-                                                    <dd><input type="text" id="City" value="" class="invalid"></dd>
-                                                </dl>
-                                                <dl>
-                                                    <dt>Country</dt>
-                                                    <dd><select id="Country">
-                                                        <option value="Select Country">Select Country</option>
-                                                        <option value="Afghanistan">Afghanistan</option>
-                                                        <option value="Albania">Albania</option>
-                                                        <option value="Algeria">Algeria</option>
-                                                        </select>
-                                                    </dd>
-                                                </dl>
-
-                                          
-                                            <div>
-                                                <!-- <input type="submit" name="save-button" value="Save" class="button-default"> -->
-                                                <a href="#" id="save-button" name="save-button" class="button-default">Save</a>
-
-                                            </div>
-                                        </div>
-                                    </div>
 
                                     </div>
                                 </div>
@@ -391,18 +329,27 @@
                                                 <dd>United Kingdom</dd>
                                             </dl>
 
-                                           
-                                            <p><b>Important:</b> By clicking "Confirm" button below, you will not be able to update your data previously entered, if you are not sure click "Back" button.</p>
-                                           
+
+                                            <p><b>Important:</b> By clicking "Confirm", an invoice will be generated and you will not be able to update the data entered, if you are not sure, click "Back".</p>
+
 
                                             <a href="#" id="back-button" name="back-button" class="button-default">Back</a>
                                             <a href="#" id="confirm-button" name="confirm-button" class="button-default">Confirm</a>
                                     </div>
-                                    
+
                                 </div>
 
 
-                            <div class="container" id="payment">
+
+                            <div id="payment">
+                                <div class="container" id="download-invoice">
+                                <h3>Invoice</h3>
+                                <div class="padding-2">
+                                    <div class="download-invoice"><a href="#"><img src="images/pdf-download.svg"><span>Download invoice</span></a> </div>
+                                </div>
+                            </div>
+                            <div class="container">
+
                                 <!-- Step 3 -->
                                 <h3>Payment Methods</h3>
                                 <div class="padding-2">
@@ -417,14 +364,23 @@
                                         <li class="paypal">
                                             <form>
                                                 <button type="submit" value="sandbox.paypal.submit" class="button-paypal">
-                                                    <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_150x38.png" alt="paypal">
+                                                    <!-- <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_150x38.png" alt="paypal"> -->
+                                                    <img src="https://www.irefurb.it/images/paypal-logo1.png" alt="paypal">
                                                 </button>
                                             </form>
                                         </li>
+                                        <li class="checkout">
+                                            <form>
+                                                <a href="#" class="button-checkout">
+                                                    <img src="images/2checkout.png" alt="checkout">
+                                                </a>
+                                            </form>
+                                        </li>
                                         <li class="transfer">
-                                                <!-- <div>BANK TRANSFER</div> -->
-                                                <label for="details1">
-                                                    <span>BANK TRANSFER</span>
+                                                <label for="details1" class="button-transfer">
+
+														<img src="images/bank-transfer.svg" alt="checkout">
+
                                                 </label>
                                         </li>
                                     </ul>
@@ -456,7 +412,7 @@
                                                     </dd>
                                                 </dl>
 
-                                             
+
                                                 <div>
                                                     <a href="#" id="creditcard-button" name="creditcard-button" class="button-default">Pay $900.00</a>
                                                 </div>
@@ -465,7 +421,7 @@
                                     <input type="checkbox" name="details1" id="details1">
 
                                     <div id="transfer-content" class="transfer-content">
-                                        
+
                                             <dl>
                                                 <dt>Account Name</dt>
                                                 <dd>Hindawi Limited</dd>
@@ -509,9 +465,9 @@
 
                                             <p>It is important that we can match up the payment you make to your invoice. Please ensure that the reference used for a bank transfer is the invoice number you are payin</p>
                                     </div>
-                                        
-                                        
-                                        
+
+
+                                  </div>
                                 </div>
                             </div>
                         </div>
@@ -543,7 +499,7 @@
                         <dl>
                             <dt>Article ID</dt>
                             <dd>1406304</dd>
-                        </dl> 
+                        </dl>
                         <dl>
                             <dt>Article Type</dt>
                             <dd>Research Article</dd>
@@ -558,7 +514,7 @@
                                     <span class="smaller-font">(Corresponding Author)</span>
                             </dt>
                             <dd>
-                                Jing Zhao 
+                                Jing Zhao
                                 <a href="http://orcid.org/0000-0003-3696-7507" target="_blank"><span class="icon-orcid"></span></a>
                                     <!-- <span class="smaller-font nowrap">(ORCID: 0000-0002-8140-3658)</span> -->
                             </dd>
@@ -566,7 +522,7 @@
                         <dl class="no-print">
                             <dt>Additional Authors</dt>
                             <dd>
-                                <div class="authors-list"> 
+                                <div class="authors-list">
                                     <label class="for-modal" for="modal1" >
                                             <span>view author list</span>
                                     </label>
@@ -593,7 +549,7 @@
                             <dt>Terms</dt>
                             <dd>Payable upon Receipt</dd>
                         </dl>
-                        
+
                         <hr>
 
                         <div class="invoice-details__apc">
@@ -611,7 +567,7 @@
                                 <dd>750.00</dd>
                             </dl>
                             <dl class="vat">
-                                <dt>Vat 
+                                <dt>VAT
                                     <span class="percent">(+20%)</span>
                                     <label class="for-modal" for="modal2" >
                                             <span class="icon-help"></span>
@@ -637,8 +593,9 @@
                         </div>
                     </div>
                 </div>
+
             </section>
-       
+
 
 
             </form>
@@ -654,13 +611,92 @@
                 For any assistance, please contact <a href="mailto:accounts.receivable@hindawi.com">accounts.receivable@hindawi.com</a>.
             </p>
         </footer>
+
+                <!-- Modal start -->
+                <!-- Modal 1 -->
+                <div class="modal">
+                    <input id="modal1" type="checkbox" name="modal1" tabindex="1">
+                    <div class="modal__overlay">
+                        <div class="modal__box">
+                            <div class="section-title">
+                                <h2>Authors List
+                                    <span class="float-right">
+                                        <label for="modal1">&#10005;</label>
+                                    </span>
+                                </h2>
+                            </div>
+                            <div class="modal__box__content">
+                                <ul>
+                                    <li>Author 1 <span class="author-corresponding">(Corresponding)</span></li>
+                                    <li>Author 2</li>
+                                    <li>Author 3</li>
+                                    <li>Author 4</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal 2 -->
+                <div class="modal">
+                    <input id="modal2" type="checkbox" name="modal2" tabindex="2">
+                    <div class="modal__overlay">
+                        <div class="modal__box">
+                            <div class="section-title">
+                                <h2>VAT
+                                    <span class="float-right">
+                                        <label for="modal2">&#10005;</label>
+                                    </span>
+                                </h2>
+                            </div>
+                            <div class="modal__box__content">
+                                <p>
+                                Hindawi Limited is based in the United Kingdom and must charge a 20% Value Added Tax (VAT) on qualifying transactions.
+                                </p>
+                                <p>
+                                UK VAT applies when we supply services to any individual or organization based in the UK.
+                                </p>
+                                <p>
+                                When our customer is a non-VAT registered individual or organization based outside the UK but within the EU, Article 45 of 2006/112/EC applies. The place of supply is where the supplier, Hindawi Limited, is established and UK VAT therefore applies.
+                                </p>
+                                <p>
+                                When our customer is a VAT-registered individual or organization based outside the UK but within the EU, Article 44 of the 2006/112/EC applies. The place of supply is where the customer is established, which puts the invoice outside the scope of UK VAT.
+                                </p>
+                                <p>
+                                When our customer is an individual or organization based outside of the EU, all transactions are outside the scope of UK VAT.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal 3 -->
+                <div class="modal">
+                    <input id="modal3" type="checkbox" name="modal3" tabindex="3">
+                    <div class="modal__overlay">
+                        <div class="modal__box">
+                            <div class="section-title">
+                                <h2>The Coupon
+                                    <span class="float-right">
+                                        <label for="modal3">&#10005;</label>
+                                    </span>
+                                </h2>
+                            </div>
+                            <div class="modal__box__content">
+                                <p>This box will open to display the list of Authors or the detailed information about the coupon policy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal end -->
+
         <!-- Content Ends -->
 
         <!--build:js js/cookieconsent.min.js -->
         <script type="text/javascript" src="js/cookieconsent.js"></script>
         <!-- endbuild -->
 
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
 
         <script type="text/javascript" language="javascript">
 
@@ -669,7 +705,7 @@
         //     $('.toggle-tab').on('click', function() {
         //         var tabId = $(this).attr('data-tabid');
         //         alert(tabId);
-        //         // $('#'+tabId).toggle(); // id on container that should be toggled 
+        //         // $('#'+tabId).toggle(); // id on container that should be toggled
         //     });
         // });
 
@@ -688,7 +724,7 @@
                         $('#choose-payer').removeClass("active-step");
                         $('#choose-payer').addClass("success-step");
                         $('#payer-details').addClass("active-step");
-                        
+
                     }
 
                     else {
@@ -750,28 +786,29 @@
                         $('#tab-content1').hide();
                         $('#tab-content2').hide();
                         $('#tab-content3').hide();
-                        
+
                         $('.tabs').hide();
                         $('#confirm-details').show();
 
                         $('#payer-details').removeClass("active-step");
                         $('#payer-details').addClass("success-step");
                         $('#confirm').addClass("active-step");
-                  
+
                 });
             });
- 
+
             $(document).ready(function() {
                 $('a[name="confirm-button"]').click(function() {
-                    
+
                         $('#payment').show();
+                        $('#download-invoice').show();
                         $('#confirm-details').hide();
 
                         $('#confirm').removeClass("active-step");
                         $('#confirm').addClass("success-step");
 
                         $('#payment-method').addClass("active-step");
-   
+
                 });
             });
 
@@ -790,6 +827,8 @@
                 $("#transfer-content").hide(this.checked);
 
             });
+
+
 
             </script>
 

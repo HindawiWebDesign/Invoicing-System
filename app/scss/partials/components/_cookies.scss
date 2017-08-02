@@ -24,7 +24,7 @@
 	}
 	a.btn_accept {
 	    font-family: $myriadRegular;
-	    font-size: 2.4rem;
+	    font-size: 1.6rem;
 	    cursor: pointer;
 	    display: inline-block;
 	    width: 2.4rem;
@@ -34,6 +34,7 @@
 	    position: absolute;
 	    margin-right: -0.7rem;
 	    right: 0;
+	    top: 2px;
 	}
 	a {
 	    color: $color-white-text;

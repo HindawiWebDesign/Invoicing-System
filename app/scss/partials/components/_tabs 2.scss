@@ -1,0 +1,48 @@
+.tabs {
+padding-bottom: 0;
+}
+.tabs:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.tabs input[type=radio] {
+	/*margin-left: $pica*2;*/
+    margin-top: -0.5rem;
+    display: inline-block;
+}
+.tabs label, 
+.transfer label {
+	cursor: pointer;
+}
+.steps .transfer label {
+	padding: 0;
+	margin-right: 0;
+}
+.tab-content {
+	display: none;
+	// width: 100%;
+	// box-sizing: border-box;
+	/*border-top: 1px solid $color-border-grey;*/
+	/*margin: $pica 0 0;*/
+}
+#details1, 
+#details1-content {
+	display: none;
+}
+/*.tabs [id^="tab"]:checked + label {}*/
+#tab1:checked ~ #tab-content1,
+#tab2:checked ~ #tab-content2,
+#tab3:checked ~ #tab-content3,
+#details1:checked ~ #details1-content {
+	display: block;
+}
+
+$tab-number: 4;
+
+@while $tab-number > 0 {
+  #tab#{$tab-number}:checked ~ #tab-content#{$tab-number} {
+    display: block;
+  $tab-number: $tab-number - 1
+  }
+}

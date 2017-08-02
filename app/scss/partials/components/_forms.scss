@@ -84,10 +84,10 @@ datalist {
 }
 
 label {
-	
+
 	display: $fh-display;
-	padding: 0 0 0 $pica/2;
-	
+	padding: 0;
+
 }
 
 
@@ -280,7 +280,7 @@ legend {
 
 /* Buttons, Input Type Submit/Reset ------------------ */
 
- 
+
 
 
 %button {
@@ -299,7 +299,7 @@ legend {
 	cursor: pointer;
     box-sizing: border-box;
 }
-.button-default, 
+.button-default,
 button,
 input[type="button"],
 input[type="submit"],
@@ -333,11 +333,12 @@ input[type="image"] {
 	    height: 66px;
 	    line-height: 0;
 	    margin: 0;
-	    padding: $pica;
+	    padding: 0; /*$pica*/
 	    /*width: 155px;*/
 	}
 	img {
-		width: 100%;
+		// width: 100%;
+		height: 70%;
 	}
 }
 
@@ -357,8 +358,43 @@ input[type="image"] {
    		height: 35px;
 	}
 }
+.checkout {
+	.button-checkout {
+	    background-color: transparent;
+	    font-size: 0;
+	    height: 67px;
+	    line-height: 0;
+	    margin: 0;
+	    padding: 1.6rem;
+	    width: 132px;
+		display: table-cell;
+	}
+	img {
+		width: 36px;
+   		height: 36px;
+	}
+}
+.transfer {
+	.button-transfer {
+	    background-color: transparent;
+	    font-size: 0;
+	    height: 67px;
+	    line-height: 0;
+	    margin: 0;
+	    padding: 1.6rem;
+	    width: 132px;
+		display: block;
+		box-sizing: border-box;
+	}
+	img {
+		width: 68px;
+		height: 24px;
+		// margin-top: $pica / 2.8;
+		margin: 2.1rem 1.4rem;
+	}
+}
 
-.transfer div {
+.transfer label {
 	padding: $pica*2 $pica 0;
     /* text-transform: uppercase; */
     white-space: nowrap;
@@ -373,7 +409,7 @@ input[type="image"] {
 
 /* States ------------------ */
 
-a.button-default:hover, 
+a.button-default:hover,
 button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover,
@@ -394,7 +430,7 @@ option:focus {
 	border-color: $fh-focus-border-color;
 }
 
-a.button-default[disabled], 
+a.button-default[disabled],
 input[disabled],
 button[disabled] {
 	cursor: default;
@@ -410,7 +446,7 @@ button[disabled] {
 
 textarea[disabled],
 select[disabled],
-option[disabled], 
+option[disabled],
 input[type="text"]:disabled {
 	cursor: default;
 	opacity: 0.45;
@@ -428,11 +464,11 @@ input[type="radio"]:focus {
 	outline: $fh-focus-border-color solid 0;
 }
 
-input.invalid, 
-textarea.invalid, 
-select.invalid, 
-input.invalid:focus, 
-textarea.invalid:focus, 
+input.invalid,
+textarea.invalid,
+select.invalid,
+input.invalid:focus,
+textarea.invalid:focus,
 select.invalid:focus {
 	border-color: $color-border-red;
 	color: $color-red;

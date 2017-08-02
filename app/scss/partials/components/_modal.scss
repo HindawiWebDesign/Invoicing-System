@@ -30,7 +30,7 @@ label.for-modal {
 	background-color: rgba(0,0,0,.5);
 	bottom: 0;
 	left: 0;
-	position: absolute;
+	position: fixed;
 	right: 0;
 	top: 0;
 	height: 100%;
@@ -93,7 +93,7 @@ input:focus + label {
 main .modal__overlay.full-overlay {
 	position: fixed;
 }
-main .modal__overlay.full-overlay .button-default, 
+main .modal__overlay.full-overlay .button-default,
 main .modal__box form label {
 	position: relative;
 	display: inline-block;

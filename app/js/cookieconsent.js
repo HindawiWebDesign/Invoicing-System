@@ -104,7 +104,7 @@
 				a = {
 					options: {
 						message: "By using this website, you consent to the use of cookies as described in our ",
-						dismiss: "x",
+						dismiss: "&#x2715;",
 						learnMore: "Privacy Policy",
 						link: "https://www.hindawi.com/privacy/",
 						target: "_self",
