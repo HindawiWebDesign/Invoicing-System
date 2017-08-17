@@ -578,6 +578,11 @@ h1, h2, h3, h4, h5, h6, b, strong {
 h2 {
   font-size: 1.8rem; }
 
+h3 {
+  font-size: 1.6rem;
+  font-family: "Myriad W01 Regular", sans-serif;
+  text-transform: uppercase; }
+
 section .percent {
   font-family: "Myriad W01 Regular", sans-serif; }
 
@@ -672,12 +677,13 @@ section {
   background-color: #FFF;
   margin-top: 1.6rem;
   padding: 0;
-  border-radius: 0.5rem 0.5rem 0 0;
   position: relative; }
   section .section-content--right {
     width: 49.8333%; }
     section .section-content--right p {
       float: left; }
+    section .section-content--right h3:first-child {
+      margin-top: 0; }
   section .section-content,
   section .invoice-details {
     width: 100%;
@@ -724,10 +730,10 @@ section {
       border-top: 1px solid transparent;
       padding-top: 0.8rem; }
     section .invoice-details__apc .net-charges dd {
-      border-top: 1px solid #B5B5B5;
+      border-top: 1px solid #D1D1D1;
       padding-top: 0.8rem; }
     section .invoice-details__apc .subtotal {
-      border-top: 1px solid #B5B5B5;
+      border-top: 1px solid #D1D1D1;
       margin: 0.4rem 0 1.2rem;
       padding-top: 1.6rem; }
   section .icon-help {
@@ -838,27 +844,50 @@ section {
   section .payment-options__list {
     height: 68px; }
     section .payment-options__list li {
-      display: inline-block;
+      display: block;
       float: left;
       width: 95.43333px;
       height: 66px;
       margin-right: 1.6rem;
       border: 1px solid #D1D1D1;
       text-align: center;
-      border-radius: 5px; }
+      border-radius: 5px;
+      opacity: 0.6;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%); }
       section .payment-options__list li.transfer {
         margin-right: 0; }
       section .payment-options__list li.payment-active {
-        border: 1px solid #6cb33e; }
+        border: 1px solid #6cb33e;
+        opacity: 1;
+        filter: none;
+        -webkit-filter: none; }
+      section .payment-options__list li:hover {
+        opacity: 1;
+        filter: none;
+        -webkit-filter: none;
+        transition: all ease 0.3s; }
   section .paypal form {
     width: 100%;
     height: 100%; }
   section #transfer-content,
   section #creditcard-content {
-    margin-top: 3.2rem; }
+    margin-top: 1.6rem; }
+  section #creditcard-content .creditcard-number dd {
+    border-bottom: 1px solid #C8C8C8;
+    position: relative; }
+    section #creditcard-content .creditcard-number dd input {
+      width: 18rem;
+      border-bottom: 0; }
+    section #creditcard-content .creditcard-number dd img {
+      top: 0.6rem;
+      width: 90px;
+      position: absolute;
+      right: 0; }
   section hr {
     float: left;
-    width: 100%; }
+    width: 100%;
+    display: none; }
   section .container {
     background-color: #ffffff;
     border: 1px solid #eaeaea;
@@ -874,8 +903,15 @@ h2 {
   padding: 0.8rem 1.6rem 0.8rem 3.2rem;
   color: #FFF; }
 
+h3 {
+  padding: 0.8rem 1.6rem 0 0;
+  border-bottom: 1px solid #cccccc;
+  color: #00718f;
+  margin: 1rem 0; }
+
 .article-details {
-  margin-top: 0; }
+  margin-top: 0;
+  border-top: 0.6rem solid #6cb33e; }
 
 .section-content.formdt .section-content--right {
   padding-top: 0;
@@ -918,6 +954,24 @@ h2 {
 .download-invoice img {
   width: 3.2rem;
   margin-right: 1.6rem; }
+
+#confirm-payment .success {
+  background-image: url(../images/success.svg);
+  background-repeat: no-repeat;
+  background-size: 24px 18px;
+  -webkit-background-size: 24px 18px;
+  -moz-background-size: 24px 18px;
+  -o-background-size: 24px 18px;
+  -ms-background-size: 24px 18px;
+  padding-left: 3.2rem; }
+  #confirm-payment .success b {
+    font-size: 2.2rem; }
+
+#confirm-payment p {
+  margin-bottom: 0; }
+
+#confirm-payment .button-default {
+  margin-right: 0; }
 
 footer {
   font-size: 1.6rem;
@@ -1463,14 +1517,15 @@ input.toggle-tab,
   .notification a.btn_accept:hover {
     text-decoration: none; }
 
-.steps h3 {
+.steps h2 {
   margin: 0;
   font-size: 1.6rem;
   padding: 0.2rem 3.2rem 0.1rem;
   background-color: #EDEDED;
   /*border-bottom: 1px solid $color-border-grey;*/
   text-transform: uppercase;
-  font-family: "Myriad W01 Regular", sans-serif; }
+  font-family: "Myriad W01 Regular", sans-serif;
+  color: #787878; }
 
 .steps label {
   margin-right: 6.4rem; }

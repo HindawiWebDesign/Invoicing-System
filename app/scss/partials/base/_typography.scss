@@ -1,9 +1,9 @@
-html { 
-	font-size: 62.5%; 
+html {
+	font-size: 62.5%;
 }
-body { 
+body {
 	font-family: $myriadRegular;
-	font-size: $fontSize-default; 
+	font-size: $fontSize-default;
 	font-weight: normal;
 	font-style: normal;
 	line-height: 2.4rem;
@@ -26,6 +26,11 @@ h1, h2, h3, h4, h5, h6, b, strong {
 }
 h2 {
    	font-size: $fontSize-default;
+}
+h3 {
+	font-size: $fontSize-small;
+	font-family: $myriadRegular;
+	text-transform: uppercase;
 }
 section {
 	.percent {

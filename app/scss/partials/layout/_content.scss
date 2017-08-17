@@ -10,7 +10,7 @@ section {
 	background-color: #FFF;
 	margin-top: $pica;
 	padding: 0;
-    border-radius: 0.5rem 0.5rem 0 0;
+    // border-radius: 0.5rem 0.5rem 0 0;
 	position: relative;
 
 	.section-content--right {
@@ -18,6 +18,9 @@ section {
 
 		p {
 			float: left;
+		}
+		h3:first-child {
+			margin-top: 0;
 		}
 	}
 
@@ -85,11 +88,11 @@ section {
 		    padding-top: $pica/2;
 		}
 		.net-charges dd {
-			border-top: 1px solid $color-border-darkGrey;
+			border-top: 1px solid $color-border-grey;
 		    padding-top: $pica/2;
 		}
 		.subtotal {
-			border-top: 1px solid $color-border-darkGrey;
+			border-top: 1px solid $color-border-grey;
 			margin: $pica/4 0 1.2rem;
 			padding-top: $pica;
 		}
@@ -295,12 +298,28 @@ section {
 	}
 	#transfer-content,
 	#creditcard-content {
-		margin-top: $pica*2;
+		margin-top: $pica;
+	}
+	#creditcard-content .creditcard-number dd {
+		border-bottom: 1px solid #C8C8C8;
+		position: relative;
+
+		input {
+			width: $pica*11.25;
+			border-bottom: 0;
+		}
+		img {
+			top: 0.6rem;
+			width: 90px;
+			position: absolute;
+			right: 0;
+		}
 	}
 
 	hr {
 	    float: left;
-	    width: 100%;
+		width: 100%;
+		display: none;
 	}
 	.container {
 		background-color: #ffffff;
@@ -320,8 +339,15 @@ h2 {
    	padding: $pica/2 $pica $pica/2 $pica*2;
 	color: #FFF;
 }
+h3 {
+   	padding: $pica/2 $pica 0 0;
+	border-bottom: 1px solid #cccccc;
+	color: #00718f;
+	margin: 1rem 0;
+}
 &.article-details {
-   	margin-top: 0;
+	   margin-top: 0;
+	   border-top: $pica/2.66666 solid $color-green;
 }
 
 .section-content.formdt {
@@ -381,4 +407,25 @@ h2 {
 	margin-right: $pica;
 }
 
+#confirm-payment {
+	.success {
+		background-image: url(../images/success.svg);
+		background-repeat: no-repeat;
+		background-size: 24px 18px;
+		-webkit-background-size: 24px 18px;
+		-moz-background-size: 24px 18px;
+		-o-background-size: 24px 18px;
+		-ms-background-size: 24px 18px;
+		padding-left: $pica*2;
 
+		b {
+			font-size: $fontSize-bigger;
+		}
+	}
+	p {
+		margin-bottom: 0;
+	}
+	.button-default {
+		margin-right: 0;
+	}
+}

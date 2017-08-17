@@ -114,9 +114,9 @@
             </div>
             <form>
             <section class="article-details">
-                <div class="section-title">
+                <!-- <div class="section-title">
                    <h2>Article Details</h2>
-                </div>
+                </div> -->
 
 
                 <div class="section-content">
@@ -165,7 +165,7 @@
 
                                 <!-- Step 1 -->
                                 <div class="container">
-                                    <h3>Choose Payer</h3>
+                                    <h2>Choose Payer</h2>
                                     <div class="padding-2">
 
                                         <!-- <label for="tab1" class="disabled"> -->
@@ -186,7 +186,7 @@
                                     <!-- Step 2 -->
                                     <!-- #tab-content1 -->
                                     <div id="tab-content1" class="tab-content formdt container">
-                                        <h3>Billing Address</h3>
+                                        <h2>Billing Address</h2>
                                         <div class="padding-2">
                                             <div class="smaller-font validation-message">
                                                 <ul>
@@ -242,7 +242,7 @@
 
                                     <!-- #tab-content2 -->
                                     <div id="tab-content2" class="tab-content formdt container">
-                                    <h3>Institution Details</h3>
+                                    <h2>Institution Details</h2>
                                         <div class="padding-2">
                                             <dl>
                                                 <dt>Institution name</dt>
@@ -305,7 +305,7 @@
 
                                 <div class="container" id="confirm-details">
                                     <!-- Step 3 -->
-                                    <h3>CONFIRM</h3>
+                                    <h2>CONFIRM</h2>
                                     <div class="padding-2">
                                             <!-- <p>Pay by: <b>Author</b></p> -->
                                             <dl>
@@ -343,7 +343,7 @@
 
                             <div id="payment">
                                 <div class="container" id="download-invoice">
-                                <h3>Invoice</h3>
+                                <h2>Invoice</h2>
                                 <div class="padding-2">
                                     <div class="download-invoice"><a href="#"><img src="images/pdf-download.svg"><span>Download invoice</span></a> </div>
                                 </div>
@@ -351,7 +351,7 @@
                             <div class="container">
 
                                 <!-- Step 3 -->
-                                <h3>Payment Methods</h3>
+                                <h2>Payment Methods</h2>
                                 <div class="padding-2">
                                     <ul class="payment-options__list">
                                         <li class="creditcard payment-active">
@@ -387,10 +387,14 @@
 
                                     <!-- Credit Card -->
                                             <div id="creditcard-content" class="creditcard-content formdt">
-                                                <img src="images/credit-cards.png">
-                                                <dl>
+												<h3>Credit Card Details</h3>
+
+                                                <dl class="creditcard-number">
                                                     <dt>Card Number</dt>
-                                                    <dd><input type="text" id="" value=""></dd>
+													<dd>
+														<input type="text" id="" value="">
+														<img src="images/credit-cards.png">
+													</dd>
                                                 </dl>
                                                 <dl>
                                                     <dt>Expiry Date</dt>
@@ -421,7 +425,7 @@
                                     <input type="checkbox" name="details1" id="details1">
 
                                     <div id="transfer-content" class="transfer-content">
-
+										<h3>Bank Transfer Details</h3>
                                             <dl>
                                                 <dt>Account Name</dt>
                                                 <dd>Hindawi Limited</dd>
@@ -469,12 +473,20 @@
 
                                   </div>
                                 </div>
-                            </div>
+							</div>
+
+							<div class="container" id="confirm-payment" style="display:none;">
+								<div class="padding-2 align-center">
+									<span class="success"><b>$900.00</b></span>
+									<p>Your payment is complete</p>
+									<a href="#" id="view-invoice-button" name="view-invoice-button" class="button-default">View Invoice</a>
+								</div>
+							</div>
                         </div>
 
                     </div>
                     <div class="section-content--right">
-
+						<h3>Article Details</h3>
                         <dl>
                             <dt>Journal Title</dt>
                             <dd>International Journal of Mathematics and Mathematical Science</dd>
@@ -531,8 +543,8 @@
                         </dl>
 
 
-                        <hr>
-
+                        <!-- <hr> -->
+						<h3>Invoice Details</h3>
                         <dl>
                             <dt>Invoice Issue Date</dt>
                             <dd>20 October 2016</dd>
@@ -550,8 +562,8 @@
                             <dd>Payable upon Receipt</dd>
                         </dl>
 
-                        <hr>
-
+						<!-- <hr> -->
+						<h3>Charges</h3>
                         <div class="invoice-details__apc">
 
                             <dl>
@@ -713,12 +725,17 @@
 
 
             $(document).ready(function() {
+
+				// $('#confirm-payment').hide();
+
                 $('input[type="radio"]').click(function() {
 
                     // $('#payment').hide();
 
                     if($(this).attr('id') == 'tab1') {
                         $('#tab-content1').show();
+						$('#confirm-payment').hide();
+
                         $('#author-label').addClass("active-payer ");
 
                         $('#choose-payer').removeClass("active-step");
@@ -742,6 +759,8 @@
 
                     if($(this).attr('id') == 'tab2') {
                         $('#tab-content2').show();
+						$('#confirm-payment').hide();
+
                         $('#institution-label').addClass("active-payer");
 
                         $('#choose-payer').removeClass("active-step");
@@ -764,6 +783,8 @@
 
                     if($(this).attr('id') == 'tab3') {
                         $('#tab-content3').show();
+						$('#confirm-payment').hide();
+
                         $('#other-label').addClass("active-payer");
 
                         $('#choose-payer').removeClass("active-step");
@@ -786,6 +807,7 @@
                         $('#tab-content1').hide();
                         $('#tab-content2').hide();
                         $('#tab-content3').hide();
+						$('#confirm-payment').hide();
 
                         $('.tabs').hide();
                         $('#confirm-details').show();
@@ -798,11 +820,13 @@
             });
 
             $(document).ready(function() {
+
                 $('a[name="confirm-button"]').click(function() {
 
                         $('#payment').show();
                         $('#download-invoice').show();
                         $('#confirm-details').hide();
+						$('#confirm-payment').hide();
 
                         $('#confirm').removeClass("active-step");
                         $('#confirm').addClass("success-step");
@@ -825,6 +849,20 @@
                 $('.creditcard').addClass("payment-active");
                 $('.transfer').removeClass("payment-active");
                 $("#transfer-content").hide(this.checked);
+
+            });
+
+            $('#creditcard-button').click(function() {
+                        $('#payment').hide();
+                        $('#download-invoice').hide();
+                        $('#confirm-details').hide();
+						$('#confirm-payment').show();
+
+                        // $('#confirm').removeClass("active-step");
+                        // $('#confirm').addClass("success-step");
+
+                        $('#payment-method').removeClass("active-step");
+						$('#payment-method').addClass("success-step");
 
             });
 
