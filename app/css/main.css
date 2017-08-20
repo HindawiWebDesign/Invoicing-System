@@ -1444,10 +1444,7 @@ main .modal__box form label {
   /*margin: $pica 0 0;*/ }
 
 input.toggle-tab,
-#details1,
-#transfer-content,
-#confirm-details,
-#payment {
+#details1 {
   display: none; }
 
 /*.tabs [id^="tab"]:checked + label {}*/
