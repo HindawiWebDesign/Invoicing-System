@@ -98,23 +98,17 @@ section {
 		}
 	}
 	.icon-help {
-		background-color: transparent;
-	    background-image: url(../images/help.svg);
-	    background-repeat: no-repeat;
-	    background-size: 24px 24px;
-		-webkit-background-size: 24px 24px;
-		-moz-background-size: 24px 24px;
-		-o-background-size: 24px 24px;
-		-ms-background-size: 24px 24px;
-	    background-position: center center;
 	    display: inline-block;
 	    width: 24px;
 	    height: 24px;
 	    vertical-align: text-bottom;
-	    cursor: pointer;
-	    margin-left: $pica/4;
+		cursor: pointer;
+		margin-left: $pica/4;
+		font-size: 24px;
+		color: $color-lightGrey;
 	    &:hover, &:focus, &:active {
-	    	background-image: url(../images/help-hover.svg);
+			// background-image: url(../images/help-hover.svg);
+			color: $color-grey;
 	    }
 	}
 
@@ -137,88 +131,41 @@ section {
 		margin-top: -3px;
 	}
 
-	.icon-author {
-		background-color: transparent;
-	    background-image: url(../images/people2.svg);
-	    background-repeat: no-repeat;
-	    background-size: 24px 24px;
-		-webkit-background-size: 24px 24px;
-		-moz-background-size: 24px 24px;
-		-o-background-size: 24px 24px;
-		-ms-background-size: 24px 24px;
-	    background-position: center center;
-	    display: inline-block;
-	    width: 24px;
-	    height: 24px;
-	    vertical-align: text-bottom;
-	    cursor: pointer;
-	    margin-right: $pica/3;
-	}
 	label {
 	    &.active-payer {
-	    	color: #6cb33e;
+	    	color: $color-green;
 
-		    .icon-author {
-		    	background-image: url(../images/people-active2.svg);
-		    }
-		    .icon-institution {
-		    	background-image: url(../images/institution-active2.svg);
-		    }
-			&:hover .icon-author, &:focus .icon-author, &:active .icon-author {
-		    	background-image: url(../images/people-active2.svg);
-		    }
-			&:hover .icon-institution, &:focus .icon-institution, &:active .icon-institution {
-		    	background-image: url(../images/institution-active2.svg);
-		    }
+			.icon-author,
+			.icon-institution {
+		    	color: $color-green;
+			}
+			&:hover, &:focus, &:active {
+				color: $color-green;
+			}
 		}
 
 		&.disabled {
 			color: #c3c3c3;
 			cursor: default;
 			pointer-events: none;
-
-		    .icon-author {
-		    	background-image: url(../images/people-disabled2.svg);
-		    }
-		    .icon-institution {
-		    	background-image: url(../images/institution-disabled2.svg);
-		    }
-			&:hover .icon-author, &:focus .icon-author, &:active .icon-author {
-		    	background-image: url(../images/people-disabled2.svg);
-		    	cursor: default;
-		    }
-			&:hover .icon-institution, &:focus .icon-institution, &:active .icon-institution {
-		    	background-image: url(../images/institution-disabled2.svg);
-		    	cursor: default;
-		    }
 		}
 
-		&:hover .icon-author, &:focus .icon-author, &:active .icon-author {
-	    	background-image: url(../images/people-hover2.svg);
-	    }
-
-		&:hover .icon-institution, &:focus .icon-institution, &:active .icon-institution {
-	    	background-image: url(../images/institution-hover2.svg);
+		&:hover, &:focus, &:active {
+	    	color: $color-blue;
 	    }
 	}
 
-
+	.icon-author,
 	.icon-institution {
-		background-color: transparent;
-	    background-image: url(../images/institution2.svg);
-	    background-repeat: no-repeat;
-	    background-size: 24px 24px;
-		-webkit-background-size: 24px 24px;
-		-moz-background-size: 24px 24px;
-		-o-background-size: 24px 24px;
-		-ms-background-size: 24px 24px;
-	    background-position: center center;
-	    display: inline-block;
-	    width: 24px;
-	    height: 24px;
-	    vertical-align: text-bottom;
+	    display: block;
+	    width: 50px;
+	    height: 50px;
+	    // vertical-align: text-bottom;
 	    cursor: pointer;
-	    margin-right: $pica/3;
+		margin-right: $pica/3;
+
+		margin: 0 auto $pica/2;
+		font-size: 50px;
 	}
 
 	.coupon {
@@ -237,23 +184,7 @@ section {
 			margin-bottom: 0;
 		}
 	}
-	// header {
-	// 	border-bottom: 1px solid $color-border-grey;
-	// 	padding: 0 $pica*2 $pica $pica*2;
- //    	margin-top: $pica;
 
-	// 	span {
-
-	// 		margin-right: $pica*2;
-	// 	    display: inline-block;
-
-	// 		label{
-	// 			padding-top: 0.15rem;
-	// 		    display: inline-block;
-	// 		    float: right;
-	// 		}
-	// 	}
-	// }
 
 	.payment-options__list {
 		height: 68px;
@@ -299,22 +230,27 @@ section {
 	#transfer-content,
 	#creditcard-content {
 		margin-top: $pica;
-	}
-	#creditcard-content .creditcard-number dd {
-		border-bottom: 1px solid #C8C8C8;
-		position: relative;
 
-		input {
-			width: $pica*11.25;
-			border-bottom: 0;
-		}
 		img {
-			top: 0.6rem;
-			width: 90px;
-			position: absolute;
-			right: 0;
+			margin-bottom: 1rem;
 		}
 	}
+
+	// #creditcard-content .creditcard-number dd {
+	// 	border-bottom: 1px solid #C8C8C8;
+	// 	position: relative;
+
+	// 	input {
+	// 		// width: $pica*11.25;
+	// 		border-bottom: 0;
+	// 	}
+	// 	// img {
+	// 	// 	top: 0.6rem;
+	// 	// 	width: 90px;
+	// 	// 	position: absolute;
+	// 	// 	right: 0;
+	// 	// }
+	// }
 
 	hr {
 	    float: left;

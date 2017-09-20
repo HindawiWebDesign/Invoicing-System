@@ -167,14 +167,16 @@
                                 <div class="container">
                                     <h2>Choose Payer</h2>
                                     <div class="padding-2">
+										<p>Who is making the payment?</p>
 
-                                        <!-- <label for="tab1" class="disabled"> -->
-                                        <label for="tab1" id="author-label"><span class="icon-author"></span>Individual</label>
+										<div class="payer">
+											<!-- <label for="tab1" class="disabled"> -->
+											<label for="tab1" id="author-label"><span class="icon-author"></span>Pay as Individual</label>
 
 
-                                        <!-- <label for="tab2" id="institution-label" class="active"> -->
-                                        <label for="tab2" id="institution-label"><span class="icon-institution"></span>Institution</label>
-
+											<!-- <label for="tab2" id="institution-label" class="active"> -->
+											<label for="tab2" id="institution-label"><span class="icon-institution"></span>Pay by Institution</label>
+										</div>
                                     </div>
                                 </div>
 
@@ -307,7 +309,7 @@
                                     <!-- Step 3 -->
                                     <h2>CONFIRM</h2>
                                     <div class="padding-2">
-                                            <!-- <p>Pay by: <b>Author</b></p> -->
+                                        <!-- <p>Pay by: <b>Author</b></p> -->
                                             <dl>
                                                 <dt>Pay by</dt>
                                                 <dd>Author</dd>
@@ -329,12 +331,10 @@
                                                 <dd>United Kingdom</dd>
                                             </dl>
 
-
-                                            <p><b>Important:</b> By clicking "Confirm", an invoice will be generated and you will not be able to update the data entered, if you are not sure, click "Back".</p>
-
-
-                                            <a href="#" id="back-button" name="back-button" class="button-default">Back</a>
-                                            <a href="#" id="confirm-button" name="confirm-button" class="button-default">Confirm</a>
+											<a href="#" id="back-button" name="back-button" class="button-default">Back</a>
+											<label class="for-modal" for="modal4">
+												<a id="confirm" name="confirm" class="button-default">Confirm</a>
+											</label>
                                     </div>
 
                                 </div>
@@ -342,12 +342,6 @@
 
 
                             <div id="payment">
-                                <div class="container" id="download-invoice">
-                                <h2>Invoice</h2>
-                                <div class="padding-2">
-                                    <div class="download-invoice"><a href="#"><img src="images/pdf-download.svg"><span>Download invoice</span></a> </div>
-                                </div>
-                            </div>
                             <div class="container">
 
                                 <!-- Step 3 -->
@@ -369,13 +363,6 @@
                                                 </button>
                                             </form>
                                         </li>
-                                        <li class="checkout">
-                                            <form>
-                                                <a href="#" class="button-checkout">
-                                                    <img src="images/2checkout.png" alt="checkout">
-                                                </a>
-                                            </form>
-                                        </li>
                                         <li class="transfer">
                                                 <label for="details1" class="button-transfer">
 
@@ -387,13 +374,12 @@
 
                                     <!-- Credit Card -->
                                             <div id="creditcard-content" class="creditcard-content formdt">
-												<h3>Credit Card Details</h3>
-
-                                                <dl class="creditcard-number">
+													<h3>Credit Card Details</h3>
+												<img src="images/credit-cards.png">
+                                                <dl>
                                                     <dt>Card Number</dt>
 													<dd>
 														<input type="text" id="" value="">
-														<img src="images/credit-cards.png">
 													</dd>
                                                 </dl>
                                                 <dl>
@@ -616,12 +602,15 @@
 
         <footer>
             <p>
-                <b>Hindawi Ltd.</b><br>
+                <b>Hindawi Limited</b><br>
                 Kirkman House, 12-14 Whitfield Street, London, W1T 2RF, United Kingdom<br>
-                Company Reg. No. : 08671628<br>
+                Company Reg. No. : 08671628 -
                 VAT Reg. No. : GB 181 0941 19<br>
                 For any assistance, please contact <a href="mailto:accounts.receivable@hindawi.com">accounts.receivable@hindawi.com</a>.
-            </p>
+			</p>
+			<div>
+				<a href="/terms/">Terms of Service</a><span class="sep"> | </span><a href="/privacy/">Privacy Policy</a>
+			</div>
         </footer>
 
                 <!-- Modal start -->
@@ -699,7 +688,28 @@
                             </div>
                         </div>
                     </div>
-                </div>
+				</div>
+
+				<!-- Modal 4 -->
+                <div class="modal">
+						<input id="modal4" type="checkbox" name="modal4" tabindex="3">
+						<div class="modal__overlay">
+							<div class="modal__box">
+								<div class="section-title">
+									<h2>Important
+										<span class="float-right">
+											<label for="modal4">&#10005;</label>
+										</span>
+									</h2>
+								</div>
+								<div class="modal__box__content">
+									<p>By clicking "Confirm", an invoice will be generated and you will not be able to update the data entered, if you are not sure, click "Back".</p>
+									<a href="#" id="back-button" name="back-button" class="button-default">Back</a>
+									<label for="modal4"><a id="confirm-button" name="confirm-button" class="button-default">Confirm</a></label>
+								</div>
+							</div>
+						</div>
+					</div>
                 <!-- Modal end -->
 
         <!-- Content Ends -->

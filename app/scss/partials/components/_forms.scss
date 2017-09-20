@@ -125,7 +125,7 @@ select
 
 	input[type="text"] {
 		border: 1px solid $fh-border-color;
-		width: 30%;
+		width: 46%;
 		padding: 0 0.8rem;
 		height: 3.2rem;
 		border-radius: $fh-button-radius;
@@ -135,13 +135,13 @@ select
 			border-color: $fh-focus-border-color;
 		}
 	}
-	.button-default {
-		background-color: $bgcolor-btn-grey;
+	// .button-default {
+	// 	background-color: $bgcolor-btn-grey;
 
-	&:focus, &:hover {
-		background-color: $bgcolor-btn-grey-hover;
-	}
-	}
+	// &:focus, &:hover {
+	// 	background-color: $bgcolor-btn-grey-hover;
+	// }
+	// }
 }
 
 /* Fields with standard height */
@@ -325,6 +325,21 @@ input[type="image"] {
 		margin: 0 0 0 -2.4rem;
 	}
 }
+.modal__box__content {
+	.button-default  {
+		margin: 0 1.2rem $pica 0;
+	}
+	label {
+		width: auto;
+		height: auto;
+		margin: 0 1.2rem $pica 0;
+
+		.button-default  {
+			margin: 0;
+		}
+	}
+}
+
 
 .paypal {
 	.button-paypal  {

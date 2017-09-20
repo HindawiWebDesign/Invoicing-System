@@ -38,10 +38,7 @@ padding-bottom: 0;
 }
 
 input.toggle-tab,
-#details1,
-#transfer-content,
-#confirm-details,
-#payment {
+#details1 {
 	display: none;
 }
 
@@ -64,7 +61,7 @@ $tab-number: 4;
   }
 }
 
-.creditcard-content img {
-  margin-bottom: $pica;
-}
+// .creditcard-content img {
+//   margin-bottom: $pica;
+// }
 

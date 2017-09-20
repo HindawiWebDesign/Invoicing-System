@@ -8,6 +8,9 @@ footer {
     clear: both;
     padding: $pica 0;
 	border-top: 1px solid $color-border-grey;
+	div {
+		margin-top: $pica/4;
+	}
     p {
     	margin: 0;
     }

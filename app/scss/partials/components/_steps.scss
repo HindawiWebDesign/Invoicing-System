@@ -11,9 +11,20 @@
 		color: #787878;
 	}
 
+	.payer {
+		text-align: center;
+
 	label {
 		margin-right: $pica*4;
+
+		width: 45%;
+		padding: 0 $pica/2;
+		margin: 0;
+		text-align: center;
+		box-sizing: border-box;
+		display: inline-block;
 	}
+}
 
 
 
