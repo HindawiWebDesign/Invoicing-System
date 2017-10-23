@@ -1,5 +1,4 @@
-.steps {
-
+.container {
 	h2 {
 		margin: 0;
 	    font-size: 1.6rem;
@@ -10,7 +9,8 @@
 		font-family: $myriadRegular;
 		color: #787878;
 	}
-
+}
+.steps {
 	.payer {
 		text-align: center;
 

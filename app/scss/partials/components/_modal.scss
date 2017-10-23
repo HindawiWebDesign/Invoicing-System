@@ -57,7 +57,7 @@ label.for-modal {
 	-webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-.modal__box label {
+.modal__box .section-title label {
 	color: white;
 	cursor: pointer;
 	display: inline-block;
@@ -84,7 +84,7 @@ input:focus + label {
 .modal__box__content {
 	padding: $pica $pica*2 $pica;
 	max-height: $pica*27.5;
-	overflow-y: scroll;
+	overflow-y: hidden;
 
 	p {
 		margin: $pica 0;
@@ -103,4 +103,11 @@ main .modal__box form label {
 	width: auto;
 	height: auto;
     margin-top: 0;
+}
+.modal__close {
+	position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }

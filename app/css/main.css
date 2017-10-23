@@ -1356,7 +1356,7 @@ label.for-modal {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%); }
 
-.modal__box label {
+.modal__box .section-title label {
   color: white;
   cursor: pointer;
   display: inline-block;
@@ -1380,7 +1380,7 @@ input:focus + label {
 .modal__box__content {
   padding: 1.6rem 3.2rem 1.6rem;
   max-height: 44rem;
-  overflow-y: scroll; }
+  overflow-y: hidden; }
   .modal__box__content p {
     margin: 1.6rem 0; }
 
@@ -1397,6 +1397,13 @@ main .modal__box form label {
   width: auto;
   height: auto;
   margin-top: 0; }
+
+.modal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
 
 .tabs {
   padding-bottom: 0; }
@@ -1494,7 +1501,7 @@ input.toggle-tab,
   .notification a.btn_accept:hover {
     text-decoration: none; }
 
-.steps h2 {
+.container h2 {
   margin: 0;
   font-size: 1.6rem;
   padding: 0.2rem 3.2rem 0.1rem;
