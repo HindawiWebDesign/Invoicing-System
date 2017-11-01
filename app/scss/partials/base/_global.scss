@@ -117,8 +117,8 @@ a, .authors-list label span, .transfer label span {
    ========================================================================== */
 
 /* General Display */
-.display-none, 
-.display_none, 
+.display-none,
+.display_none,
 .no-screen         {display: none;}
 .display-inl_block {display: inline-block;}
 .display-block     {display: block;}
@@ -141,7 +141,8 @@ a, .authors-list label span, .transfer label span {
 .pre_line          {white-space: pre-line;}
 
 /* General Margins */
-.margin-t-6  {margin-top: 6px;}
-.margin-t-12  {margin-top: 12px;}
-.padding-2  {padding: 3.2rem;}
+.margin-t-hpc      {margin-top: $pica/2}
+.margin-t-1pc      {margin-top: $pica}
+.margin-t-2pc      {margin-top: $pica*2}
+.padding-2         {padding: $pica*2}
 

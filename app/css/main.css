@@ -541,11 +541,14 @@ a, .authors-list label span, .transfer label span {
   white-space: pre-line; }
 
 /* General Margins */
-.margin-t-6 {
-  margin-top: 6px; }
+.margin-t-hpc {
+  margin-top: 0.8rem; }
 
-.margin-t-12 {
-  margin-top: 12px; }
+.margin-t-1pc {
+  margin-top: 1.6rem; }
+
+.margin-t-2pc {
+  margin-top: 3.2rem; }
 
 .padding-2 {
   padding: 3.2rem; }
@@ -657,13 +660,12 @@ header {
     height: 72px;
     outline: 0 none;
     line-height: 0;
-    float: left;
-    margin-bottom: 3rem; }
+    float: left; }
   header h1 {
     color: #000;
     font-family: "Myriad W01 Lt", sans-serif;
     letter-spacing: 2px;
-    margin: 0 auto 1.5rem;
+    margin: 0 auto;
     width: 50%;
     position: relative;
     text-align: center;
@@ -948,6 +950,40 @@ h3 {
 
 #confirm-payment .button-default {
   margin-right: 0; }
+
+.note {
+  margin-top: 1.6rem; }
+  .note span {
+    color: #6cb33e; }
+
+.error-404 {
+  text-align: center;
+  margin: 0;
+  padding: 16rem 0; }
+  .error-404 .symbol {
+    margin-left: auto;
+    display: block;
+    height: 190px;
+    width: 190px;
+    border-radius: 190px;
+    color: #dadada;
+    /* border: 0.6rem solid #d1d1d1; */
+    margin: 0 auto;
+    background-color: #f7f7f7; }
+    .error-404 .symbol .number {
+      font-family: "Myriad W01 SmBd", sans-serif;
+      font-size: 80px;
+      line-height: 180px;
+      display: block; }
+    .error-404 .symbol .text {
+      font-size: 16px;
+      text-transform: uppercase;
+      display: block;
+      line-height: initial;
+      margin-top: -56px;
+      color: #c7c7c7; }
+  .error-404 p {
+    margin-top: 3.2rem; }
 
 footer {
   font-size: 1.6rem;

@@ -365,3 +365,52 @@ h3 {
 		margin-right: 0;
 	}
 }
+
+// Notes
+.note {
+	margin-top: $pica;
+
+	span {
+		color: $color-green;
+	}
+}
+
+// 404 Error
+.error-404 {
+	text-align: center;
+	margin: 0;
+	padding: 16rem 0;
+
+	.symbol {
+		margin-left: auto;
+		display: block;
+		height: 190px;
+		width: 190px;
+		border-radius: 190px;
+		// color: #c5c5c5;
+		color: #dadada;
+		/* border: 0.6rem solid #d1d1d1; */
+		margin: 0 auto;
+		background-color: #f7f7f7;
+
+		.number {
+			font-family: $myriadSmBd;
+			font-size: 80px;
+			line-height: 180px;
+			display: block;
+		}
+
+		.text {
+			// font-family: $myriadLight;
+			font-size: 16px;
+			text-transform: uppercase;
+			display: block;
+			line-height: initial;
+			margin-top: -56px;
+			color: #c7c7c7;
+		}
+	}
+	p {
+		margin-top: $pica*2;
+	}
+}

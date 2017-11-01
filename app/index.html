@@ -235,10 +235,10 @@
 
                                             <div>
                                                 <!-- <input type="submit" name="save-button" value="Save" class="button-default"> -->
-                                                <a href="#" id="save-button1" name="save-button" class="button-default">Save</a>
+                                                <a href="#" id="save-button1" name="save-button" class="button-default">Continue</a>
 
                                             </div>
-                                        </div>
+										</div>
                                     </div>
 
 
@@ -295,7 +295,7 @@
                                             <div>
                                                 <!-- <input type="submit" id="save-button1" name="save-button" value="Save" class="button-default"> -->
 
-                                                <a href="#" id="save-button2" name="save-button" class="button-default">Save</a>
+                                                <a href="#" id="save-button2" name="save-button" class="button-default">Continue</a>
                                             </div>
                                         </div>
                                     </div>
@@ -303,7 +303,15 @@
 
 
 
-                                    </div>
+									</div>
+
+									<div class="note">
+										<p>
+											<span>Note:</span>
+												You will need to confirm and create an invoice in step 3, otherwise none of the information added in the previous steps is going to be saved.
+										</p>
+									</div>
+
                                 </div>
 
                                 <div class="container" id="confirm-details">
@@ -334,7 +342,7 @@
 
 											<a href="#" id="back-button" name="back-button" class="button-default">Back</a>
 											<label class="for-modal" for="modal4">
-												<a id="confirm" name="confirm" class="button-default">Confirm</a>
+												<span id="confirm" name="confirm" class="button-default">Create Invoice</span>
 											</label>
                                     </div>
 
@@ -709,8 +717,8 @@
 								</div>
 								<div class="modal__box__content">
 									<p>By clicking "Confirm", an invoice will be generated and you will not be able to update the data entered, if you are not sure, click "Back".</p>
-									<a href="#" id="back-button" name="back-button" class="button-default">Back</a>
-									<label for="modal4"><a id="confirm-button" name="confirm-button" class="button-default">Confirm</a></label>
+									<a href="#" id="back-button" name="back-button" class="button-default">Cancel</a>
+									<label for="modal4"><span id="confirm-button" name="confirm-button" class="button-default">Confirm</span></label>
 								</div>
 							</div>
 						</div>
@@ -757,6 +765,7 @@
                         $('#choose-payer').removeClass("active-step");
                         $('#choose-payer').addClass("success-step");
                         $('#payer-details').addClass("active-step");
+						$('.note').hide();
 
                     }
 
@@ -782,6 +791,7 @@
                         $('#choose-payer').removeClass("active-step");
                         $('#choose-payer').addClass("success-step");
                         $('#payer-details').addClass("active-step");
+						$('.note').hide();
                     }
 
                     else {
