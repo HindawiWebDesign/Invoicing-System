@@ -234,7 +234,7 @@
 
 
                                             <div>
-                                                <!-- <input type="submit" name="save-button" value="Save" class="button-default"> -->
+                                                <!-- <input type="submit" name="save-button" value="Continue" class="button-default"> -->
                                                 <a href="#" id="save-button1" name="save-button" class="button-default">Continue</a>
 
                                             </div>
@@ -293,7 +293,7 @@
                                                 </dl>
 
                                             <div>
-                                                <!-- <input type="submit" id="save-button1" name="save-button" value="Save" class="button-default"> -->
+                                                <!-- <input type="submit" id="save-button2" name="save-button" value="Continue" class="button-default"> -->
 
                                                 <a href="#" id="save-button2" name="save-button" class="button-default">Continue</a>
                                             </div>
@@ -305,12 +305,7 @@
 
 									</div>
 
-									<div class="note">
-										<p>
-											<span>Note:</span>
-												You will need to confirm and create an invoice in step 3, otherwise none of the information added in the previous steps is going to be saved.
-										</p>
-									</div>
+
 
                                 </div>
 
@@ -348,9 +343,20 @@
 
                                 </div>
 
-
+								<div class="note">
+									<p>
+										<span>Note:</span>
+										if you do not confirm your information in step 3, your information will not be saved.
+									</p>
+								</div>
 
                             <div id="payment">
+								<div class="container" id="download-invoice">
+                                	<h2>Invoice</h2>
+                                	<div class="padding-2">
+                                    	<div class="download-invoice"><a href="#"><img src="images/pdf-download.svg"><span>Download invoice</span></a> </div>
+                                	</div>
+                           		</div>
                             <div class="container">
 
                                 <!-- Step 3 -->
@@ -749,7 +755,7 @@
 
             $(document).ready(function() {
 
-				$('#payment,#transfer-content,#confirm-details').hide();
+				$('#payment,#transfer-content,#confirm-details,.note').hide();
 
 
                 $('input[type="radio"]').click(function() {
@@ -765,7 +771,7 @@
                         $('#choose-payer').removeClass("active-step");
                         $('#choose-payer').addClass("success-step");
                         $('#payer-details').addClass("active-step");
-						$('.note').hide();
+						$('.note').show();
 
                     }
 
@@ -791,7 +797,7 @@
                         $('#choose-payer').removeClass("active-step");
                         $('#choose-payer').addClass("success-step");
                         $('#payer-details').addClass("active-step");
-						$('.note').hide();
+						$('.note').show();
                     }
 
                     else {
@@ -847,7 +853,7 @@
 
             $(document).ready(function() {
 
-                $('a[name="confirm-button"]').click(function() {
+                $('span[name="confirm-button"]').click(function() {
 
                         $('#payment').show();
                         $('#download-invoice').show();
@@ -859,6 +865,7 @@
 
                         $('#payment-method').addClass("active-step");
 
+						$('.note').hide();
                 });
             });
 

@@ -367,6 +367,7 @@ input[type="image"] {
 	    padding: 1.6rem;
 	    width: 132px;
 		display: table-cell;
+		box-sizing: border-box;
 	}
 	img {
 		width: 56px;

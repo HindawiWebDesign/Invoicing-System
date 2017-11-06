@@ -1239,7 +1239,8 @@ input[type="image"] {
   margin: 0;
   padding: 1.6rem;
   width: 132px;
-  display: table-cell; }
+  display: table-cell;
+  box-sizing: border-box; }
 
 .creditcard img {
   width: 56px;
